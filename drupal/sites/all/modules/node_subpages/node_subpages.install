@@ -1,0 +1,86 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the Node Subpages module.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function node_subpages_enable() {
+  // Set the weight to 2, so that it is higher than the weight on the pathauto module
+  // Path Auto needs to set the node path before this module adds aliases
+  db_update('system')
+  ->fields(array(
+    'weight' => 2,
+  ))
+  ->condition('name', 'node_subpages')
+  ->condition('type', 'module')
+  ->execute();
+
+  // Clear the cache to get these to take effect.
+  cache_clear_all();
+}
+
+
+/**
+ * Implements hook_schema().
+ */
+function node_subpages_schema() {
+  $schema['node_subpages'] = array(
+    'description' => 'Store details about node subpage configuration',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+      ),
+      'node_type' => array(
+        'description' => 'Machine name of node type',
+        'type' => 'varchar',
+        'length' => '32',
+        'not null' => TRUE,
+      ),
+      'subpath' => array(
+        'description' => 'URL subpath for this subpage',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+      ),
+      'title' => array(
+        'description' => 'Title for the subpage tab.',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => FALSE,
+      ),
+      'is_default' => array(
+        'description' => 'Is this tab the default one?',
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'source_type' => array(
+        'description' => 'Type of data to use for this tab: cck, view, etc',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => FALSE,
+      ),
+      'source_data' => array(
+        'description' => 'Config for data to use for subpage',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => FALSE,
+      ),
+      'weight' => array(
+        'description' => 'Weight of tab, for positioning',
+        'type' => 'int',
+        'length' => '11',
+        'not null' => FALSE,
+      ),
+    ),
+    'primary key' => array('id'),
+    'indexes' => array(
+      'node_type' => array('node_type'),
+    ),
+  );
+  return $schema;
+}

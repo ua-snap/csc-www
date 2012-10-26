@@ -1,0 +1,14 @@
+name = Node Subpages
+description = "Allows admins to define subpages for content types. These can be used to display CCK fields of Views in subpages instead of on the regular node view."
+core = 7.x
+
+; Module dependencies
+dependencies[] = path
+files[] = context_plugins/node_subpages_condition_node_subpage.inc
+
+; Information added by drupal.org packaging script on 2012-01-07
+version = "7.x-1.0-alpha1"
+core = "7.x"
+project = "node_subpages"
+datestamp = "1325899542"
+
