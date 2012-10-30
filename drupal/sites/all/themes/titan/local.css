@@ -1,0 +1,30 @@
+#header-wrapper {
+  background-color: rgb(202, 227, 255);
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+#main-wrapper {
+  background: none;
+}
+
+a#logo {
+  margin-left: -15px;
+}
+
+#block-node_subpages-menu_bar li {
+  float: left;
+  margin-left: -30px;
+  margin-right: 30px;
+  background: none;
+}
+
+#block-node_subpages-menu_bar li a {
+  color: rgb(168, 139, 110);
+}
+
+#breadcrumb {
+  font-size: 12px;
+}
