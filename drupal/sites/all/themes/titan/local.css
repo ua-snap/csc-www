@@ -28,3 +28,58 @@ a#logo {
 #breadcrumb {
   font-size: 12px;
 }
+
+div.field-label, .field-type-taxonomy-term-reference .field-label {
+  color: rgb(68, 68, 68);
+  font-weight: bold;
+  display: block;
+}
+
+div.field {
+  margin-bottom: 10px;
+}
+
+div.sharethis-wrapper {
+  margin-top: 30px;
+}
+
+#branding #site-name a,
+#branding #site-name a:active,
+#branding #site-name a:focus {
+  color: rgb(46, 73, 112);
+}
+
+div#block-views-resources-block_1 {
+  margin-top: -20px;
+}
+
+/*
+form#search-block-form {
+  margin-top: -100px;
+  margin-bottom: 40px;
+}
+*/
+
+form#search-block-form input#edit-search-block-form--2.form-text {
+  background: #ffffff url(/drupal/sites/all/themes/titan/search.png) no-repeat scroll 214px center;
+}
+
+form#search-block-form #edit-actions {
+  display: none;
+}
+
+.date .year, .date .month, .date .day {
+  color: rgb(144, 173, 61);
+}
+
+.node .meta a, li.node-readmore.first.last a, a {
+  color: rgb(46, 73, 112);
+}
+
+.node .meta a:hover, li.node-readmore.first.last a:hover, a:hover {
+  color: rgb(144, 173, 61);
+}
+
+div.views-widget input#edit-keys.form-text{
+  width: 400px;
+}
