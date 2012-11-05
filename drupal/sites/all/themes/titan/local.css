@@ -49,7 +49,10 @@ div.sharethis-wrapper {
   color: rgb(46, 73, 112);
 }
 
-div#block-views-resources-block_1 {
+div#block-views-resources-block_1,
+div#block-views-projects-block_1,
+div#block-views-people-block_1,
+div#block-views-workshops-block_1 {
   margin-top: -20px;
 }
 
@@ -81,5 +84,38 @@ form#search-block-form #edit-actions {
 }
 
 div.views-widget input#edit-keys.form-text{
-  width: 400px;
+  width: 350px;
+}
+
+div#block-system-navigation ul.menu li {
+  padding-top: 4px;
+}
+
+div#block-system-navigation ul.menu li a {
+  color: rgb(255, 255, 255);
+  display: inline;
+  padding: 2px 21px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+div#header-menu-wrapper {
+  background: -moz-linear-gradient(top, rgb(96, 123, 162), rgb(46, 73, 112));
+}
+
+#header-menu .content ul {
+  margin-left: -20px;
+}
+
+#header-menu .content li a:hover,
+#header-menu .content li a:active,
+#header-menu .content li a:focus {
+  color: rgb(193, 205, 145);
+  background-color: transparent;
+}
+
+#footer-wrapper {
+  border-top-color: rgb(193, 205, 145);
+  background-color: rgb(240, 240, 216);
 }
