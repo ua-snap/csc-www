@@ -103,6 +103,10 @@ div#block-system-navigation ul.menu li a {
 div#header-menu-wrapper {
   background: -moz-linear-gradient(top, rgb(96, 123, 162), rgb(46, 73, 112));
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(96, 123, 162)), to(rgb(46, 73, 112)));
+  /* For Internet Explorer 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF607BA2, endColorstr=#FF2E4970);
+  /* For Internet Explorer 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF607BA2, endColorstr=#FF2E4970)";
 }
 
 #header-menu .content ul {
@@ -119,4 +123,8 @@ div#header-menu-wrapper {
 #footer-wrapper {
   border-top-color: rgb(193, 205, 145);
   background-color: rgb(240, 240, 216);
+}
+
+div.view-id-people td {
+  text-align: center;
 }
