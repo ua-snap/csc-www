@@ -87,6 +87,10 @@ div.views-widget input#edit-keys.form-text{
   width: 350px;
 }
 
+div#block-system-navigation ul.menu {
+  margin: 0;
+}
+
 div#block-system-navigation ul.menu li {
   padding-top: 4px;
 }
@@ -127,4 +131,14 @@ div#header-menu-wrapper {
 
 div.view-id-people td {
   text-align: center;
+}
+
+ul {
+  list-style: disc outside none;
+  margin: 20px 0 20px 25px;
+}
+
+ul li {
+  background: none;
+  padding: 0;
 }
