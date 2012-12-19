@@ -88,7 +88,7 @@ div.views-widget input#edit-keys.form-text{
 }
 
 div#block-system-navigation ul.menu {
-  margin: 0;
+  margin: 0 0 0 -22px;
 }
 
 div#block-system-navigation ul.menu li {
@@ -141,4 +141,8 @@ ul {
 ul li {
   background: none;
   padding: 0;
+}
+
+div.user-picture {
+  margin-bottom: 20px;
 }
