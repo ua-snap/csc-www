@@ -146,3 +146,56 @@ ul li {
 div.user-picture {
   margin-bottom: 20px;
 }
+
+/*
+div.node-page, div.node-promoted {
+  border-top: none;
+}
+*/
+
+input.form-submit {
+  font-size: 13px;
+  background-color: rgb(240, 235, 231);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(209, 203, 181);
+  padding: 3px 5px;
+}
+
+#edit-submit--2, #edit-submit--3 {
+  display: none;
+}
+
+th, th.field-label, th.tabledrag-hide {
+  background-color: rgb(240, 240, 238);
+  color: rgb(68, 68, 68);
+  padding: 5px 14px;
+}
+
+th, th.field-label label, th.tabledrag-hide label {
+  margin-bottom: 0;
+}
+
+th a {
+  color: rgb(68, 68, 68) !important;
+}
+
+span.summary {
+  display: block;
+  clear: both;
+}
+
+div.filter-guidelines ul, ul.action-links {
+  margin-left: 25px;
+}
+
+div.filter-guidelines li {
+  padding-left: 0;
+}
+
+div#field-news-related-people-add-more-wrapper, div#field-news-related-resources-add-more-wrapper {
+  margin: 25px 0;
+}
+
+div#content {
+  margin-bottom: 40px;
+}
