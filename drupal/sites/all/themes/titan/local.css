@@ -199,3 +199,27 @@ div#field-news-related-people-add-more-wrapper, div#field-news-related-resources
 div#content {
   margin-bottom: 40px;
 }
+
+div.node-teaser div.field-type-taxonomy-term-reference {
+  display: none;
+}
+
+div.icon-pdf {
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-left: -100px;
+  background-image: url(/drupal/sites/all/themes/titan/icons/pdf.gif);
+}
+
+#header-menu .content li.expanded a {
+  background-image: none;
+}
+
+#header-menu .content li.expanded ul {
+  background-color: rgb(109, 136, 171);
+}
+
+#header-menu .content li.expanded ul a:hover {
+  background-color: transparent;
+}
