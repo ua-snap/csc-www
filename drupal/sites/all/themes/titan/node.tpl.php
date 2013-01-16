@@ -85,8 +85,11 @@
 
 <?php
 
+  // Some AK CSC changes here, to use the begin date for workshops instead of
+  // the node creation date, which we use for other content types.
 
-  if($node->type == 'workshop' && !empty($raw_date)) {
+  if($node->type == 'workshop' &&
+     !empty($node->field_date[$node->language][0]['value'])) {
     $raw_date = $node->field_date[$node->language][0]['value'];
     $date = explode(' ', $raw_date);
     $date_fields = explode('-', $date[0]);
@@ -94,8 +97,6 @@
   } else {
     $time = $node->created;
   }
-
-  // print format_date($time, 'custom', 'M');  
 
 ?>
         <span class="month"><?php print format_date($time, 'custom', 'M') ?></span>
