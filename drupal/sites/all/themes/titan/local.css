@@ -64,7 +64,16 @@ form#search-block-form {
 */
 
 form#search-block-form input#edit-search-block-form--2.form-text {
-  background: #ffffff url(/drupal/sites/all/themes/titan/search.png) no-repeat scroll 214px center;
+  background: #ffffff url(/drupal/sites/all/themes/titan/search.png) no-repeat scroll 175px center;
+  width: 200px;
+  float: right;
+  margin-top: 10px;
+  padding: 3px 6px;
+}
+
+#header-menu .content {
+  height: 32px;
+  margin-top: -24px;
 }
 
 form#search-block-form #edit-actions {
@@ -226,7 +235,7 @@ div.icon-pdf {
 }
 
 #header-menu .content li.expanded ul {
-  margin-top: -2px;
+  margin-top: 3px;
 }
 
 .node-project div.node-header,
@@ -250,5 +259,5 @@ div.field.field-name-field-date.field-type-datetime.field-label-above div.field-
 }
 
 div.field.field-name-field-date.field-type-datetime.field-label-above div.field-label {
-  display: none;
 }
+
