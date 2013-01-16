@@ -208,7 +208,8 @@ div.icon-pdf {
   width: 32px;
   height: 32px;
   float: left;
-  margin-left: -100px;
+  margin-top: -52px;
+  margin-left: -90px;
   background-image: url(/drupal/sites/all/themes/titan/icons/pdf.gif);
 }
 
@@ -222,4 +223,32 @@ div.icon-pdf {
 
 #header-menu .content li.expanded ul a:hover {
   background-color: transparent;
+}
+
+#header-menu .content li.expanded ul {
+  margin-top: -2px;
+}
+
+.node-project div.node-header,
+.node-project div.content,
+div#block-system-main div.node-resource div.node-header div.title-and-meta,
+div#block-system-main div.node-resource.node.indent div.content,
+div#node-6 div {
+  margin-left: 0;
+}
+
+.node-project div.date,
+.node-resource div.date {
+  display: none;
+}
+
+div.field.field-name-field-date.field-type-datetime.field-label-above div.field-items span.date-display-single {
+  color: rgb(144, 173, 61);
+  font-size: 15px;
+  font-weight: 700;
+  float: left;
+}
+
+div.field.field-name-field-date.field-type-datetime.field-label-above div.field-label {
+  display: none;
 }

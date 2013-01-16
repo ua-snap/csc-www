@@ -82,9 +82,25 @@
 
     <?php if ($display_submitted): ?>
       <div class="date">
-        <span class="month"><?php print format_date($node->created, 'custom', 'M') ?></span>
-        <span class="day"><?php print format_date($node->created, 'custom', 'j') ?> </span>
-        <span class="year"><?php print format_date($node->created, 'custom', 'Y') ?></span>
+
+<?php
+
+
+  if($node->type == 'workshop' && !empty($raw_date)) {
+    $raw_date = $node->field_date[$node->language][0]['value'];
+    $date = explode(' ', $raw_date);
+    $date_fields = explode('-', $date[0]);
+    $time = mktime(0, 0, 0, $date_fields[1], $date_fields[2], $date_fields[0]);
+  } else {
+    $time = $node->created;
+  }
+
+  // print format_date($time, 'custom', 'M');  
+
+?>
+        <span class="month"><?php print format_date($time, 'custom', 'M') ?></span>
+        <span class="day"><?php print format_date($time, 'custom', 'j') ?> </span>
+        <span class="year"><?php print format_date($time, 'custom', 'Y') ?></span>
       </div>
     <?php endif; ?>
 
