@@ -279,22 +279,22 @@ div.breadcrumb {
   display: none;
 }
 
-div#block-views-events-block {
+.front div#block-views-events-block {
   width: 306px;
   height: 350px;
   background-color: rgb(46, 73, 112);
 }
 
-div#block-views-research_highlights-block,
-div#block-views-featured_scientists-block {
+.front div#block-views-research_highlights-block,
+.front div#block-views-featured_scientists-block {
   width: 305px;
   height: 350px;
   background-color: rgb(144, 173, 61);
 }
 
-div#block-views-events-block h2,
-div#block-views-research_highlights-block h2,
-div#block-views-featured_scientists-block h2 {
+.front div#block-views-events-block h2,
+.front div#block-views-research_highlights-block h2,
+.front div#block-views-featured_scientists-block h2 {
   font-size: 18px;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -302,28 +302,28 @@ div#block-views-featured_scientists-block h2 {
   margin-top: 0;
 }
 
-div#block-views-events-block h2.node-title,
-div#block-views-research_highlights-block h2.node-title,
-div#block-views-featured_scientists-block h2.node-title {
+.front div#block-views-events-block h2.node-title,
+.front div#block-views-research_highlights-block h2.node-title,
+.front div#block-views-featured_scientists-block h2.node-title {
   line-height: 18px;
   text-align: left;
   padding: 0;
 }
 
 
-div#block-views-events-block p,
-div#block-views-events-block h2.node-title a,
-div#block-views-research_highlights-block p,
-div#block-views-research_highlights-block h2.node-title a,
-div#block-views-featured_scientists-block p,
-div#block-views-featured_scientists-block h2.node-title a {
+.front div#block-views-events-block p,
+.front div#block-views-events-block h2.node-title a,
+.front div#block-views-research_highlights-block p,
+.front div#block-views-research_highlights-block h2.node-title a,
+.front div#block-views-featured_scientists-block p,
+.front div#block-views-featured_scientists-block h2.node-title a {
   line-height: 18px;
   color: rgb(255, 255, 255);
 }
 
 
-div#block-views-research_highlights-block h2.node-title a,
-div#block-views-featured_scientists-block h2.node-title a {
+.front div#block-views-research_highlights-block h2.node-title a,
+.front div#block-views-featured_scientists-block h2.node-title a {
   font-size: 14px;
 }
 
@@ -331,13 +331,13 @@ div#block-views-featured_scientists-block h2.node-title a {
   border-top: 1px solid rgb(255, 255, 255);
 }
 
-div#block-views-events-block a,
-div#block-views-research_highlights-block a,
-div#block-views-featured_scientists-block a {
+.front div#block-views-events-block a,
+.front div#block-views-research_highlights-block a,
+.front div#block-views-featured_scientists-block a {
   color: rgb(255, 255, 255);
 }
 
-div#block-views-events-block div.date {
+.front div#block-views-events-block div.date {
   float: none;
   text-transform: none;
   background: none;
@@ -345,71 +345,71 @@ div#block-views-events-block div.date {
   font-size: 14px;
 }
 
-div#block-views-research_highlights-block div.date,
-div#block-views-featured_scientists-block div.date {
+.front div#block-views-research_highlights-block div.date,
+.front div#block-views-featured_scientists-block div.date {
   display: none;
 }
 
-div.view-research-highlights {
+.front div.view-research-highlights {
   margin-bottom: 16px;
 }
 
-div#block-views-events-block div.view-content,
-div#block-views-research_highlights-block div.view-content,
-div#block-views-featured_scientists-block div.view-content {
+.front div#block-views-events-block div.view-content,
+.front div#block-views-research_highlights-block div.view-content,
+.front div#block-views-featured_scientists-block div.view-content {
   padding: 0 20px;
 }
 
-div#block-views-events-block .date .year,
-div#block-views-events-block .date .month,
-div#block-views-events-block .date .day {
+.front div#block-views-events-block .date .year,
+.front div#block-views-events-block .date .month,
+.front div#block-views-events-block .date .day {
   color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
-div#block-views-events-block .date .year {
+.front div#block-views-events-block .date .year {
   top: 0;
   display: inline;
 }
 
-div#block-views-events-block span.submitted,
-div#block-views-research_highlights-block span.submitted,
-div#block-views-featured_scientists-block span.submitted {
+.front div#block-views-events-block span.submitted,
+.front div#block-views-research_highlights-block span.submitted,
+.front div#block-views-featured_scientists-block span.submitted {
   display: none;
 }
 
-div#block-views-events-block .node {
+.front div#block-views-events-block .node {
   margin-bottom: 0;
 }
 
-div#block-views-events-block,
-div#block-views-research_highlights-block,
-div#block-views-featured_scientists-block {
+.front div#block-views-events-block,
+.front div#block-views-research_highlights-block,
+.front div#block-views-featured_scientists-block {
   float: left;
 }
 
-div#block-views-events-block,
-div#block-views-featured_scientists-block {
+.front div#block-views-events-block,
+.front div#block-views-featured_scientists-block {
   margin-left: 22px;
 }
 
-div#block-views-events-block .node.indent .title-and-meta,
-div#block-views-research_highlights-block .node.indent .title-and-meta,
-div#block-views-research_highlights-block .node.indent .content,
-div#block-views-featured_scientists-block .node.indent .title-and-meta,
-div#block-views-featured_scientists-block .node.indent .content {
+.front div#block-views-events-block .node.indent .title-and-meta,
+.front div#block-views-research_highlights-block .node.indent .title-and-meta,
+.front div#block-views-research_highlights-block .node.indent .content,
+.front div#block-views-featured_scientists-block .node.indent .title-and-meta,
+.front div#block-views-featured_scientists-block .node.indent .content {
   margin-left: 0;
 }
 
-div#block-views-events-block .node.indent .title-and-meta a {
+.front div#block-views-events-block .node.indent .title-and-meta a {
   font-size: 14px;
   font-weight: normal;
 }
 
-div#block-views-events-block div.links-wrapper {
+.front div#block-views-events-block div.links-wrapper {
   display: none;
 }
 
-div#block-views-events-block .node-header {
+.front div#block-views-events-block .node-header {
   line-height: 18px;
 }
