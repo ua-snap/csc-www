@@ -1,9 +1,11 @@
 #header-wrapper {
-  background-color: rgb(202, 227, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 body {
   background-color: rgb(255, 255, 255);
+  width: 960px;
+  margin: 0 auto;
 }
 
 #main-wrapper {
@@ -64,11 +66,11 @@ form#search-block-form {
 */
 
 form#search-block-form input#edit-search-block-form--2.form-text {
-  background: #ffffff url(/drupal/sites/all/themes/titan/search.png) no-repeat scroll 175px center;
-  width: 200px;
+  background: #ffffff url(/drupal/sites/all/themes/titan/search.png) no-repeat scroll 225px center;
+  width: 250px;
   float: right;
-  margin-top: 10px;
-  padding: 3px 6px;
+  margin-top: -140px;
+  padding: 6px 6px;
 }
 
 #header-menu .content {
@@ -97,7 +99,7 @@ div.views-widget input#edit-keys.form-text{
 }
 
 div#block-system-navigation ul.menu {
-  margin: 0 0 0 -22px;
+  margin: 0;
 }
 
 div#block-system-navigation ul.menu li {
@@ -109,33 +111,29 @@ div#block-system-navigation ul.menu li a {
   display: inline;
   padding: 2px 21px;
   border: none;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
 }
 
 div#header-menu-wrapper {
-  background: -moz-linear-gradient(top, rgb(96, 123, 162), rgb(46, 73, 112));
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(96, 123, 162)), to(rgb(46, 73, 112)));
-  /* For Internet Explorer 5.5 - 7 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF607BA2, endColorstr=#FF2E4970);
-  /* For Internet Explorer 8 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF607BA2, endColorstr=#FF2E4970)";
+  background-color: rgb(46, 73, 112);
+  background-image: none;
 }
 
 #header-menu .content ul {
   margin-left: -20px;
 }
 
-#header-menu .content li a:hover,
-#header-menu .content li a:active,
-#header-menu .content li a:focus {
-  color: rgb(193, 205, 145);
-  background-color: transparent;
+a:hover,
+a:active,
+a:focus {
+  color: rgb(193, 205, 145) !important;
+  background-color: transparent !important;
 }
 
 #footer-wrapper {
-  border-top-color: rgb(193, 205, 145);
-  background-color: rgb(240, 240, 216);
+  border-top-color: rgb(46, 73, 112);
+  background-color: rgb(255, 255, 255);
 }
 
 div.view-id-people td {
@@ -261,3 +259,157 @@ div.field.field-name-field-date.field-type-datetime.field-label-above div.field-
 div.field.field-name-field-date.field-type-datetime.field-label-above div.field-label {
 }
 
+div.breadcrumb {
+  display: none;
+}
+
+.node {
+  border-top: none;
+}
+
+.front div#block-system-main {
+  display: none;
+}
+
+.front div#content {
+  margin-top: 0;
+}
+
+.front a.feed-icon {
+  display: none;
+}
+
+div#block-views-events-block {
+  width: 306px;
+  height: 350px;
+  background-color: rgb(46, 73, 112);
+}
+
+div#block-views-research_highlights-block,
+div#block-views-featured_scientists-block {
+  width: 305px;
+  height: 350px;
+  background-color: rgb(144, 173, 61);
+}
+
+div#block-views-events-block h2,
+div#block-views-research_highlights-block h2,
+div#block-views-featured_scientists-block h2 {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+div#block-views-events-block h2.node-title,
+div#block-views-research_highlights-block h2.node-title,
+div#block-views-featured_scientists-block h2.node-title {
+  line-height: 18px;
+  text-align: left;
+  padding: 0;
+}
+
+
+div#block-views-events-block p,
+div#block-views-events-block h2.node-title a,
+div#block-views-research_highlights-block p,
+div#block-views-research_highlights-block h2.node-title a,
+div#block-views-featured_scientists-block p,
+div#block-views-featured_scientists-block h2.node-title a {
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+}
+
+
+div#block-views-research_highlights-block h2.node-title a,
+div#block-views-featured_scientists-block h2.node-title a {
+  font-size: 14px;
+}
+
+.views-row-last {
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+div#block-views-events-block a,
+div#block-views-research_highlights-block a,
+div#block-views-featured_scientists-block a {
+  color: rgb(255, 255, 255);
+}
+
+div#block-views-events-block div.date {
+  float: none;
+  text-transform: none;
+  background: none;
+  padding-left: 0;
+  font-size: 14px;
+}
+
+div#block-views-research_highlights-block div.date,
+div#block-views-featured_scientists-block div.date {
+  display: none;
+}
+
+div.view-research-highlights {
+  margin-bottom: 16px;
+}
+
+div#block-views-events-block div.view-content,
+div#block-views-research_highlights-block div.view-content,
+div#block-views-featured_scientists-block div.view-content {
+  padding: 0 20px;
+}
+
+div#block-views-events-block .date .year,
+div#block-views-events-block .date .month,
+div#block-views-events-block .date .day {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+div#block-views-events-block .date .year {
+  top: 0;
+  display: inline;
+}
+
+div#block-views-events-block span.submitted,
+div#block-views-research_highlights-block span.submitted,
+div#block-views-featured_scientists-block span.submitted {
+  display: none;
+}
+
+div#block-views-events-block .node {
+  margin-bottom: 0;
+}
+
+div#block-views-events-block,
+div#block-views-research_highlights-block,
+div#block-views-featured_scientists-block {
+  float: left;
+}
+
+div#block-views-events-block,
+div#block-views-featured_scientists-block {
+  margin-left: 22px;
+}
+
+div#block-views-events-block .node.indent .title-and-meta,
+div#block-views-research_highlights-block .node.indent .title-and-meta,
+div#block-views-research_highlights-block .node.indent .content,
+div#block-views-featured_scientists-block .node.indent .title-and-meta,
+div#block-views-featured_scientists-block .node.indent .content {
+  margin-left: 0;
+}
+
+div#block-views-events-block .node.indent .title-and-meta a {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+div#block-views-events-block div.links-wrapper {
+  display: none;
+}
+
+div#block-views-events-block .node-header {
+  line-height: 18px;
+}
