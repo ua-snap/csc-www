@@ -426,7 +426,7 @@ div#block-rotating_banner-1 {
 
 .front div.views-field.views-field-field-banner-image {
   width: 654px;
-  height: 302px;
+  height: 282px;
   float: left;
 }
 
@@ -455,16 +455,16 @@ div#block-rotating_banner-1 {
 }
 
 div.views-slideshow-controls-bottom {
-  position: absolute;
+  position: relative;
   width: 170px;
-  right: 20px;
+  left: 750px;
   bottom: 20px;
   z-index: 3;
 }
 
 .front div.views-slideshow-cycle-main-frame-row div.views-field-nothing a {
   position: absolute;
-  bottom: 20px;
+  bottom: 2px;
   right: 25px;
 }
 
