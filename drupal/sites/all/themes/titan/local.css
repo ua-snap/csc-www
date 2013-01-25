@@ -222,6 +222,7 @@ div.icon-pdf {
 
 #header-menu .content li.expanded a {
   background-image: none;
+  padding-bottom: 10px;
 }
 
 #header-menu .content li.expanded ul {
@@ -431,8 +432,8 @@ div#block-rotating_banner-1 {
 
 .front div.views-slideshow-cycle-main-frame-row div.views-field.views-field-title {
   color: rgb(255, 255, 255);
-  width: 261px;
-  padding: 15px 15px 15px 30px;
+  width: 266px;
+  padding: 15px 20px 15px 20px;
   float: right;
   font-size: 18px;
   font-weight: bold;
@@ -440,8 +441,8 @@ div#block-rotating_banner-1 {
 
 .front div.views-slideshow-cycle-main-frame-row div.views-field.views-field-body {
   color: rgb(255, 255, 255);
-  width: 261px;
-  padding: 0 15px 0 30px;
+  width: 266px;
+  padding: 0 20px 0 20px;
   float: right;
 }
 
@@ -450,13 +451,23 @@ div#block-rotating_banner-1 {
   width: 20px;
   float: left;
   cursor: hand;
-  pointer: pointer;
+  cursor: pointer;
 }
 
 div.views-slideshow-controls-bottom {
-  position: relative;
-  width: 261px;
-  margin-left: 875px;
-  margin-top: -20px;
+  position: absolute;
+  width: 170px;
+  right: 20px;
+  bottom: 20px;
   z-index: 3;
+}
+
+.front div.views-slideshow-cycle-main-frame-row div.views-field-nothing a {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+}
+
+.front div.views-slideshow-cycle-main-frame-row div.views-field-nothing a {
+  color: rgb(255, 255, 255);
 }
