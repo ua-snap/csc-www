@@ -456,16 +456,23 @@ div#block-rotating_banner-1 {
 
 div.views-slideshow-controls-bottom {
   position: relative;
-  width: 170px;
+  width: 120px;
   left: 750px;
   bottom: 20px;
   z-index: 6;
 }
 
-.front div.views-slideshow-cycle-main-frame-row div.views-field-nothing a {
-  position: absolute;
-  bottom: 2px;
-  right: 25px;
+.front div.more-link {
+  position: relative;
+  width: 120px;
+  left: 880px;
+  bottom: 29px;
+  line-height: 0;
+  z-index: 6;
+}
+
+.front div.more-link a {
+  color: rgb(255, 255, 255);
 }
 
 .front div.views-slideshow-cycle-main-frame-row div.views-field-nothing a {
