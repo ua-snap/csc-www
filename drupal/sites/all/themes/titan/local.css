@@ -204,7 +204,7 @@ div#field-news-related-people-add-more-wrapper, div#field-news-related-resources
 }
 
 div#content {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 div.node-teaser div.field-type-taxonomy-term-reference {
@@ -259,7 +259,7 @@ div.field.field-name-field-date.field-type-datetime.field-label-above div.field-
 div.field.field-name-field-date.field-type-datetime.field-label-above div.field-label {
 }
 
-div.breadcrumb {
+div#breadcrumb {
   display: none;
 }
 
@@ -412,4 +412,51 @@ div.breadcrumb {
 
 .front div#block-views-events-block .node-header {
   line-height: 18px;
+}
+
+div#block-rotating_banner-1 {
+  margin-bottom: 20px;
+}
+
+.front div#block-views-banner-block {
+  background-color: rgb(46, 73, 112);
+  margin-bottom: 20px;
+}
+
+.front div.views-field.views-field-field-banner-image {
+  width: 654px;
+  height: 302px;
+  float: left;
+}
+
+.front div.views-slideshow-cycle-main-frame-row div.views-field.views-field-title {
+  color: rgb(255, 255, 255);
+  width: 261px;
+  padding: 15px 15px 15px 30px;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.front div.views-slideshow-cycle-main-frame-row div.views-field.views-field-body {
+  color: rgb(255, 255, 255);
+  width: 261px;
+  padding: 0 15px 0 30px;
+  float: right;
+}
+
+.front div.views-content-counter {
+  color: rgb(255, 255, 255);
+  width: 20px;
+  float: left;
+  cursor: hand;
+  pointer: pointer;
+}
+
+div.views-slideshow-controls-bottom {
+  position: relative;
+  width: 261px;
+  margin-left: 875px;
+  margin-top: -20px;
+  z-index: 3;
 }
