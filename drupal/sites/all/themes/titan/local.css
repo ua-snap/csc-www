@@ -459,7 +459,7 @@ div.views-slideshow-controls-bottom {
   width: 170px;
   left: 750px;
   bottom: 20px;
-  z-index: 3;
+  z-index: 6;
 }
 
 .front div.views-slideshow-cycle-main-frame-row div.views-field-nothing a {
