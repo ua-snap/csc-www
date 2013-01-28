@@ -166,10 +166,6 @@
     <?php endif; ?>
 
     <div id="closure" class="clearfix">
-      <ul id="info">
-        <li class="copyright"><?php print theme_get_setting('copyright_information');  ?></li>
-        <li><a href="http://wordpress.org/extend/themes/titan">Titan theme</a> ported by <a href="http://kiwi-themes.com">Kiwi Drupal Themes</a>.</li>
-      </ul>
 
       <?php if ($page['footer_menu']): ?>
         <div id="footer-menu">

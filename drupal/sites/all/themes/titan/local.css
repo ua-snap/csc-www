@@ -222,7 +222,7 @@ div.icon-pdf {
 
 #header-menu .content li.expanded a {
   background-image: none;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 #header-menu .content li.expanded ul {
@@ -477,4 +477,10 @@ div.views-slideshow-controls-bottom {
 
 .front div.views-slideshow-cycle-main-frame-row div.views-field-nothing a {
   color: rgb(255, 255, 255);
+}
+
+.front div#block-block-1 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: rgb(46, 73, 112);
 }
