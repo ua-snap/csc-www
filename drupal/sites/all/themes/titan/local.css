@@ -12,6 +12,10 @@ body {
   background: none;
 }
 
+.node h1.node-title a {
+  font-size: 28px;
+}
+
 a#logo {
   margin-left: -15px;
 }
@@ -73,9 +77,14 @@ form#search-block-form input#edit-search-block-form--2.form-text {
   padding: 6px 6px;
 }
 
-#header-menu .content {
+.front #header-menu .content {
   height: 32px;
   margin-top: -24px;
+}
+
+#header-menu .content {
+  height: 32px;
+  margin-top: -26px;
 }
 
 form#search-block-form #edit-actions {
@@ -280,17 +289,30 @@ div#breadcrumb {
   display: none;
 }
 
+div#block-views-events-block h2 {
+  display: none;
+}
+
+.front div#block-views-events-block h2 {
+  display: block;
+}
+
 .front div#block-views-events-block {
   width: 306px;
-  height: 350px;
+  height: 400px;
   background-color: rgb(46, 73, 112);
 }
 
 .front div#block-views-research_highlights-block,
 .front div#block-views-featured_scientists-block {
   width: 305px;
-  height: 350px;
+  height: 400px;
   background-color: rgb(144, 173, 61);
+}
+
+.front div.field-name-field-resource-highlight-image,
+.front div.field-name-field-featured-scientist-image {
+  padding-bottom: 5px;
 }
 
 .front div#block-views-events-block h2,
@@ -483,4 +505,50 @@ div.views-slideshow-controls-bottom {
   margin-bottom: 20px;
   font-size: 14px;
   color: rgb(46, 73, 112);
+}
+
+div#node-7,
+div#node-5 {
+  padding-top: 0;
+}
+
+.front div#node-5 {
+  padding-top: 23px;
+}
+
+div#block-views-people-block_1 tr {
+  border-bottom: 0;
+  height: 300px;
+}
+
+.front div#branding {
+  display: block;
+}
+
+div#branding {
+  display: none;
+}
+
+.front #header-menu-wrapper {
+  margin-top: 0;
+}
+
+#header-menu-wrapper {
+  margin-top: 20px;
+}
+
+.front #header-menu-wrapper {
+  margin-top: 0;
+}
+
+div#header-menu-wrapper {
+  margin-left: 135px;
+}
+
+.front div#header-menu-wrapper {
+  margin-left: 0;
+}
+
+div#header-menu-wrapper img {
+  margin-left: -135px;
 }
