@@ -1,0 +1,554 @@
+#header-wrapper {
+  background-color: rgb(255, 255, 255);
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  width: 960px;
+  margin: 0 auto;
+}
+
+#main-wrapper {
+  background: none;
+}
+
+.node h1.node-title a {
+  font-size: 28px;
+}
+
+a#logo {
+  margin-left: -15px;
+}
+
+#block-node_subpages-menu_bar li {
+  float: left;
+  margin-left: -30px;
+  margin-right: 30px;
+  background: none;
+}
+
+#block-node_subpages-menu_bar li a {
+  color: rgb(168, 139, 110);
+}
+
+#breadcrumb {
+  font-size: 12px;
+}
+
+div.field-label, .field-type-taxonomy-term-reference .field-label {
+  color: rgb(68, 68, 68);
+  font-weight: bold;
+  display: block;
+}
+
+div.field {
+  margin-bottom: 10px;
+}
+
+div.sharethis-wrapper {
+  margin-top: 30px;
+}
+
+#branding #site-name a,
+#branding #site-name a:active,
+#branding #site-name a:focus {
+  color: rgb(46, 73, 112);
+}
+
+div#block-views-resources-block_1,
+div#block-views-projects-block_1,
+div#block-views-people-block_1,
+div#block-views-workshops-block_1 {
+  margin-top: -20px;
+}
+
+/*
+form#search-block-form {
+  margin-top: -100px;
+  margin-bottom: 40px;
+}
+*/
+
+form#search-block-form input#edit-search-block-form--2.form-text {
+  background: rgb(255, 255, 255) url(/sites/all/themes/titan/search.png) no-repeat scroll 225px center;
+  width: 250px;
+  float: right;
+  margin-top: -140px;
+  padding: 6px 6px;
+}
+
+.front #header-menu .content {
+  height: 32px;
+  margin-top: -24px;
+}
+
+#header-menu .content {
+  height: 32px;
+  margin-top: -26px;
+}
+
+form#search-block-form #edit-actions {
+  display: none;
+}
+
+.date .year, .date .month, .date .day {
+  color: rgb(144, 173, 61);
+}
+
+.node .meta a, li.node-readmore.first.last a, a {
+  color: rgb(46, 73, 112);
+}
+
+.node .meta a:hover, li.node-readmore.first.last a:hover, a:hover {
+  color: rgb(144, 173, 61);
+}
+
+div.views-widget input#edit-keys.form-text{
+  width: 350px;
+}
+
+div#block-system-navigation ul.menu {
+  margin: 0;
+}
+
+div#block-system-navigation ul.menu li {
+  padding-top: 4px;
+}
+
+div#block-system-navigation ul.menu li a {
+  color: rgb(255, 255, 255);
+  display: inline;
+  padding: 2px 21px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+div#header-menu-wrapper {
+  background-color: rgb(46, 73, 112);
+  background-image: none;
+}
+
+#header-menu .content ul {
+  margin-left: -20px;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: rgb(193, 205, 145) !important;
+  background-color: transparent !important;
+}
+
+#footer-wrapper {
+  border-top-color: rgb(46, 73, 112);
+  background-color: rgb(255, 255, 255);
+}
+
+div.view-id-people td {
+  text-align: center;
+}
+
+ul {
+  list-style: disc outside none;
+  margin: 20px 0 20px 25px;
+}
+
+ul li {
+  background: none;
+  padding: 0;
+}
+
+div.user-picture {
+  margin-bottom: 20px;
+}
+
+/*
+div.node-page, div.node-promoted {
+  border-top: none;
+}
+*/
+
+input.form-submit {
+  font-size: 13px;
+  background-color: rgb(240, 235, 231);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(209, 203, 181);
+  padding: 3px 5px;
+}
+
+#edit-submit--2, #edit-submit--3 {
+  display: none;
+}
+
+th, th.field-label, th.tabledrag-hide {
+  background-color: rgb(240, 240, 238);
+  color: rgb(68, 68, 68);
+  padding: 5px 14px;
+}
+
+th, th.field-label label, th.tabledrag-hide label {
+  margin-bottom: 0;
+}
+
+th a {
+  color: rgb(68, 68, 68) !important;
+}
+
+span.summary {
+  display: block;
+  clear: both;
+}
+
+div.filter-guidelines ul, ul.action-links {
+  margin-left: 25px;
+}
+
+div.filter-guidelines li {
+  padding-left: 0;
+}
+
+div#field-news-related-people-add-more-wrapper, div#field-news-related-resources-add-more-wrapper {
+  margin: 25px 0;
+}
+
+div#content {
+  margin-bottom: 20px;
+}
+
+div.node-teaser div.field-type-taxonomy-term-reference {
+  display: none;
+}
+
+div.icon-pdf {
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-top: -52px;
+  margin-left: -90px;
+  background-image: url(/sites/all/themes/titan/icons/pdf.gif);
+}
+
+#header-menu .content li.expanded a {
+  background-image: none;
+  padding-bottom: 12px;
+}
+
+#header-menu .content li.expanded ul {
+  background-color: rgb(109, 136, 171);
+}
+
+#header-menu .content li.expanded ul a:hover {
+  background-color: transparent;
+}
+
+#header-menu .content li.expanded ul {
+  margin-top: 3px;
+}
+
+.node-project div.node-header,
+.node-project div.content,
+div#block-system-main div.node-resource div.node-header div.title-and-meta,
+div#block-system-main div.node-resource.node.indent div.content,
+div#node-6 div {
+  margin-left: 0;
+}
+
+.node-project div.date,
+.node-resource div.date {
+  display: none;
+}
+
+div.field.field-name-field-date.field-type-datetime.field-label-above div.field-items span.date-display-single {
+  color: rgb(144, 173, 61);
+  font-size: 15px;
+  font-weight: 700;
+  float: left;
+}
+
+div.field.field-name-field-date.field-type-datetime.field-label-above div.field-label {
+}
+
+div#breadcrumb {
+  display: none;
+}
+
+.node {
+  border-top: none;
+}
+
+.front div#block-system-main {
+  display: none;
+}
+
+.front div#content {
+  margin-top: 0;
+}
+
+.front a.feed-icon {
+  display: none;
+}
+
+div#block-views-events-block h2 {
+  display: none;
+}
+
+.front div#block-views-events-block h2 {
+  display: block;
+}
+
+.front div#block-views-events-block {
+  width: 306px;
+  height: 400px;
+  background-color: rgb(46, 73, 112);
+}
+
+.front div#block-views-research_highlights-block,
+.front div#block-views-featured_scientists-block {
+  width: 305px;
+  height: 400px;
+  background-color: rgb(144, 173, 61);
+}
+
+.front div.field-name-field-resource-highlight-image,
+.front div.field-name-field-featured-scientist-image {
+  padding-bottom: 5px;
+}
+
+.front div#block-views-events-block h2,
+.front div#block-views-research_highlights-block h2,
+.front div#block-views-featured_scientists-block h2 {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+.front div#block-views-events-block h2.node-title,
+.front div#block-views-research_highlights-block h2.node-title,
+.front div#block-views-featured_scientists-block h2.node-title {
+  line-height: 18px;
+  text-align: left;
+  padding: 0;
+}
+
+
+.front div#block-views-events-block p,
+.front div#block-views-events-block h2.node-title a,
+.front div#block-views-research_highlights-block p,
+.front div#block-views-research_highlights-block h2.node-title a,
+.front div#block-views-featured_scientists-block p,
+.front div#block-views-featured_scientists-block h2.node-title a {
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+}
+
+
+.front div#block-views-research_highlights-block h2.node-title a,
+.front div#block-views-featured_scientists-block h2.node-title a {
+  font-size: 14px;
+}
+
+.views-row-last {
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.front div#block-views-events-block a,
+.front div#block-views-research_highlights-block a,
+.front div#block-views-featured_scientists-block a {
+  color: rgb(255, 255, 255);
+}
+
+.front div#block-views-events-block div.date {
+  float: none;
+  text-transform: none;
+  background: none;
+  padding-left: 0;
+  font-size: 14px;
+}
+
+.front div#block-views-research_highlights-block div.date,
+.front div#block-views-featured_scientists-block div.date {
+  display: none;
+}
+
+.front div.view-research-highlights {
+  margin-bottom: 16px;
+}
+
+.front div#block-views-events-block div.view-content,
+.front div#block-views-research_highlights-block div.view-content,
+.front div#block-views-featured_scientists-block div.view-content {
+  padding: 0 20px;
+}
+
+.front div#block-views-events-block .date .year,
+.front div#block-views-events-block .date .month,
+.front div#block-views-events-block .date .day {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.front div#block-views-events-block .date .year {
+  top: 0;
+  display: inline;
+}
+
+.front div#block-views-events-block span.submitted,
+.front div#block-views-research_highlights-block span.submitted,
+.front div#block-views-featured_scientists-block span.submitted {
+  display: none;
+}
+
+.front div#block-views-events-block .node {
+  margin-bottom: 0;
+}
+
+.front div#block-views-events-block,
+.front div#block-views-research_highlights-block,
+.front div#block-views-featured_scientists-block {
+  float: left;
+}
+
+.front div#block-views-events-block,
+.front div#block-views-featured_scientists-block {
+  margin-left: 22px;
+}
+
+.front div#block-views-events-block .node.indent .title-and-meta,
+.front div#block-views-research_highlights-block .node.indent .title-and-meta,
+.front div#block-views-research_highlights-block .node.indent .content,
+.front div#block-views-featured_scientists-block .node.indent .title-and-meta,
+.front div#block-views-featured_scientists-block .node.indent .content {
+  margin-left: 0;
+}
+
+.front div#block-views-events-block .node.indent .title-and-meta a {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.front div#block-views-events-block div.links-wrapper {
+  display: none;
+}
+
+.front div#block-views-events-block .node-header {
+  line-height: 18px;
+}
+
+div#block-rotating_banner-1 {
+  margin-bottom: 20px;
+}
+
+.front div#block-views-banner-block {
+  background-color: rgb(46, 73, 112);
+  margin-bottom: 20px;
+}
+
+.front div.views-field.views-field-field-banner-image {
+  width: 654px;
+  height: 282px;
+  float: left;
+}
+
+.front div.views-slideshow-cycle-main-frame-row div.views-field.views-field-title {
+  color: rgb(255, 255, 255);
+  width: 266px;
+  padding: 15px 20px 15px 20px;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.front div.views-slideshow-cycle-main-frame-row div.views-field.views-field-body {
+  color: rgb(255, 255, 255);
+  width: 266px;
+  padding: 0 20px 0 20px;
+  float: right;
+}
+
+.front div.views-content-counter {
+  color: rgb(255, 255, 255);
+  width: 20px;
+  float: left;
+  cursor: hand;
+  cursor: pointer;
+}
+
+div.views-slideshow-controls-bottom {
+  position: relative;
+  width: 120px;
+  left: 750px;
+  bottom: 20px;
+  z-index: 6;
+}
+
+.front div.more-link {
+  position: relative;
+  width: 120px;
+  left: 880px;
+  bottom: 29px;
+  line-height: 0;
+  z-index: 6;
+}
+
+.front div.more-link a {
+  color: rgb(255, 255, 255);
+}
+
+.front div.views-slideshow-cycle-main-frame-row div.views-field-nothing a {
+  color: rgb(255, 255, 255);
+}
+
+.front div#block-block-1 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: rgb(46, 73, 112);
+}
+
+div#node-7,
+div#node-5 {
+  padding-top: 0;
+}
+
+.front div#node-5 {
+  padding-top: 23px;
+}
+
+div#block-views-people-block_1 tr {
+  border-bottom: 0;
+  height: 300px;
+}
+
+.front div#branding {
+  display: block;
+}
+
+div#branding {
+  display: none;
+}
+
+.front #header-menu-wrapper {
+  margin-top: 0;
+}
+
+#header-menu-wrapper {
+  margin-top: 20px;
+}
+
+.front #header-menu-wrapper {
+  margin-top: 0;
+}
+
+div#header-menu-wrapper {
+  margin-left: 135px;
+}
+
+.front div#header-menu-wrapper {
+  margin-left: 0;
+}
+
+div#header-menu-wrapper img {
+  margin-left: -135px;
+}

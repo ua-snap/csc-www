@@ -1,8 +1,0 @@
-; $Id$
- 
-name = Resource Control
-description = Provides tighter controls on the Resource node type.
-package = Resource Control
-core = 7.x
- 
-files[] = resource_control.module
