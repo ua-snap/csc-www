@@ -220,6 +220,7 @@ div.node-teaser div.field-type-taxonomy-term-reference {
   display: none;
 }
 
+/*
 div.icon-pdf {
   width: 32px;
   height: 32px;
@@ -228,6 +229,7 @@ div.icon-pdf {
   margin-left: -90px;
   background-image: url(/sites/all/themes/titan/icons/pdf.gif);
 }
+*/
 
 #header-menu .content li.expanded a {
   background-image: none;
@@ -259,7 +261,7 @@ div#node-6 div {
   display: none;
 }
 
-div.field.field-name-field-date.field-type-datetime.field-label-above div.field-items span.date-display-single {
+.front div.field.field-name-field-date.field-type-datetime.field-label-above div.field-items span.date-display-single {
   color: rgb(144, 173, 61);
   font-size: 15px;
   font-weight: 700;
@@ -289,11 +291,11 @@ div#breadcrumb {
   display: none;
 }
 
-div#block-views-events-block h2 {
+div#block-views-events-block div.inner > h2 {
   display: none;
 }
 
-.front div#block-views-events-block h2 {
+.front div#block-views-events-block div.inner > h2 {
   display: block;
 }
 
@@ -350,8 +352,16 @@ div#block-views-events-block h2 {
   font-size: 14px;
 }
 
-.views-row-last {
+.front div.views-row-last {
   border-top: 1px solid rgb(255, 255, 255);
+}
+
+.front div.view-events div.views-row {
+  border-top: none;
+}
+
+.front div.view-events div.views-row div.node-header {
+  margin-bottom: 20px;
 }
 
 .front div#block-views-events-block a,
@@ -395,14 +405,9 @@ div#block-views-events-block h2 {
   display: inline;
 }
 
-.front div#block-views-events-block span.submitted,
-.front div#block-views-research_highlights-block span.submitted,
-.front div#block-views-featured_scientists-block span.submitted {
-  display: none;
-}
-
 .front div#block-views-events-block .node {
   margin-bottom: 0;
+  border-top: 1px solid rgb(255, 255, 255);
 }
 
 .front div#block-views-events-block,
@@ -429,6 +434,14 @@ div#block-views-events-block h2 {
   font-weight: normal;
 }
 
+.front div.node-event div.field-name-body {
+  display: none;
+}
+
+.title-and-meta span.submitted {
+  display: none;
+}
+
 .front div#block-views-events-block div.links-wrapper {
   display: none;
 }
@@ -450,6 +463,13 @@ div#block-rotating_banner-1 {
   width: 654px;
   height: 282px;
   float: left;
+}
+
+.front div.views-field-field-link a {
+  color: rgb(255, 255, 255);
+  padding: 0 20px 0 20px;
+  position: relative;
+  top: 10px;
 }
 
 .front div.views-slideshow-cycle-main-frame-row div.views-field.views-field-title {
@@ -509,10 +529,10 @@ div.views-slideshow-controls-bottom {
 
 div#node-7,
 div#node-5 {
-  padding-top: 0;
+  padding-top: 20px;
 }
 
-.front div#node-5 {
+.front div.node-event {
   padding-top: 23px;
 }
 
@@ -551,4 +571,48 @@ div#header-menu-wrapper {
 
 div#header-menu-wrapper img {
   margin-left: -135px;
+}
+
+div#block-views-projects-block_1 .views-row-odd {
+  background-color: #cdd5de;
+  padding: 0 20px 5px 20px;
+}
+
+div#block-system-navigation ul.menu li.last {
+}
+
+div#block-views-projects-block_1 .views-row-even {
+  padding: 0 20px 5px 20px;
+}
+
+div#block-views-projects-block_1 .node.indent .title-and-meta,
+div#block-views-projects-block_1 .node.indent .content {
+  margin-left: 0;
+}
+
+div#node-11 .node-title {
+  display: none;
+}
+
+div#node-11 {
+  padding-top: 0;
+}
+
+div#main div#content {
+  margin-top: 0;
+}
+
+div#block-views-projects-block_1 div.field-name-field-project-image {
+  float: left;
+}
+
+div#block-views-projects-block_1 div.node-header {
+  width: 586px;
+  float: right;
+}
+
+div#block-views-projects-block_1 div.title-and-meta {
+  position: relative;
+  width: 606px;
+  margin-top: 10px;
 }
