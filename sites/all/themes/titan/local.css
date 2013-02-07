@@ -606,13 +606,32 @@ div#block-views-projects-block_1 div.field-name-field-project-image {
   float: left;
 }
 
-div#block-views-projects-block_1 div.node-header {
-  width: 586px;
+div#block-views-projects-block_1 div.node-header,
+div#block-views-projects-block_1 div.field-name-field-project-location,
+div#block-views-projects-block_1 div.field-name-field-project-duration,
+div#block-views-projects-block_1 div.field-type-text-with-summary,
+div#block-views-projects-block_1 div.links-wrapper {
+  width: 687px;
   float: right;
+}
+
+div#block-views-projects-block_1 div.node-header {
+  margin-bottom: 0;
+}
+
+div#block-views-projects-block_1 div.field-name-field-project-location {
+  margin-bottom: 0;
+}
+
+div#block-views-projects-block_1 div.links-wrapper {
 }
 
 div#block-views-projects-block_1 div.title-and-meta {
   position: relative;
   width: 606px;
-  margin-top: 10px;
+  margin-top: 3px;
+}
+
+div#block-system-navigation ul.menu li.add-content {
+  display: none;
 }
