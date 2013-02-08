@@ -251,8 +251,7 @@ div.icon-pdf {
 .node-project div.node-header,
 .node-project div.content,
 div#block-system-main div.node-resource div.node-header div.title-and-meta,
-div#block-system-main div.node-resource.node.indent div.content,
-div#node-6 div {
+div#block-system-main div.node-resource.node.indent div.content {
   margin-left: 0;
 }
 
@@ -634,4 +633,92 @@ div#block-views-projects-block_1 div.title-and-meta {
 
 div#block-system-navigation ul.menu li.add-content {
   display: none;
+}
+
+div.node-project div.field-name-field-project-location div.field-label, 
+div.node-project div.field-name-field-project-location div.field-items,
+div.node-project div.field-name-field-project-location div.field-items div {
+  display: inline;
+}
+
+div.node-project div.field-name-field-duration div.field-label, 
+div.node-project div.field-name-field-duration div.field-items,
+div.node-project div.field-name-field-duration div.field-items div {
+  display: inline;
+}
+
+div.node-project div.field-name-field-project-image {
+}
+
+div#block-views-projects-block_1 div.node-project {
+  background-color: transparent;
+}
+
+div#block-system-main div.inner div.node-project {
+  margin-top: 30px;
+}
+
+div#block-system-main div.inner div.node-project .node-header{
+  margin-bottom: 0;
+}
+
+div#block-system-main div.inner div.node-project h1.node-title {
+  padding: 20px 20px;
+  background-color: #cdd5de;
+}
+
+div#block-system-main div.inner div.node-project div.content {
+  background-color: #ffffff;
+  padding-bottom: 10px;
+}
+
+div#block-system-main div.inner div.node-project div.field-name-field-project-location {
+  margin-bottom: 0;
+  padding: 0 20px 10px 20px;
+  background-color: #cdd5de;
+}
+
+div#block-system-main div.inner div.node-project div.field-name-field-duration {
+  margin-bottom: 30px;
+  padding: 0 20px 20px 20px;
+  background-color: #cdd5de;
+}
+
+div#block-system-main div.inner div.node-project div.field-name-body {
+  margin-bottom: 30px;
+  margin-left: 230px;
+}
+
+div#block-system-main div.inner div.node-project div.field-name-field-project-image {
+  margin-right: 30px;
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+div#block-system-main div.inner div.node-project div.field-name-field-keywords {
+  background-color: #cdd5de;
+  margin-left: 230px;
+  margin-bottom: 0;
+  width: 700px;
+  padding: 10px 15px 15px 15px;
+}
+
+div#block-system-main div.inner div.node-project div.field-name-field-project-related-people,
+div#block-system-main div.inner div.node-project div.field-name-field-project-related-events, 
+div#block-system-main div.inner div.node-project div.field-name-field-project-related-resources {
+  background-color: #cdd5de;
+  margin-left: 230px;
+  margin-bottom: 0;
+  width: 700px;
+  padding: 10px 15px 10px 15px;
+}
+
+div#block-system-main div.inner div.node-project div.links-wrapper {
+  margin: 0 4px;
+}
+
+div.caption p {
+  font-style: italic;
 }
