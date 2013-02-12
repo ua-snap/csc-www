@@ -290,8 +290,9 @@ div#breadcrumb {
   display: none;
 }
 
-div#block-views-events-block div.inner > h2 {
-  display: none;
+.front div#block-views-events-block div.inner > h2 {
+  padding: 10px 0 0 0;
+  background-color: transparent;
 }
 
 .front div#block-views-events-block div.inner > h2 {
@@ -302,6 +303,22 @@ div#block-views-events-block div.inner > h2 {
   width: 306px;
   height: 400px;
   background-color: rgb(46, 73, 112);
+}
+
+div#block-views-events-block div.inner > h2 {
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  background-color: rgb(144, 173, 61);
+}
+
+div#block-views-events-block_1 div.inner > h2 {
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  background-color: rgb(144, 173, 61);
+}
+
+div#node-12 {
+  margin-bottom: 0;
 }
 
 .front div#block-views-research_highlights-block,
@@ -435,6 +452,10 @@ div#block-views-events-block div.inner > h2 {
 
 .front div.node-event div.field-name-body {
   display: none;
+}
+
+div#block-views-events-block .inner .node {
+  margin-bottom: 0;
 }
 
 .title-and-meta span.submitted {

@@ -88,7 +88,7 @@
   // Some AK CSC changes here, to use the begin date for workshops instead of
   // the node creation date, which we use for other content types.
 
-  if($node->type == 'workshop' &&
+  if($node->type == 'event' &&
      !empty($node->field_date[$node->language][0]['value'])) {
     $raw_date = $node->field_date[$node->language][0]['value'];
     $date = explode(' ', $raw_date);
