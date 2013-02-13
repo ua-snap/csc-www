@@ -296,7 +296,12 @@ div#breadcrumb {
 }
 
 .front div#block-views-events-block div.inner > h2 {
-  display: block;
+}
+
+.front div#block-views-events-block div.inner div.field-name-field-location,
+.front div#block-views-events-block div.inner div.field-name-field-date,
+.front div#block-views-events-block div.inner div.field-name-field-event-image {
+  display: none;
 }
 
 .front div#block-views-events-block {
