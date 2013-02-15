@@ -256,6 +256,7 @@ div#block-system-main div.node-resource.node.indent div.content {
 }
 
 .node-project div.date,
+.node-event div.date,
 .node-resource div.date {
   display: none;
 }
@@ -290,33 +291,74 @@ div#breadcrumb {
   display: none;
 }
 
-.front div#block-views-events-block div.inner > h2 {
+.front div#block-views-events-block div.inner > h2,
+.front div#block-views-events-block_1 div.inner > h2 {
   padding: 10px 0 0 0;
   background-color: transparent;
 }
 
-.front div#block-views-events-block div.inner > h2 {
-}
-
 .front div#block-views-events-block div.inner div.field-name-field-location,
 .front div#block-views-events-block div.inner div.field-name-field-date,
-.front div#block-views-events-block div.inner div.field-name-field-event-image {
+.front div#block-views-events-block div.inner div.field-name-field-event-image,
+.front div#block-views-events-block_1 div.inner div.field-name-field-location,
+.front div#block-views-events-block_1 div.inner div.field-name-field-date,
+.front div#block-views-events-block_1 div.inner div.field-name-field-event-image {
   display: none;
 }
 
-.front div#block-views-events-block {
+.front div#block-views-events-block,
+.front div#block-views-events-block_1 {
   width: 306px;
   height: 400px;
   background-color: rgb(46, 73, 112);
 }
 
-div#block-views-events-block div.inner > h2 {
-  color: rgb(255, 255, 255);
-  padding: 5px 10px;
-  background-color: rgb(144, 173, 61);
+.not-front div#block-views-events-block div.views-row,
+.not-front div#block-views-events-block_1 div.views-row {
+  padding: 0 20px 5px 20px;
 }
 
-div#block-views-events-block_1 div.inner > h2 {
+.not-front div#block-views-events-block div.node-header,
+.not-front div#block-views-events-block div.node-header,
+.not-front div#block-views-events-block div.field-name-body,
+.not-front div#block-views-events-block div.field-name-field-date,
+.not-front div#block-views-events-block div.field-name-field-location,
+.not-front div#block-views-events-block div.links-wrapper, 
+.not-front div#block-views-events-block_1 div.node-header,
+.not-front div#block-views-events-block_1 div.node-header,
+.not-front div#block-views-events-block_1 div.field-name-body,
+.not-front div#block-views-events-block_1 div.field-name-field-date,
+.not-front div#block-views-events-block_1 div.field-name-field-location,
+.not-front div#block-views-events-block_1 div.links-wrapper {
+  float: right;
+  width: 687px;
+}
+
+.not-front div#block-views-events-block div.field-name-field-event-image,
+.not-front div#block-views-events-block_1 div.field-name-field-event-image {
+  float: left;
+}
+
+.not-front div#block-views-events-block div.date,
+.not-front div#block-views-events-block_1 div.date {
+  display: none;
+}
+
+.not-front div#block-views-events-block div.title-and-meta,
+.not-front div#block-views-events-block_1 div.title-and-meta {
+  position: relative;
+  width: 606px;
+  margin-left: 0;
+  margin-top: 3px;
+}
+
+.not-front div#block-views-events-block .node.indent .content,
+.not-front div#block-views-events-block_1 .node.indent .content {
+  margin-left: 0;
+}
+
+.not-front div#block-views-events-block div.inner > h2,
+.not-front div#block-views-events-block_1 div.inner > h2 {
   color: rgb(255, 255, 255);
   padding: 5px 10px;
   background-color: rgb(144, 173, 61);
@@ -598,7 +640,14 @@ div#header-menu-wrapper img {
   margin-left: -135px;
 }
 
-div#block-views-projects-block_1 .views-row-odd {
+.front div#block-views-events-block .views-row-odd,
+.front div#block-views-events-block_1 .views-row-odd {
+  background-color: transparent;
+}
+
+.not-front div#block-views-events-block .views-row-odd,
+.not-front div#block-views-events-block_1 .views-row-odd,
+.not-front div#block-views-projects-block_1 .views-row-odd {
   background-color: #cdd5de;
   padding: 0 20px 5px 20px;
 }
@@ -615,11 +664,13 @@ div#block-views-projects-block_1 .node.indent .content {
   margin-left: 0;
 }
 
-div#node-11 .node-title {
+div#node-11 .node-title,
+div#node-12 .node-title {
   display: none;
 }
 
-div#node-11 {
+div#node-11,
+div#node-12 {
   padding-top: 0;
 }
 
@@ -640,11 +691,15 @@ div#block-views-projects-block_1 div.links-wrapper {
   float: right;
 }
 
-div#block-views-projects-block_1 div.node-header {
+div#block-views-projects-block_1 div.node-header,
+.not-front div#block-views-events-block div.node-header,
+.not-front div#block-views-events-block_1 div.node-header {
   margin-bottom: 0;
 }
 
-div#block-views-projects-block_1 div.field-name-field-project-location {
+div#block-views-projects-block_1 div.field-name-field-project-location,
+div#block-views-events-block div.field-name-field-location,
+div#block-views-events-block_1 div.field-name-field-location {
   margin-bottom: 0;
 }
 
@@ -673,6 +728,18 @@ div.node-project div.field-name-field-duration div.field-items div {
   display: inline;
 }
 
+div.node-event div.field-name-field-location div.field-label, 
+div.node-event div.field-name-field-location div.field-items,
+div.node-event div.field-name-field-location div.field-items div {
+  display: inline;
+}
+
+div.node-event div.field-name-field-date div.field-label, 
+div.node-event div.field-name-field-date div.field-items,
+div.node-event div.field-name-field-date div.field-items div {
+  display: inline;
+}
+
 div.node-project div.field-name-field-project-image {
 }
 
@@ -684,11 +751,22 @@ div#block-system-main div.inner div.node-project {
   margin-top: 30px;
 }
 
+div#block-system-main div.inner div.node-event .node-header,
 div#block-system-main div.inner div.node-project .node-header{
   margin-bottom: 0;
 }
 
+div#block-system-main div.inner div.node-event div.title-and-meta,
+div#block-system-main div.inner div.node-event div.content {
+  margin-left: 0;
+}
+
 div#block-system-main div.inner div.node-project h1.node-title {
+  padding: 20px 20px;
+  background-color: #cdd5de;
+}
+
+div#block-system-main div.inner div.node-event h1.node-title {
   padding: 20px 20px;
   background-color: #cdd5de;
 }
@@ -698,24 +776,29 @@ div#block-system-main div.inner div.node-project div.content {
   padding-bottom: 10px;
 }
 
+div#block-system-main div.inner div.node-event div.field-name-field-location,
 div#block-system-main div.inner div.node-project div.field-name-field-project-location {
   margin-bottom: 0;
   padding: 0 20px 10px 20px;
   background-color: #cdd5de;
 }
 
+div#block-system-main div.inner div.node-event div.field-name-field-date,
 div#block-system-main div.inner div.node-project div.field-name-field-duration {
   margin-bottom: 30px;
   padding: 0 20px 20px 20px;
   background-color: #cdd5de;
 }
 
-div#block-system-main div.inner div.node-project div.field-name-body {
+div#block-system-main div.inner div.node-project div.field-name-body,
+div#block-system-main div.inner div.node-event div.field-name-body,
+div#block-system-main div.inner div.node-event div.field-name-field-agenda {
   margin-bottom: 30px;
   margin-left: 230px;
 }
 
-div#block-system-main div.inner div.node-project div.field-name-field-project-image {
+div#block-system-main div.inner div.node-project div.field-name-field-project-image,
+div#block-system-main div.inner div.node-event div.field-name-field-event-image {
   margin-right: 30px;
   margin-bottom: 0;
   padding: 0;
@@ -733,7 +816,9 @@ div#block-system-main div.inner div.node-project div.field-name-field-keywords {
 
 div#block-system-main div.inner div.node-project div.field-name-field-project-related-people,
 div#block-system-main div.inner div.node-project div.field-name-field-project-related-events, 
-div#block-system-main div.inner div.node-project div.field-name-field-project-related-resources {
+div#block-system-main div.inner div.node-project div.field-name-field-project-related-resources,
+div#block-system-main div.inner div.node-event div.field-name-field-participants,
+div#block-system-main div.inner div.node-event div.field-name-field-products {
   background-color: #cdd5de;
   margin-left: 230px;
   margin-bottom: 0;
