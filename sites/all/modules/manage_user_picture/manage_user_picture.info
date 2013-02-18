@@ -1,0 +1,8 @@
+; $Id$
+ 
+name = Manage User Picture
+description = This module simply adds the "User Picture" field to the "Manage Display" screen.
+package = Manage User Picture
+core = 7.x
+ 
+files[] = manage_user_picture.module

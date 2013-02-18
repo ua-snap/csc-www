@@ -256,7 +256,7 @@ div#block-system-main div.node-resource.node.indent div.content {
 }
 
 .node-project div.date,
-.node-event div.date,
+.not-front .node-event div.date,
 .node-resource div.date {
   display: none;
 }
@@ -832,4 +832,124 @@ div#block-system-main div.inner div.node-project div.links-wrapper {
 
 div.caption p {
   font-style: italic;
+}
+
+div.profile div.user-picture {
+  width: 325px;
+}
+
+div.profile div.user-picture img {
+  height: 150px;
+}
+
+div.profile div.group-left-side h3 {
+  display: none;
+}
+
+div.profile div.group-left-side {
+  float: left;
+  display: inline-block;
+}
+
+div.profile div.field-name-field-first-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+div.profile div.field-name-field-last-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+div.profile div.field-name-field-position {
+  width: 325px;
+  clear: left;
+}
+
+div.profile div.field-name-field-position div {
+  display: inline-block;
+}
+
+div.profile div.field-name-field-affiliation {
+  width: 325px;
+  clear: left;
+}
+
+div.profile div.field-name-field-affiliation div {
+  display: inline-block;
+}
+
+div.profile div.field-name-field-email {
+  width: 325px;
+  clear: left;
+}
+
+div.profile div.field-name-field-email div {
+  display: inline-block;
+}
+
+div.profile div.field-name-field-phone {
+  width: 325px;
+  clear: left;
+}
+
+div.profile div.field-name-field-phone div {
+  display: inline-block;
+}
+
+div.profile div.group-right-side h3 {
+  display: none;
+}
+
+div.profile div.group-right-side {
+  width: 625px;
+  float: right;
+}
+
+div.profile div.group-about h3 {
+  display: none;
+}
+
+div.profile div.group-about {
+  width: 625px;
+  margin-bottom: 30px;
+}
+div.profile div.field-name-field-bio {
+  width: 625px;
+}
+
+div.profile div.field-name-field-education {
+  width: 625px;
+}
+
+div.profile div.field-name-field-areas-of-expertise {
+  width: 625px;
+}
+
+div.profile div.group-related-entities h3 {
+  display: none;
+}
+
+div.profile div.group-related-entities {
+  width: 625px;
+  background-color: #cdd5de;
+}
+
+div.profile div.field-name-field-people-related-projects {
+  width: 595px;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 0;
+}
+
+div.profile div.field-name-field-people-related-resources {
+  width: 595px;
+  padding: 10px 15px 10px 15px;
+}
+
+div#block-views-people-block_1 .cols-4 td {
+  width: 240px;
 }
