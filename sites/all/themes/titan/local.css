@@ -1003,3 +1003,13 @@ span.summary {
 #footer-columns .region {
   margin-bottom: 0;
 }
+
+p + ul, p + ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ul + p, ol + p {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
