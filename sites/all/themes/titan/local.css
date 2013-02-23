@@ -104,6 +104,18 @@ form#search-block-form #edit-actions {
   margin: 0;
 }
 
+.not-front #header-menu #block-system-navigation {
+  bottom: 2px;
+}
+
+.not-front #header-menu #block-system-navigation ul.menu {
+  margin-left: 100px;
+}
+
+.not-front #header-menu #block-system-navigation ul.menu ul.menu {
+  margin-left: 0;
+}
+
 #header-menu #block-system-navigation ul.menu ul.menu {
   margin-top: 3px;
 }
@@ -609,7 +621,7 @@ span.summary {
 }
 
 #header-menu-wrapper {
-  margin-left: 135px;
+/*  margin-left: 135px; */
 }
 
 .front #header-menu-wrapper {
@@ -617,7 +629,7 @@ span.summary {
 }
 
 #header-menu-wrapper img {
-  margin-left: -135px;
+/*  margin-left: -135px; */
 }
 
 .front #block-views-events-block .views-row-odd,
@@ -1012,4 +1024,96 @@ p + ul, p + ol {
 ul + p, ol + p {
   margin-top: 20px;
   margin-bottom: 0;
+}
+
+/*
+#block-block-2 {
+  border-bottom: 2px solid #DBD3D0;
+  padding-bottom: 20px;
+}
+
+#closure {
+  border-top: none;
+}
+*/
+
+.not-front #block-block-3 {
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+/* Resource Icons */
+
+.block-1 .views-row,
+#block-views-resources-block_1 .views-row {
+  margin-left: 100px;
+}
+
+.icon-audio {
+  height: 64px;
+  width: 64px;
+  background-image: url(/sites/default/files/icons/audio.png);
+  float: left;
+  margin-top: -35px;
+  margin-left: -100px;
+}
+
+.icon-document {
+  height: 64px;
+  width: 64px;
+  background-image: url(/sites/default/files/icons/document.png);
+  float: left;
+  margin-top: -35px;
+  margin-left: -100px;
+}
+
+
+.icon-educational-resource {
+  height: 64px;
+  width: 64px;
+  background-image: url(/sites/default/files/icons/educational-resource.png);
+  float: left;
+  margin-top: -35px;
+  margin-left: -100px;
+}
+
+.icon-fact-sheet-faq {
+  height: 64px;
+  width: 64px;
+  background-image: url(/sites/default/files/icons/fact-sheet-faq.png);
+  float: left;
+  margin-top: -35px;
+  margin-left: -100px;
+}
+.icon-poster {
+  height: 64px;
+  width: 64px;
+  background-image: url(/sites/default/files/icons/poster.png);
+  float: left;
+  margin-top: -35px;
+  margin-left: -100px;
+}
+.icon-presentation {
+  height: 64px;
+  width: 64px;
+  background-image: url(/sites/default/files/icons/presentation.png);
+  float: left;
+  margin-top: -35px;
+  margin-left: -100px;
+}
+.icon-video {
+  height: 64px;
+  width: 64px;
+  background-image: url(/sites/default/files/icons/video.png);
+  float: left;
+  margin-top: -35px;
+  margin-left: -100px;
+}
+.icon-website {
+  height: 64px;
+  width: 64px;
+  background-image: url(/sites/default/files/icons/website.png);
+  float: left;
+  margin-top: -35px;
+  margin-left: -100px;
 }
