@@ -80,6 +80,10 @@ form#search-block-form input#edit-search-block-form--2.form-text {
   margin-top: -26px;
 }
 
+.not-front #header-menu .content {
+  margin-bottom: 5px;
+}
+
 form#search-block-form #edit-actions {
   display: none;
 }
@@ -105,23 +109,41 @@ form#search-block-form #edit-actions {
 }
 
 .not-front #header-menu #block-system-navigation {
-  bottom: 2px;
+  /* bottom: 2px; */
+  width: 800px;
+  float: right;
 }
 
 .not-front #header-menu #block-system-navigation ul.menu {
-  margin-left: 100px;
+  margin-top: -6px;
 }
 
 .not-front #header-menu #block-system-navigation ul.menu ul.menu {
   margin-left: 0;
 }
 
-#header-menu #block-system-navigation ul.menu ul.menu {
+.front #header-menu #block-system-navigation ul.menu ul.menu {
   margin-top: 3px;
 }
 
-#block-system-navigation ul.menu li {
-  padding-top: 3px;
+.not-front #header-menu #block-system-navigation ul.menu ul.menu {
+  margin-top: 1px;
+}
+
+.front #block-system-navigation ul.menu li {
+  padding-top: 4px;
+}
+
+#block-system-navigation ul.menu li ul.menu li {
+  padding-top: 4px;
+}
+
+.not-front #block-system-navigation ul.menu li {
+/*  padding-top: 4px; */
+  margin-top: -4px;
+}
+
+.not-front #block-system-navigation ul.menu li ul.menu {
 }
 
 #block-system-navigation ul.menu li a {
@@ -651,12 +673,12 @@ span.summary {
 
 #node-11 .node-title,
 #node-12 .node-title {
-  display: none;
+  /* display: none; */
 }
 
 #node-11,
 #node-12 {
-  padding-top: 0;
+  /* padding-top: 0; */
 }
 
 #main #content {
@@ -823,6 +845,7 @@ span.summary {
 }
 
 #block-system-main .inner .node-project .field-name-body,
+#block-system-main .inner .node-project .field-name-field-publications,
 #block-system-main .inner .node-event .field-name-body,
 #block-system-main .inner .node-event .field-name-field-agenda {
   margin-bottom: 15px;
@@ -992,13 +1015,14 @@ span.summary {
   width: 240px;
 }
 
-#node-39 {
+#node-39,
+#node-58 {
   margin-bottom: 0;
-  padding-top: 0;
+  /* padding-top: 0; */
 }
 
 #node-39 .title-and-meta {
-  display: none;
+  /* display: none; */
 }
 
 #footer .block {
@@ -1020,7 +1044,7 @@ ul + p, ol + p {
 }
 
 .not-front #block-block-3 {
-  margin-top: 3px;
+  margin-top: 5px;
   margin-left: 5px;
 }
 
