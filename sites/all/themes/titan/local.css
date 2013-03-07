@@ -1120,3 +1120,63 @@ ul + p, ol + p {
   float: left;
   margin: 5px 15px 9px 0;
 }
+
+.not-front #content h2,
+.not-front #content h3,
+.not-front #content h4 {
+  color: rgb(46, 73, 112);
+}
+
+.search-result {
+  margin: 25px 0;
+}
+
+.search-result h3.title {
+  font-size: 14px;
+}
+
+.node-title {
+  font-weight: bold;
+}
+
+.view-taxonomy-term .views-row {
+  margin-left: 0;
+  background-color: transparent;
+}
+
+.view-taxonomy-term .views-row .field-name-field-project-location {
+  background-color: transparent;
+}
+
+#block-system-main .inner .view-taxonomy-term .node-event .field-name-field-location,
+#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-project-location,
+#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-duration {
+  display: none;
+}
+
+#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-pi,
+#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-co-pi {
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+#block-system-main .inner .view-taxonomy-term .node-project .field-name-body,
+#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-publications,
+#block-system-main .inner .view-taxonomy-term .node-event .field-name-body,
+#block-system-main .inner .view-taxonomy-term .node-event .field-name-field-agenda {
+  margin-left: 0;
+}
+
+#block-system-main .inner .view-taxonomy-term .node-event .node-header,
+#block-system-main .inner .view-taxonomy-term .node-project .node-header {
+  margin-bottom: 16px;
+}
+
+#block-system-main .inner .view-taxonomy-term .node-resource {
+  padding-left: 100px;
+}
+
+#block-system-main .inner .view-taxonomy-term .caption p {
+  display: none;
+}
+

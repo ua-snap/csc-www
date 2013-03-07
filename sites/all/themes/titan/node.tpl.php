@@ -108,7 +108,8 @@
     <div class="title-and-meta">
       <?php print render($title_prefix); ?>
       <?php if ($page): ?>
-        <h1 class="node-title" <?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
+	<?php // Some AK CSC changes here. Unlink page titles. ?>
+        <h1 class="node-title" <?php print $title_attributes; ?>><?php print $title; ?></h1>
       <?php endif; ?>
       <?php if (!$page): ?>
         <h2 class="node-title" <?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
