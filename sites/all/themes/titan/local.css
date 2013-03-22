@@ -661,6 +661,7 @@ span.summary {
 
 .not-front #block-views-events-block .views-row-odd,
 .not-front #block-views-events-block_1 .views-row-odd,
+.not-front #block-views-outreach-block .views-row-odd,
 .not-front #block-views-projects-block_1 .views-row-odd {
   background-color: #cdd5de;
   padding: 0 20px 5px 20px;
@@ -669,6 +670,7 @@ span.summary {
 #block-system-navigation ul.menu li.last {
 }
 
+#block-views-outreach-block .views-row-even,
 #block-views-projects-block_1 .views-row-even {
   padding: 0 20px 5px 20px;
 }
@@ -692,35 +694,23 @@ span.summary {
   margin-top: 0;
 }
 
+#block-views-outreach-block .field-name-field-outreach-image,
 #block-views-projects-block_1 .field-name-field-project-image {
   float: left;
 }
 
 #block-views-projects-block_1 .node-header,
-#block-views-projects-block_1 .field-name-field-pi,
-#block-views-projects-block_1 .field-name-field-co-pi,
-#block-views-projects-block_1 .field-name-field-project-location,
-#block-views-projects-block_1 .field-name-field-duration,
-#block-views-projects-block_1 .field-type-text-with-summary,
-#block-views-projects-block_1 .links-wrapper {
-  width: 680px;
-  float: right;
-}
-
-#block-views-projects-block_1 .node-header,
-.not-front #block-views-events-block .node-header,
-.not-front #block-views-events-block_1 .node-header {
-  margin-bottom: 0;
-}
-
-/* is this a duplicate? */
 #block-views-projects-block_1 .field-name-field-funded-title,
 #block-views-projects-block_1 .field-name-field-pi,
 #block-views-projects-block_1 .field-name-field-co-pi,
 #block-views-projects-block_1 .field-name-field-project-location,
 #block-views-projects-block_1 .field-name-field-duration,
 #block-views-projects-block_1 .field-type-text-with-summary,
-#block-views-projects-block_1 .links-wrapper {
+#block-views-projects-block_1 .links-wrapper,
+#block-views-outreach-block .node-header,
+#block-views-outreach-block .field-name-field-outreach-location,
+#block-views-outreach-block .field-name-field-outreach-duration,
+#block-views-outreach-block .field-type-text-with-summary {
   width: 680px;
   float: right;
 }
@@ -731,6 +721,14 @@ span.summary {
   margin-bottom: 0;
 }
 
+#block-views-projects-block_1 .node-header,
+.not-front #block-views-events-block .node-header,
+.not-front #block-views-events-block_1 .node-header,
+.not-front #block-views-outreach-block .node-header {
+  margin-bottom: 0;
+}
+
+#block-views-outreach-block .field-name-field-outreach-location,
 #block-views-projects-block_1 .field-name-field-funded-title,
 #block-views-projects-block_1 .field-name-field-pi,
 #block-views-projects-block_1 .field-name-field-co-pi,
@@ -753,6 +751,12 @@ span.summary {
   position: relative;
   width: 606px;
   margin-top: 3px;
+}
+
+#block-views-outreach-block .title-and-meta {
+  position: relative;
+  width: 606px;
+  margin-top: 7px;
 }
 
 #block-views-projects-block_1 .field-name-field-project-location {
@@ -807,6 +811,18 @@ span.summary {
   display: inline;
 }
 
+.node-outreach .field-name-field-outreach-location .field-label, 
+.node-outreach .field-name-field-outreach-location .field-items,
+.node-outreach .field-name-field-outreach-location .field-items div {
+  display: inline;
+}
+
+.node-outreach .field-name-field-outreach-duration .field-label, 
+.node-outreach .field-name-field-outreach-duration .field-items,
+.node-outreach .field-name-field-outreach-duration .field-items div {
+  display: inline;
+}
+
 .node-project .field-name-field-project-image {
 }
 
@@ -818,6 +834,7 @@ span.summary {
   margin-top: 30px;
 }
 
+#block-system-main .inner .node-outreach .node-header,
 #block-system-main .inner .node-event .node-header,
 #block-system-main .inner .node-project .node-header{
   margin-bottom: 0;
@@ -828,6 +845,7 @@ span.summary {
   margin-left: 0;
 }
 
+#block-system-main .inner .node-outreach h1.node-title,
 #block-system-main .inner .node-project h1.node-title {
   padding: 20px 20px;
   background-color: #cdd5de;
@@ -843,6 +861,8 @@ span.summary {
   padding-bottom: 10px;
 }
 
+#block-system-main .inner .node-outreach .field-name-field-outreach-location,
+#block-system-main .inner .node-outreach .field-name-field-outreach-duration,
 #block-system-main .inner .node-event .field-name-field-location,
 #block-system-main .inner .node-project .field-name-field-funded-title,
 #block-system-main .inner .node-project .field-name-field-pi,
@@ -853,6 +873,7 @@ span.summary {
   background-color: #cdd5de;
 }
 
+#block-system-main .inner .node-outreach .field-name-field-outreach-duration,
 #block-system-main .inner .node-event .field-name-field-date,
 #block-system-main .inner .node-project .field-name-field-duration {
   margin-bottom: 30px;
@@ -860,6 +881,7 @@ span.summary {
   background-color: #cdd5de;
 }
 
+#block-system-main .inner .node-outreach .field-name-body,
 #block-system-main .inner .node-project .field-name-body,
 #block-system-main .inner .node-project .field-name-field-publications,
 #block-system-main .inner .node-event .field-name-body,
@@ -868,6 +890,7 @@ span.summary {
   margin-left: 330px;
 }
 
+#block-system-main .inner .node-outreach .field-name-field-outreach-image,
 #block-system-main .inner .node-project .field-name-field-project-image,
 #block-system-main .inner .node-event .field-name-field-event-image {
   margin-right: 30px;
@@ -878,11 +901,13 @@ span.summary {
 }
 
 
+#block-system-main .inner .node-outreach .field-name-field-outreach-image .field-item,
 #block-system-main .inner .node-project .field-name-field-project-image .field-item,
 #block-system-main .inner .node-event .field-name-field-event-image .field-item {
   margin-bottom: 20px;
 }
 
+#block-system-main .inner .node-outreach .field-name-field-outreach-keywords,
 #block-system-main .inner .node-project .field-name-field-keywords {
   background-color: #cdd5de;
   margin-left: 330px;
@@ -891,6 +916,9 @@ span.summary {
   padding: 10px 15px 15px 15px;
 }
 
+#block-system-main .inner .node-outreach .field-name-field-outreach-related-people,
+#block-system-main .inner .node-outreach .field-name-field-outreach-related-resources,
+#block-system-main .inner .node-outreach .field-name-field-outreach-related-events, 
 #block-system-main .inner .node-project .field-name-field-project-related-people,
 #block-system-main .inner .node-project .field-name-field-project-related-events, 
 #block-system-main .inner .node-project .field-name-field-project-related-resources,
@@ -1157,6 +1185,8 @@ ul + p, ol + p {
   background-color: transparent;
 }
 
+#block-system-main .inner .view-taxonomy-term .node-outreach .field-name-field-outreach-location,
+#block-system-main .inner .view-taxonomy-term .node-outreach .field-name-field-outreach-duration,
 #block-system-main .inner .view-taxonomy-term .node-event .field-name-field-location,
 #block-system-main .inner .view-taxonomy-term .node-project .field-name-field-project-location,
 #block-system-main .inner .view-taxonomy-term .node-project .field-name-field-duration {
@@ -1170,6 +1200,7 @@ ul + p, ol + p {
   background-color: transparent;
 }
 
+#block-system-main .inner .view-taxonomy-term .node-outreach .field-name-body,
 #block-system-main .inner .view-taxonomy-term .node-project .field-name-body,
 #block-system-main .inner .view-taxonomy-term .node-project .field-name-field-publications,
 #block-system-main .inner .view-taxonomy-term .node-event .field-name-body,
@@ -1177,6 +1208,7 @@ ul + p, ol + p {
   margin-left: 0;
 }
 
+#block-system-main .inner .view-taxonomy-term .node-outreach .node-header,
 #block-system-main .inner .view-taxonomy-term .node-event .node-header,
 #block-system-main .inner .view-taxonomy-term .node-project .node-header {
   margin-bottom: 16px;
