@@ -1222,3 +1222,22 @@ ul + p, ol + p {
   display: none;
 }
 
+#block-block-4 {
+  margin-bottom: 40px;
+}
+
+#block-block-4 h2 {
+  font-size: 14px;
+}
+
+#node-10 {
+  margin-bottom: 0;
+}
+
+#node-10 .field-name-body {
+  margin-bottom: 0;
+}
+
+#node-10 .field-name-body p + p {
+  margin-top: 0;
+}
