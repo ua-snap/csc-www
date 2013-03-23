@@ -1227,7 +1227,7 @@ ul + p, ol + p {
 }
 
 #block-block-4 h2 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #node-10 {
@@ -1240,4 +1240,19 @@ ul + p, ol + p {
 
 #node-10 .field-name-body p + p {
   margin-top: 0;
+}
+
+.resource-key-item {
+  width: 190px;
+  height: 200px;
+  float: left;
+  margin: 0 25px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.resource-key-item p {
+  margin-top: 6px;
+  line-height: 16px;
+  text-align: center;
 }
