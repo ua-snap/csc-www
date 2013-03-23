@@ -1256,3 +1256,7 @@ ul + p, ol + p {
   line-height: 16px;
   text-align: center;
 }
+
+.empty-upcoming-events p {
+  margin: 25px 0;
+}
