@@ -1260,3 +1260,7 @@ ul + p, ol + p {
 .empty-upcoming-events p {
   margin: 25px 0;
 }
+
+div .collapsiblock a {
+  background-position: 120px;
+}
