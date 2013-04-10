@@ -900,6 +900,25 @@ span.summary {
   background-color: transparent;
 }
 
+.not-front .node-research-highlight .field-name-field-media img {
+  width: 300px;
+  height: auto;
+}
+
+.not-front .node-featured-scientist .field-name-field-featured-scientist-media img {
+  width: 300px;
+  height: auto;
+}
+
+.not-front .node-research-highlight .field-name-field-media .field-item {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.not-front .node-featured-scientist .field-name-field-featured-scientist-media .field-item {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
 
 #block-system-main .inner .node-outreach .field-name-field-outreach-image .field-item,
 #block-system-main .inner .node-project .field-name-field-project-image .field-item,
