@@ -93,7 +93,12 @@ form#search-block-form #edit-actions {
 }
 
 .node .meta a, li.node-readmore.first.last a, a {
-  color: rgb(46, 73, 112);
+  color: #355582;
+}
+
+.title-and-meta h2.node-title a,
+.title-and-meta h1.node-title a {
+  color: #355582;
 }
 
 .node .meta a:hover, li.node-readmore.first.last a:hover, a:hover {
@@ -109,7 +114,6 @@ form#search-block-form #edit-actions {
 }
 
 .not-front #header-menu #block-system-navigation {
-  /* bottom: 2px; */
   width: 800px;
   float: right;
 }
@@ -139,7 +143,6 @@ form#search-block-form #edit-actions {
 }
 
 .not-front #block-system-navigation ul.menu li {
-/*  padding-top: 4px; */
   margin-top: -4px;
 }
 
@@ -267,6 +270,10 @@ span.summary {
 #block-system-main .node-resource .node-header .title-and-meta,
 #block-system-main .node-resource.node.indent .content {
   margin-left: 0;
+}
+
+.node-resource {
+  margin-bottom: 10px;
 }
 
 .node-project .date,
@@ -680,16 +687,6 @@ span.summary {
   margin-left: 0;
 }
 
-#node-11 .node-title,
-#node-12 .node-title {
-  /* display: none; */
-}
-
-#node-11,
-#node-12 {
-  /* padding-top: 0; */
-}
-
 #main #content {
   margin-top: 0;
 }
@@ -763,10 +760,6 @@ span.summary {
 }
 
 #block-views-projects-block_1 .field-name-field-duration {
-}
-
-#block-system-navigation ul.menu li.add-content {
-  display: none;
 }
 
 .node-project .field-name-field-funded-title .field-label, 
@@ -890,6 +883,8 @@ span.summary {
   margin-left: 330px;
 }
 
+#block-system-main .inner .node-research-highlight .field-name-field-research-highlight-image,
+#block-system-main .inner .node-featured-scientist .field-name-field-featured-scientist-image,
 #block-system-main .inner .node-outreach .field-name-field-outreach-image,
 #block-system-main .inner .node-project .field-name-field-project-image,
 #block-system-main .inner .node-event .field-name-field-event-image {
@@ -920,6 +915,8 @@ span.summary {
   margin-bottom: 20px;
 }
 
+#block-system-main .inner .node-research-highlight .field-name-field-research-highlight-image .field-item,
+#block-system-main .inner .node-featured-scientist .field-name-field-featured-scientist-image .field-item,
 #block-system-main .inner .node-outreach .field-name-field-outreach-image .field-item,
 #block-system-main .inner .node-project .field-name-field-project-image .field-item,
 #block-system-main .inner .node-event .field-name-field-event-image .field-item {
@@ -1081,11 +1078,6 @@ span.summary {
 #node-39,
 #node-58 {
   margin-bottom: 0;
-  /* padding-top: 0; */
-}
-
-#node-39 .title-and-meta {
-  /* display: none; */
 }
 
 #footer .block {
@@ -1161,8 +1153,12 @@ ul + p, ol + p {
   background-position: 0 32px;
 }
 
+.node-teaser .title-and-meta h2 a {
+  font-size: 18px;
+}
+
 #block-views-resources-block_1 .views-row > div > div {
-  margin-left: 100px;
+  margin-left: 75px;
 }
 
 .front #block-views-research_highlights-block .field-name-field-media img,
