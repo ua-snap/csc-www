@@ -609,6 +609,19 @@ span.summary {
   z-index: 6;
 }
 
+.not-front .more-link {
+  display: none;
+}
+
+.front #block-views-events-block .more-link {
+  position: static;
+  margin: 10px 20px;
+}
+
+.front #block-views-events-block .more-link a {
+  font-weight: bold;
+}
+
 .front .more-link a {
   color: rgb(255, 255, 255);
 }
