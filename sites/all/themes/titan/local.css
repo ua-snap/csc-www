@@ -1292,3 +1292,44 @@ ul + p, ol + p {
 div .collapsiblock a {
   background-position: 120px;
 }
+
+#block-menu-menu-research-menu {
+  margin: 20px 0;
+}
+
+#block-menu-menu-research-menu ul {
+  margin-left: 0;
+}
+
+#block-menu-menu-research-menu ul li {
+  display: inline-block;
+  padding-left: 0;
+  background-image: none;
+  margin: 0 4px 0 0;
+}
+
+#block-menu-menu-research-menu ul li a {
+  display: block;
+  padding: 5px 16px;
+  color: #444444;
+  border: 1px solid #d1cbb5;
+  background-color: #f0ebe7;
+}
+
+#block-menu-menu-research-menu ul li.active a {
+  background-color: #fbf9f8;
+}
+
+#block-menu-menu-research-menu ul li a:active,
+#block-menu-menu-research-menu ul li a:focus {
+  background-color: #ffffff;
+  outline: none;
+}
+
+#block-menu-menu-research-menu ul li a:hover {
+  background-color: #ffffff;
+}
+
+#node-11 {
+  margin-bottom: 0;
+}
