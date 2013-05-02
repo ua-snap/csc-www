@@ -851,6 +851,31 @@ span.summary {
   margin-left: 0;
 }
 
+#block-system-main .inner .node-event .field-name-field-products .node-header {
+  display: inline-block;
+}
+
+#block-system-main .inner .node-event .field-name-field-products .content {
+  display: inline-block;
+  color: #888;
+}
+
+#block-system-main .inner .node-event .field-name-field-products .content .field-name-field-type {
+  margin-bottom: 0;
+}
+
+#block-system-main .inner .node-event .field-name-field-products .node-resource {
+  margin: 0;
+  padding: 0;
+}
+
+#block-system-main .inner .node-event .title-and-meta h2,
+#block-system-main .inner .node-event .title-and-meta h2 a {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 13px;
+}
+
 #block-system-main .inner .node-outreach h1.node-title,
 #block-system-main .inner .node-project h1.node-title {
   padding: 20px 20px;
@@ -958,6 +983,10 @@ span.summary {
   margin-bottom: 0;
   width: 600px;
   padding: 10px 15px 10px 15px;
+}
+
+#block-system-main .inner .node-event .sharethis-buttons {
+  display: none;
 }
 
 #block-system-main .inner .node-project .links-wrapper {
@@ -1314,6 +1343,10 @@ div .collapsiblock a {
   color: #444444;
   border: 1px solid #d1cbb5;
   background-color: #f0ebe7;
+}
+
+#block-menu-menu-research-menu ul li a.active {
+  background-color: #fbf9f8;
 }
 
 #block-menu-menu-research-menu ul li.active a {
