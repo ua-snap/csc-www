@@ -312,6 +312,10 @@ span.summary {
   display: none;
 }
 
+.field-name-field-event-pi div {
+  display: inline;
+}
+
 .front #block-views-events-block .inner > h2,
 .front #block-views-events-block_1 .inner > h2 {
   padding: 10px 0 0 0;
@@ -1042,7 +1046,9 @@ span.summary {
 #block-system-main .inner .node-project .field-name-field-project-related-events, 
 #block-system-main .inner .node-project .field-name-field-project-related-resources,
 #block-system-main .inner .node-event .field-name-field-participants,
-#block-system-main .inner .node-event .field-name-field-products {
+#block-system-main .inner .node-event .field-name-field-products,
+#block-system-main .inner .node-event .field-name-field-event-pi,
+#block-system-main .inner .node-event .field-name-field-event-co-pi {
   background-color: #cdd5de;
   margin-left: 330px;
   margin-bottom: 0;
