@@ -661,7 +661,15 @@ span.summary {
   cursor: pointer;
 }
 
-.views-slideshow-controls-bottom {
+.front .views-slideshow-controls-bottom {
+  position: relative;
+  width: 120px;
+  bottom: 20px;
+  z-index: 6;
+  left: 750px;
+}
+
+.page-node-10 .views-slideshow-controls-bottom {
   position: relative;
   width: 120px;
   bottom: 20px;
