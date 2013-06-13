@@ -564,6 +564,10 @@ span.summary {
   float: left;
 }
 
+#block-views-resource_banner-block .content {
+  height: 300px;
+}
+
 #views_slideshow_cycle_teaser_section_resource_banner-block {
   margin-top: 20px;
 }
@@ -928,26 +932,43 @@ span.summary {
   margin-left: 0;
 }
 
-#block-system-main .inner .node-event .field-name-field-products .node-header {
+/*
+#block-system-main .inner .node-event .field-name-field-products .node-header,
+#block-system-main .inner .node-project .field-name-field-project-related-resources .node-header {
   display: inline-block;
 }
+*/
 
-#block-system-main .inner .node-event .field-name-field-products .content {
+#block-system-main .inner .node-event .field-name-field-products .content,
+#block-system-main .inner .node-project .field-name-field-project-related-resources .content {
   display: inline-block;
   color: #888;
 }
 
-#block-system-main .inner .node-event .field-name-field-products .content .field-name-field-type {
+#block-system-main .inner .node-event .field-name-field-products .content .field-name-field-type,
+#block-system-main .inner .node-project .field-name-field-project-related-resources .content .field-name-field-type {
   margin-bottom: 0;
 }
 
-#block-system-main .inner .node-event .field-name-field-products .node-resource {
+#block-system-main .inner .node-event .field-name-field-products .node-resource,
+#block-system-main .inner .node-project .field-name-field-project-related-resources .node-resource {
   margin: 0;
   padding: 0;
 }
 
+#block-system-main .inner .node-event .node-header,
+#block-system-main .inner .node-project .node-header,
+#block-system-main .inner .node-event .title-and-meta,
+#block-system-main .inner .node-project .title-and-meta,
 #block-system-main .inner .node-event .title-and-meta h2,
-#block-system-main .inner .node-event .title-and-meta h2 a {
+#block-system-main .inner .node-project .title-and-meta h2 {
+  display: inline;
+}
+
+#block-system-main .inner .node-event .title-and-meta h2,
+#block-system-main .inner .node-event .title-and-meta h2 a,
+#block-system-main .inner .node-project .title-and-meta h2,
+#block-system-main .inner .node-project .title-and-meta h2 a {
   font-size: 13px;
   font-weight: normal;
   line-height: 13px;
@@ -967,6 +988,10 @@ span.summary {
 #block-system-main .inner .node-project .content {
   background-color: #ffffff;
   padding-bottom: 10px;
+}
+
+#block-system-main .inner .node-project .field-name-field-project-related-resources .content {
+ padding-bottom: 0;
 }
 
 #block-system-main .inner .node-outreach .field-name-field-outreach-location,
@@ -1064,12 +1089,9 @@ span.summary {
   padding: 10px 15px 10px 15px;
 }
 
-#block-system-main .inner .node-event .sharethis-buttons {
+#block-system-main .inner .node-event .sharethis-buttons,
+#block-system-main .inner .node-project .sharethis-buttons {
   display: none;
-}
-
-#block-system-main .inner .node-project .links-wrapper {
-  margin: 0 4px;
 }
 
 .caption p {
@@ -1444,4 +1466,19 @@ div .collapsiblock a {
 
 #node-11 {
   margin-bottom: 0;
+}
+
+#block-system-main .inner .node-project .node-resource .content {
+  background-color: transparent;
+}
+
+#block-system-main .inner .node-project .field-name-field-project-related-resources .content {
+  display: inline-block;
+}
+
+#block-block-5 {
+  color: rgb(30, 57, 93);
+  width: 250px;
+  float: right;
+  margin-top: -100px;
 }
