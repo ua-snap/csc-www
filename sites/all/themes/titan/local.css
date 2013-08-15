@@ -1482,3 +1482,11 @@ div .collapsiblock a {
   float: right;
   margin-top: -100px;
 }
+
+.front #block-block-5 div {
+  font-weight: bold;
+}
+
+.front #block-block-1 div p {
+  font-size: 120%;
+}
