@@ -1565,3 +1565,7 @@ div .collapsiblock a {
 .front #block-block-1 div p {
   font-size: 120%;
 }
+
+#block-system-main a[href^="http"]:after {
+  display: none;
+}
