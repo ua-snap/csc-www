@@ -357,23 +357,15 @@ span.summary {
 .not-front #block-views-events-block .links-wrapper, 
 .not-front #block-views-events-block_1 .node-header,
 .not-front #block-views-events-block_1 .field-name-body,
-.not-front #block-views-events-block_1 .field-name-field-date,
-.not-front #block-views-events-block_1 .field-name-field-location,
 .not-front #block-views-events-block_1 .links-wrapper,
 .not-front #block-views-events-block_2 .node-header,
 .not-front #block-views-events-block_2 .field-name-body,
-.not-front #block-views-events-block_2 .field-name-field-date,
-.not-front #block-views-events-block_2 .field-name-field-location,
 .not-front #block-views-events-block_2 .links-wrapper,
 .not-front #block-views-events-block_3 .node-header,
 .not-front #block-views-events-block_3 .field-name-body,
-.not-front #block-views-events-block_3 .field-name-field-date,
-.not-front #block-views-events-block_3 .field-name-field-location,
 .not-front #block-views-events-block_3 .links-wrapper,
 .not-front #block-views-events-block_4 .node-header,
 .not-front #block-views-events-block_4 .field-name-body,
-.not-front #block-views-events-block_4 .field-name-field-date,
-.not-front #block-views-events-block_4 .field-name-field-location,
 .not-front #block-views-events-block_4 .links-wrapper {
   float: right;
   width: 680px;
@@ -951,10 +943,6 @@ span.summary {
   background-color: transparent;
 }
 
-#block-system-main .inner .node-project {
-  margin-top: 30px;
-}
-
 #block-system-main .inner .node-outreach .node-header,
 #block-system-main .inner .node-event .node-header,
 #block-system-main .inner .node-project .node-header{
@@ -1113,7 +1101,6 @@ span.summary {
 #block-system-main .inner .node-project .field-name-field-project-related-events, 
 #block-system-main .inner .node-project .field-name-field-project-related-resources,
 #block-system-main .inner .node-event .field-name-field-participants,
-#block-system-main .inner .node-event .field-name-field-products,
 #block-system-main .inner .node-event .field-name-field-event-pi,
 #block-system-main .inner .node-event .field-name-field-event-co-pi {
   background-color: #cdd5de;
@@ -1121,6 +1108,12 @@ span.summary {
   margin-bottom: 0;
   width: 600px;
   padding: 10px 15px 10px 15px;
+}
+
+#block-system-main .inner .node-event .field-name-field-products {
+  margin-left: 330px;
+  margin-bottom: 0;
+  width: 600px;
 }
 
 #block-system-main .inner .node-event .sharethis-buttons,
@@ -1282,7 +1275,7 @@ ul + p, ol + p {
 
 /* Resource Icons */
 
-.block-1 .views-row {
+.block-views-resources-block_1 .views-row {
   margin-left: 100px;
 }
 
@@ -1568,4 +1561,45 @@ div .collapsiblock a {
 
 #block-system-main a[href^="http"]:after {
   display: none;
+}
+
+#event-sub-nav {
+  display: block;
+  border-bottom: 4px solid rgb(132, 151, 47);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#event-sub-nav li {
+  display: inline;
+  background-color: rgb(32, 56, 92);
+  padding: 8px;
+  margin-right: 0;
+  line-height: 21px;
+}
+
+#event-sub-nav li.active {
+  background-color: rgb(132, 151, 47);
+  padding: 8px 8px 9px 8px;
+}
+
+#event-sub-nav li a {
+  color: rgb(255, 255, 255);
+  padding: 10px 60px;
+}
+
+.front #block-easy_breadcrumb-easy_breadcrumb {
+  display: none;
+}
+
+#block-easy_breadcrumb-easy_breadcrumb {
+  margin-bottom: 10px;
+}
+
+#breadcrumb {
+  display: none;
+}
+
+.view-event-subpages .field-name-field-products .node-resource {
+  display: inline-block;
 }
