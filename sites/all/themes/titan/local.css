@@ -1039,17 +1039,26 @@ span.summary {
 #block-system-main .inner .node-outreach .field-name-body,
 #block-system-main .inner .node-project .field-name-body,
 #block-system-main .inner .node-project .field-name-field-publications,
-#block-system-main .inner .node-event .field-name-body,
-#block-system-main .inner .node-event .field-name-field-agenda {
+#block-system-main .inner .node-event .field-name-body {
   margin-bottom: 15px;
   margin-left: 330px;
+}
+
+#block-system-main .inner .node-event .field-name-field-agenda {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 
 #block-system-main .inner .node-research-highlight .field-name-field-research-highlight-image,
 #block-system-main .inner .node-featured-scientist .field-name-field-featured-scientist-image,
 #block-system-main .inner .node-outreach .field-name-field-outreach-image,
 #block-system-main .inner .node-project .field-name-field-project-image,
-#block-system-main .inner .node-event .field-name-field-event-image {
+#block-system-main .inner .node-event .field-name-field-event-image,
+#block-system-main .inner .node-event .field-type-image {
   margin-right: 30px;
   margin-bottom: 0;
   padding: 0;
@@ -1081,7 +1090,11 @@ span.summary {
 #block-system-main .inner .node-featured-scientist .field-name-field-featured-scientist-image .field-item,
 #block-system-main .inner .node-outreach .field-name-field-outreach-image .field-item,
 #block-system-main .inner .node-project .field-name-field-project-image .field-item,
-#block-system-main .inner .node-event .field-name-field-event-image .field-item {
+#block-system-main .inner .node-event .field-name-field-event-image .field-item,
+#block-system-main .inner .node-event .field-name-field-registration-image .field-item,
+#block-system-main .inner .node-event .field-name-field-logistics-image .field-item,
+#block-system-main .inner .node-event .field-name-field-agenda-image .field-item,
+#block-system-main .inner .node-event .field-name-field-products-image .field-item {
   margin-bottom: 20px;
 }
 
@@ -1108,12 +1121,6 @@ span.summary {
   margin-bottom: 0;
   width: 600px;
   padding: 10px 15px 10px 15px;
-}
-
-#block-system-main .inner .node-event .field-name-field-products {
-  margin-left: 330px;
-  margin-bottom: 0;
-  width: 600px;
 }
 
 #block-system-main .inner .node-event .sharethis-buttons,
