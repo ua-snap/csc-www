@@ -1322,9 +1322,29 @@ span.summary {
   margin-bottom: 0;
 }
 
+.profile .field-name-field-people-related-projects .field-item {
+  display: list-item;
+  margin-left: 20px;
+}
+
 .profile .field-name-field-people-related-resources {
   width: 595px;
   padding: 10px 15px 10px 15px;
+}
+
+.profile .field-name-field-people-related-resources .field-item {
+  display: list-item;
+  margin-left: 20px;
+}
+
+.profile .field-name-field-people-publications {
+  width: 595px;
+  padding: 10px 15px 10px 15px;
+}
+
+.profile .field-name-field-people-publications .field-item {
+  display: list-item;
+  margin-left: 20px;
 }
 
 #block-views-people-block_1 .cols-4 td {
@@ -1839,6 +1859,20 @@ body.not-front {
   right: 10px;
 }
 
-html font {
+html {
   font-size: 15px;
 }
+
+.node h2.node-title a {
+  font-family: inherit;
+}
+
+.node h2.node-title a {
+  font-family: inherit;
+}
+
+#views_slideshow_cycle_teaser_section_banner-block {
+  height: 279px;
+}
+
+
