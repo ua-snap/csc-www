@@ -586,6 +586,7 @@ span.summary {
 
 .front #block-views-banner-block {
   background-color: rgb(46, 73, 112);
+  height: 300px;
   margin-bottom: 20px;
 }
 
