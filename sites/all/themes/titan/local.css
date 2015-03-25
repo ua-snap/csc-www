@@ -1875,4 +1875,28 @@ html {
   height: 279px;
 }
 
+.profile-option {
+  width: 260px;
+  height: 90px;
+  background-color: rgb(191, 202, 140);
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  float: left;
+  
+}
 
+.profile-option a {
+  font-weight: bold;
+}
+
+.profile-option a:hover,
+.profile-option a:focus,
+.profile-option a:active {
+  color: #000 !important;
+}
+
+.profile-option .small {
+  font-size: 75%;
+}
