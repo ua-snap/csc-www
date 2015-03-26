@@ -458,14 +458,13 @@ span.summary {
 }
 
 .front #block-views-research_highlights-block,
-.front #block-views-featured_scientists-block {
+.front #block-views-publications-block_2 {
   width: 305px;
   height: 400px;
-  background-color: rgb(144, 173, 61);
+  background-color: rgb(46, 73, 112);
 }
 
-.front .field-name-field-research-highlight-image,
-.front .field-name-field-featured-scientist-image {
+.front .field-name-field-research-highlight-image {
   padding: 0;
   background-color: transparent;
   border: none;
@@ -473,7 +472,7 @@ span.summary {
 
 .front #block-views-events-block h2,
 .front #block-views-research_highlights-block h2,
-.front #block-views-featured_scientists-block h2 {
+.front #block-views-publications-block_2 h2 {
   font-size: 18px;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -483,7 +482,7 @@ span.summary {
 
 .front #block-views-events-block h2.node-title,
 .front #block-views-research_highlights-block h2.node-title,
-.front #block-views-featured_scientists-block h2.node-title {
+.front #block-views-publications-block_2 h2.node-title {
   line-height: 18px;
   text-align: left;
   padding: 0;
@@ -494,15 +493,27 @@ span.summary {
 .front #block-views-events-block h2.node-title a,
 .front #block-views-research_highlights-block p,
 .front #block-views-research_highlights-block h2.node-title a,
-.front #block-views-featured_scientists-block p,
-.front #block-views-featured_scientists-block h2.node-title a {
+.front #block-views-publications-block_2 p,
+.front #block-views-publications-block_2 h2.node-title a {
   line-height: 18px;
   color: rgb(255, 255, 255);
 }
 
 
+.front #block-views-publications-block_2 div {
+  color: rgb(255, 255, 255);
+}
+
+.front #block-views-publications-block_2 .views-row {
+  line-height: 18px;
+}
+
+.front #block-views-publications-block_2 .views-row-first {
+  padding-top: 25px;
+}
+
 .front #block-views-research_highlights-block h2.node-title a,
-.front #block-views-featured_scientists-block h2.node-title a {
+.front #block-views-publications-block_2 h2.node-title a {
   font-size: 14px;
 }
 
@@ -519,8 +530,8 @@ span.summary {
 }
 
 .front #block-views-events-block a,
-.front #block-views-research_highlights-block a,
-.front #block-views-featured_scientists-block a {
+.front #block-views-publications-block_2 a,
+.front #block-views-research_highlights-block a {
   color: rgb(255, 255, 255);
 }
 
@@ -533,7 +544,7 @@ span.summary {
 }
 
 .front #block-views-research_highlights-block .date,
-.front #block-views-featured_scientists-block .date {
+.front #block-views-publications-block_2 .date {
   display: none;
 }
 
@@ -546,14 +557,14 @@ span.summary {
   position: relative;
 }
 
-.front .view-featured-scientists .views-row {
+.front .view-publications .views-row {
   height: 353px;
   position: relative;
 }
 
 .front #block-views-events-block .view-content,
 .front #block-views-research_highlights-block .view-content,
-.front #block-views-featured_scientists-block .view-content {
+.front #block-views-publications-block_2 .view-content {
   padding: 0 20px;
 }
 
@@ -576,20 +587,20 @@ span.summary {
 
 .front #block-views-events-block,
 .front #block-views-research_highlights-block,
-.front #block-views-featured_scientists-block {
+.front #block-views-publications-block_2 {
   float: left;
 }
 
 .front #block-views-events-block,
-.front #block-views-featured_scientists-block {
+.front #block-views-publications-block_2 {
   margin-left: 22px;
 }
 
 .front #block-views-events-block .node.indent .title-and-meta,
 .front #block-views-research_highlights-block .node.indent .title-and-meta,
 .front #block-views-research_highlights-block .node.indent .content,
-.front #block-views-featured_scientists-block .node.indent .title-and-meta,
-.front #block-views-featured_scientists-block .node.indent .content {
+.front #block-views-publications-block_2 .node.indent .title-and-meta,
+.front #block-views-publications-block_2 .node.indent .content {
   margin-left: 0;
 }
 
@@ -1790,19 +1801,18 @@ body.not-front {
 
 .views-slideshow-cycle-main-frame-row .views-field-title,
 #block-views-research_highlights-block,
-#block-views-featured_scientists-block,
+#block-views-publications-block_2,
 #block-views-events-block {
   border-top: 3px solid rgb(133, 149, 40);
 }
 
-#block-views-research_highlights-block .inner,
-#block-views-featured_scientists-block .inner {
+#block-views-research_highlights-block .inner {
   height: 400px;
   background-image: linear-gradient( rgb(32, 60, 93), transparent, rgb(32, 60, 93) );
 }
 
 #block-views-research_highlights-block .node-teaser,
-#block-views-featured_scientists-block .node-teaser {
+#block-views-block-views-publications-block_2 .node-teaser {
   position: absolute;
   bottom: 0;
   margin-bottom: 0;
