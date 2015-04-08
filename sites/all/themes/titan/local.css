@@ -532,7 +532,7 @@ body.front {
   font-size: 14px;
 }
 
-.front .views-row-last {
+.front #block-views-research_highlights-block .views-row-last {
   border-top: 1px solid rgb(255, 255, 255);
 }
 
@@ -572,7 +572,7 @@ body.front {
   position: relative;
 }
 
-.front .view-publications .views-row {
+.front .view-publications .view-content {
   height: 353px;
   position: relative;
 }
@@ -595,9 +595,14 @@ body.front {
   display: inline;
 }
 
+.front #block-views-publications-block_2 .views-row-first,
 .front #block-views-events-block .node {
   margin-bottom: 0;
   border-top: 1px solid rgb(255, 255, 255);
+}
+
+.front #block-views-publications-block_2 .views-row {
+  margin-bottom: 20px;
 }
 
 .front #block-views-events-block,
@@ -1445,6 +1450,9 @@ body.not-front {
 }
 
 /*** PUBLICATIONS ***/
+.not-front #block-views-publications-block .views-row {
+  margin-bottom: 20px;
+}
 
 /*** EVENTS ***/
 
