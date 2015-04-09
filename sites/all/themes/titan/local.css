@@ -866,6 +866,15 @@ body.not-front {
   background-color: rgb(49, 72, 106);
 }
 
+/*** BANNERS ***/
+
+.not-front .node-banner .field-name-field-banner-image {
+  float: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
 /*** RESEARCH HIGHLIGHTS ***/
 
 .not-front .node-research-highlight .field-name-field-media img {
