@@ -252,6 +252,7 @@ span.summary {
 
 .caption p {
   font-style: italic;
+  font-size: 90%;
 }
 
 #footer .block {
@@ -762,15 +763,6 @@ body.front {
   background-color: rgb(243, 244, 230);
 }
 
-#block-system-main .inner .node-research-highlight .field-name-field-research-highlight-image,
-#block-system-main .inner .node-featured-scientist .field-name-field-featured-scientist-image {
-  margin-right: 30px;
-  margin-bottom: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
 #block-system-main .inner .view-taxonomy-term .caption p {
   display: none;
 }
@@ -907,6 +899,15 @@ body.not-front {
   margin: 5px 15px 9px 0;
 }
 
+.not-front #block-system-main .inner .node-research-highlight .field-name-field-research-highlight-image,
+.not-front #block-system-main .inner .node-featured-scientist .field-name-field-featured-scientist-image {
+  margin-right: 30px;
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
 .not-front #content h2,
 .not-front #content h3,
 .not-front #content h4 {
@@ -962,6 +963,14 @@ body.not-front {
 
 #node-39 {
   margin-bottom: 0;
+}
+
+.not-front #block-system-main .inner .node-article .field-name-field-image {
+  margin-right: 35px;
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 /*** PROJECTS ***/
