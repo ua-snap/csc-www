@@ -296,7 +296,7 @@ ul + p, ol + p {
 
 .empty-publications p,
 .empty-upcoming-events p {
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 div .collapsiblock a {
@@ -573,14 +573,18 @@ body.front {
   position: relative;
 }
 
-.front .view-publications .view-content {
-  height: 353px;
+.front .view-publications .view-content,
+.front .view-publications .view-empty,
+.front .view-events .view-content,
+.front .view-events .view-empty {
   position: relative;
 }
 
 .front #block-views-events-block .view-content,
+.front #block-views-events-block .view-footer,
 .front #block-views-research_highlights-block .view-content,
-.front #block-views-publications-block_2 .view-content {
+.front #block-views-publications-block_2 .view-content,
+.front #block-views-publications-block_2 .view-footer {
   padding: 0 20px;
 }
 
