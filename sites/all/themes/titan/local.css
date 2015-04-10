@@ -994,74 +994,80 @@ body.not-front {
 }
 
 .not-front #block-views-outreach-block .views-row-odd,
-.not-front #block-views-projects-block_1 .views-row-odd {
+.not-front #block-views-projects-block_1 .views-row-odd,
+.not-front #block-views-projects-block_2 .views-row-odd {
   background-color: #cdd5de;
   padding: 0 20px 5px 20px;
 }
 
 #block-views-outreach-block .views-row-even,
-#block-views-projects-block_1 .views-row-even {
+#block-views-projects-block_1 .views-row-even,
+#block-views-projects-block_2 .views-row-even {
   padding: 0 20px 5px 20px;
 }
 
-#block-views-projects-block_1 .node.indent .title-and-meta,
-#block-views-projects-block_1 .node.indent .content {
-  margin-left: 0;
+
+#block-views-outreach-block .node-outreach .group_left,
+#block-views-projects-block_1 .node-project .group_left,
+#block-views-projects-block_2 .node-project .group_left {
+  float: left;
+  width: inherit;
 }
 
-#block-views-outreach-block .field-name-field-outreach-image,
-#block-views-projects-block_1 .field-name-field-project-image {
+#block-views-outreach-block .node-outreach .group_right,
+#block-views-projects-block_1 .node-project .group_right,
+#block-views-projects-block_2 .node-project .group_right {
+  overflow: hidden;
+}
+
+#block-views-outreach-block .node-outreach .field-name-body,
+#block-views-projects-block_1 .node-project .field-name-body,
+#block-views-projects-block_2 .node-project .field-name-body {
+  margin-bottom: 0;
+}
+
+.node-project h2,
+.node-outreach h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.node-outreach > .node-header,
+.node-project > .node-header {
+  display: none;
+}
+
+.node-outreach .node-header,
+.node-project .node-header {
+  display: inline;
+}
+
+.node-outreach .node-header .title-and-meta,
+.node-project .node-header .title-and-meta {
+  display: inline;
+}
+
+.node-outreach .node-header .title-and-meta .node-title,
+.node-project .node-header .title-and-meta .node-title {
+  display: inline;
+}
+
+.node-outreach .group_top,
+.node-project .group_top {
+  background-color: #cdd5de;
+  padding: 15px 15px 5px 15px;
+  margin-bottom: 30px;
+}
+
+.node-outreach .group_left,
+.node-project .group_left {
+  margin-right: 10px;
   float: left;
 }
 
-#block-views-projects-block_1 .node-header,
-#block-views-projects-block_1 .field-name-field-funded-title,
-#block-views-projects-block_1 .field-name-field-pi,
-#block-views-projects-block_1 .field-name-field-co-pi,
-#block-views-projects-block_1 .field-name-field-project-location,
-#block-views-projects-block_1 .field-name-field-duration,
-#block-views-projects-block_1 .field-type-text-with-summary,
-#block-views-projects-block_1 .links-wrapper,
-#block-views-outreach-block .node-header,
-#block-views-outreach-block .field-name-field-outreach-location,
-#block-views-outreach-block .field-name-field-outreach-duration,
-#block-views-outreach-block .field-type-text-with-summary {
-  width: 680px;
-  float: right;
-}
-
-#block-views-projects-block_1 .node-header {
-  margin-bottom: 0;
-}
-
-#block-views-projects-block_1 .node-header,
-.not-front #block-views-events-block .node-header,
-.not-front #block-views-events-block_1 .node-header,
-.not-front #block-views-events-block_2 .node-header,
-.not-front #block-views-events-block_3 .node-header,
-.not-front #block-views-events-block_4 .node-header,
-.not-front #block-views-outreach-block .node-header {
-  margin-bottom: 0;
-}
-
-#block-views-outreach-block .field-name-field-outreach-location,
-#block-views-projects-block_1 .field-name-field-funded-title,
-#block-views-projects-block_1 .field-name-field-pi,
-#block-views-projects-block_1 .field-name-field-co-pi,
-#block-views-projects-block_1 .field-name-field-project-location {
-  margin-bottom: 0;
-}
-
-#block-views-projects-block_1 .title-and-meta {
-  position: relative;
-  width: 606px;
-  margin-top: 3px;
-}
-
-#block-views-outreach-block .title-and-meta {
-  position: relative;
-  width: 606px;
-  margin-top: 7px;
+.node-outreach .group_right,
+.node-project .group_right {
+  overflow: hidden;
 }
 
 .node-project .field-name-field-funded-title .field-label, 
@@ -1133,12 +1139,6 @@ body.not-front {
   padding: 0;
 }
 
-#block-system-main .inner .node-project .node-header,
-#block-system-main .inner .node-project .title-and-meta,
-#block-system-main .inner .node-project .title-and-meta h2 {
-  display: inline;
-}
-
 #block-system-main .inner .node-project .title-and-meta h2,
 #block-system-main .inner .node-project .title-and-meta h2 a {
   font-size: 13px;
@@ -1146,10 +1146,10 @@ body.not-front {
   line-height: 13px;
 }
 
-#block-system-main .inner .node-outreach h1.node-title,
-#block-system-main .inner .node-project h1.node-title {
-  padding: 20px 20px;
-  background-color: #cdd5de;
+#block-system-main .inner .node-project .field-name-field-type {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 13px;
 }
 
 #block-system-main .inner .node-project .content {
@@ -1159,24 +1159,6 @@ body.not-front {
 
 #block-system-main .inner .node-project .field-name-field-project-related-resources .content {
  padding-bottom: 0;
-}
-
-#block-system-main .inner .node-outreach .field-name-field-outreach-location,
-#block-system-main .inner .node-outreach .field-name-field-outreach-duration,
-#block-system-main .inner .node-project .field-name-field-funded-title,
-#block-system-main .inner .node-project .field-name-field-pi,
-#block-system-main .inner .node-project .field-name-field-co-pi,
-#block-system-main .inner .node-project .field-name-field-project-location {
-  margin-bottom: 0;
-  padding: 0 20px 10px 20px;
-  background-color: #cdd5de;
-}
-
-#block-system-main .inner .node-outreach .field-name-field-outreach-duration,
-#block-system-main .inner .node-project .field-name-field-duration {
-  margin-bottom: 30px;
-  padding: 0 20px 20px 20px;
-  background-color: #cdd5de;
 }
 
 #block-system-main .inner .node-outreach .field-name-body,
@@ -1208,9 +1190,7 @@ body.not-front {
 #block-system-main .inner .node-outreach .field-name-field-outreach-keywords,
 #block-system-main .inner .node-project .field-name-field-keywords {
   background-color: #cdd5de;
-  margin-left: 330px;
   margin-bottom: 0;
-  width: 600px;
   padding: 10px 15px 15px 15px;
 }
 
@@ -1221,9 +1201,7 @@ body.not-front {
 #block-system-main .inner .node-project .field-name-field-project-related-events, 
 #block-system-main .inner .node-project .field-name-field-project-related-resources {
   background-color: #cdd5de;
-  margin-left: 330px;
   margin-bottom: 0;
-  width: 600px;
   padding: 10px 15px 10px 15px;
 }
 
