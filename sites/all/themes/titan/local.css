@@ -1829,8 +1829,16 @@ body.not-front {
 
 /*** PEOPLE ***/
 
-#block-views-people-block_1 {
+#block-views-people-block_1,
+#block-views-people-block_2,
+#block-views-people-block_3,
+#block-views-people-block_4,
+#block-views-people-block_5 {
   margin-top: -20px;
+}
+
+.view-id-people .cols-4 td {
+  width: 240px;
 }
 
 .view-id-people td {
@@ -1841,7 +1849,7 @@ body.not-front {
   margin-bottom: 20px;
 }
 
-#block-views-people-block_1 tr {
+.view-id-people tr {
   border-bottom: 0;
   height: 300px;
 }
@@ -2006,10 +2014,6 @@ body.not-front {
 
 .profile-option .small {
   font-size: 75%;
-}
-
-#block-views-people-block_1 .cols-4 td {
-  width: 240px;
 }
 
 /*** ABOUT ***/
