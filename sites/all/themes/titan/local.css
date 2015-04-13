@@ -516,6 +516,11 @@ body.front {
   color: rgb(255, 255, 255);
 }
 
+.front #block-views-research_highlights-block .read-more {
+  display: block;
+  margin-top: 20px;
+}
+
 .front #block-views-publications-block_2 div {
   color: rgb(255, 255, 255);
 }
