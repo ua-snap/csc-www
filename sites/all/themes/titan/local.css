@@ -294,6 +294,10 @@ ul + p, ol + p {
   background-color: transparent;
 }
 
+.empty-upcoming-events {
+  padding-top: 5px;
+}
+
 .empty-publications p,
 .empty-upcoming-events p {
   margin: 20px 0;
@@ -496,6 +500,16 @@ body.front {
   margin-top: 0;
 }
 
+.front #block-views-events-block .node-header {
+  display: none;
+}
+
+.front #block-views-events-block .content h2 {
+  text-align: left;
+  font-size: 15px;
+  padding: 0;
+}
+
 .front #block-views-events-block h2.node-title,
 .front #block-views-research_highlights-block h2.node-title,
 .front #block-views-publications-block_2 h2.node-title {
@@ -552,10 +566,6 @@ body.front {
 
 .front .view-events .views-row {
   border-top: none;
-}
-
-.front .view-events .views-row .node-header {
-  margin-bottom: 20px;
 }
 
 .front #block-views-events-block a,
@@ -749,7 +759,7 @@ body.front {
 }
 
 .front .node-event {
-  padding-top: 23px;
+  padding-top: 24px;
 }
 
 .front #header-menu-wrapper {
