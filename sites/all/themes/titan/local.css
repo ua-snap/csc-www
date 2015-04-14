@@ -438,8 +438,7 @@ body.front {
   background-image: linear-gradient( rgb(32, 60, 93), transparent, rgb(32, 60, 93) );
 }
 
-#block-views-research_highlights-block .node-teaser,
-#block-views-block-views-publications-block_2 .node-teaser {
+#block-views-research_highlights-block .node-research-highlight {
   position: absolute;
   bottom: 0;
   margin-bottom: 0;
@@ -516,9 +515,16 @@ body.front {
   color: rgb(255, 255, 255);
 }
 
-.front #block-views-research_highlights-block .read-more {
+.front #block-views-research_highlights-block .node-readmore {
   display: block;
-  margin-top: 20px;
+  margin-top: 18px;
+  margin-bottom: 15px;
+}
+
+.front #block-views-research_highlights-block .links-wrapper,
+.front #block-views-research_highlights-block ul.links,
+.front #block-views-research_highlights-block .field-name-body {
+  margin: 0;
 }
 
 .front #block-views-publications-block_2 div {
@@ -886,6 +892,10 @@ body.not-front {
 
 /*** RESEARCH HIGHLIGHTS ***/
 
+.not-front #node-216 {
+  margin-bottom: 0;
+}
+
 .not-front .node-research-highlight .field-name-field-media img {
   width: 300px;
   height: auto;
@@ -973,6 +983,14 @@ body.not-front {
   background-color: #ffffff;
 }
 
+#block-views-research_highlights-block_1 .field-name-body,
+#block-views-research_highlights-block_1 .field-items,
+#block-views-research_highlights-block_1 .field-item,
+#block-views-research_highlights-block_1 p,
+#block-views-research_highlights-block_1 .links-wrapper {
+  display: inline;
+}
+
 /*** NEWS ***/
 
 #field-news-related-people-add-more-wrapper, #field-news-related-resources-add-more-wrapper {
@@ -989,6 +1007,23 @@ body.not-front {
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+#block-views-news-block .field-name-body,
+#block-views-news-block .field-items,
+#block-views-news-block .field-item,
+#block-views-news-block p,
+#block-views-news-block .links-wrapper {
+  display: inline;
+}
+
+#block-views-news-block ul.inline {
+  margin: 0;
+  padding: 0;
+}
+
+#block-views-news-block ul.pager {
+  margin-left: 132px;
 }
 
 /*** PROJECTS ***/
@@ -1452,6 +1487,18 @@ body.not-front {
   margin-top: 6px;
   line-height: 16px;
   text-align: center;
+}
+
+#block-views-resources-block_1 .field-name-body,
+#block-views-resources-block_1 .field-items,
+#block-views-resources-block_1 .field-item,
+#block-views-resources-block_1 p,
+#block-views-resources-block_1 .links-wrapper {
+  display: inline;
+}
+
+#block-views-resources-block_1 ul.pager {
+  margin-left: 76px;
 }
 
 /*** PUBLICATIONS ***/
