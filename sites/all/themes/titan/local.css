@@ -1508,6 +1508,23 @@ body.not-front {
 
 /*** EVENTS ***/
 
+.not-front #block-views-events-block .node-event .group_left,
+.not-front #block-views-events-block_1 .node-event .group_left,
+.not-front #block-views-events-block_2 .node-event .group_left,
+.not-front #block-views-events-block_3 .node-event .group_left,
+.not-front #block-views-events-block_4 .node-event .group_left {
+  float: left;
+  width: inherit;
+}
+
+.not-front #block-views-events-block .node-event .group_right,
+.not-front #block-views-events-block_1 .node-event .group_right,
+.not-front #block-views-events-block_2 .node-event .group_right,
+.not-front #block-views-events-block_3 .node-event .group_right,
+.not-front #block-views-events-block_4 .node-event .group_right {
+  overflow: hidden;
+}
+
 .not-front #block-views-events-block .views-row,
 .not-front #block-views-events-block_1 .views-row,
 .not-front #block-views-events-block_2 .views-row,
@@ -1529,7 +1546,10 @@ body.not-front {
 .not-front #block-views-events-block_2 .links-wrapper,
 .not-front #block-views-events-block_3 .node-header,
 .not-front #block-views-events-block_3 .field-name-body,
-.not-front #block-views-events-block_3 .links-wrapper {
+.not-front #block-views-events-block_3 .links-wrapper,
+.not-front #block-views-events-block_4 .node-header,
+.not-front #block-views-events-block_4 .field-name-body,
+.not-front #block-views-events-block_4 .links-wrapper {
   float: right;
   width: 680px;
 }
