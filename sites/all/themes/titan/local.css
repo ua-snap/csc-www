@@ -808,6 +808,8 @@ body.not-front {
 
 #block-block-3 a {
   margin-left: -6px;
+  position: relative;
+  z-index: 10;
 }
 
 .not-front #header-menu-wrapper {
