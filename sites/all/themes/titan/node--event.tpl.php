@@ -102,10 +102,17 @@
       </div>
     <?php endif; ?>
 
+    <?php
+      hide($content['comments']);
+      hide($content['links']);
+      hide($content['title_field']);
+      hide($content['field_location']);
+      hide($content['field_date']);
+    ?>
     <div class="title-and-meta">
       <?php print render($title_prefix); ?>
 	<?php // Some AK CSC changes here. Unlink page titles. ?>
-      <h1 class="node-title" <?php print $title_attributes; ?>><?php print $title; ?></h1>
+      <h1 class="node-title" <?php print $title_attributes; ?>><?php print_r($node->title_field['und'][0]['value']); ?></h1>
       <?php print render($title_suffix); ?>
 
       <?php if ($display_submitted): ?>
@@ -124,14 +131,8 @@
     <?php //print $user_picture; ?>
     <?php
       // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      hide($content['field_location']);
-      hide($content['field_date']);
-
       print render($content['field_location']);
       print render($content['field_date']);
-
     ?>
 
     <?php
