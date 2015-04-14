@@ -954,6 +954,10 @@ body.not-front {
   color: rgb(46, 73, 112);
 }
 
+.not-front .node-research-highlight {
+  padding-top: 0;
+}
+
 #block-menu-menu-research-menu {
   margin: 20px 0;
 }
