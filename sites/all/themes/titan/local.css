@@ -513,6 +513,7 @@ body.front {
 .front #block-views-publications-block_2 h2.node-title a {
   line-height: 18px;
   color: rgb(255, 255, 255);
+  font-size: 15px;
 }
 
 .front #block-views-research_highlights-block .node-readmore {
