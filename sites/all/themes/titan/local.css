@@ -1933,6 +1933,10 @@ body.not-front {
   height: 300px;
 }
 
+.view-id-people .views-field-picture {
+  height: 150px;
+}
+
 .profile .user-picture {
   width: 325px;
 }
