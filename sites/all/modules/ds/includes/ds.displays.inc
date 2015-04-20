@@ -117,7 +117,7 @@ function ds_emergency() {
 
       $form['region_to_block']['submit'] = array(
         '#type' => 'submit',
-        '#value' => t('Update block regions'),
+        '#value' => t('Remove block regions'),
         '#submit' => array('ds_emergency_region_to_block_submit'),
         '#weight' => 1,
       );
@@ -146,10 +146,12 @@ function ds_emergency_region_to_block_submit($form, &$form_state) {
     foreach ($remove as $key => $value) {
       if ($key === $value) {
         $variable_set = TRUE;
-        db_delete('block')
-          ->condition('delta', $key)
-          ->condition('module', 'ds_extras')
-          ->execute();
+        if (module_exists('block')) {
+          db_delete('block')
+            ->condition('delta', $key)
+            ->condition('module', 'ds_extras')
+            ->execute();
+        }
         unset($region_blocks[$key]);
       }
     }
