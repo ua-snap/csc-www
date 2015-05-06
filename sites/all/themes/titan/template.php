@@ -285,3 +285,12 @@ function titan_pager($variables) {
   /* Print generated pager */
   return '<h2 class="element-invisible">' . t('Pages') . '</h2>' . theme('item_list', array('items' => $items, 'title' => NULL, 'type' => 'ul', 'attributes' => array('class' => array('pager'))));
 }
+
+function titan_vscc_element_black_icons($vars) {
+    $image_vars = array(
+        'path' => drupal_get_path('theme', 'titan') . '/images/vscc/' . $vars['element'] . '.png',
+        'alt' => t($vars['element']),
+        'title' => t($vars['element']),
+    );
+    return theme('image', $image_vars);
+}
