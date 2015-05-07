@@ -1975,14 +1975,14 @@ body.not-front {
 }
 
 .profile .field-name-field-first-name {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: bold;
   margin-right: 10px;
   display: inline-block;
 }
 
 .profile .field-name-field-last-name {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
   display: inline-block;
@@ -2088,9 +2088,8 @@ body.not-front {
   padding: 10px 15px 10px 15px;
 }
 
-.profile .field-name-field-people-publications .field-item {
-  display: list-item;
-  margin-left: 20px;
+#block-views-publications-block_1 h2 {
+  font-size: 20px;
 }
 
 .profile-option {
