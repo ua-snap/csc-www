@@ -2119,4 +2119,9 @@ body.not-front {
   font-size: 75%;
 }
 
+#block-block-7,
+#block-block-8 {
+  margin-bottom: 20px;
+}
+
 /*** ABOUT ***/
