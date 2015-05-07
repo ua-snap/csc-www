@@ -1529,8 +1529,28 @@ body.not-front {
 }
 
 /*** PUBLICATIONS ***/
-.not-front #block-views-publications-block .views-row {
+.page-node-210 .node-page {
+  margin-bottom: 0;
+}
+
+.page-node-210 .node-page .field-name-body {
+  margin-bottom: 0;
+}
+
+.page-node-210 h3 {
+  margin-bottom: 10px;
+}
+
+.not-front .view-publications .views-row {
   margin-bottom: 20px;
+}
+
+.not-front .view-publications ul {
+  margin-left: 0;
+}
+
+.not-front .view-publications ul.pager li a {
+  color: #355582;
 }
 
 /*** EVENTS ***/
