@@ -555,9 +555,9 @@ body.front {
   padding-top: 25px;
 }
 
-.front #block-views-research_highlights-block h2.node-title a,
-.front #block-views-publications-block_2 h2.node-title a {
-  font-size: 14px;
+.front #block-views-research_highlights-block h2.node-title a {
+  font-size: 18px;
+  text-shadow: 1px 1px 30px #000000;
 }
 
 .front #block-views-research_highlights-block .views-row-last {
