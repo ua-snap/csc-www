@@ -141,3 +141,5 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
+
+Redirect 301	/projects/integrated-ecosystem-model	/projects/integrated-ecosystem-model-iem-alaska-and-northwest-canada
