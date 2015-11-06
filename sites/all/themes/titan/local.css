@@ -10,6 +10,10 @@ body {
   margin: 0 auto;
 }
 
+a:active, a:focus, a:hover, a:visited {
+  outline: none;
+}
+
 #header-wrapper {
   background-color: rgb(255, 255, 255);
 }
