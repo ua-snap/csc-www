@@ -1073,16 +1073,16 @@ body.not-front {
 }
 
 
-#block-views-outreach-block .node-outreach .group_left,
-#block-views-projects-block_1 .node-project .group_left,
-#block-views-projects-block_2 .node-project .group_left {
+#block-views-outreach-block .node-outreach .group-left,
+#block-views-projects-block_1 .node-project .group-left,
+#block-views-projects-block_2 .node-project .group-left {
   float: left;
   width: inherit;
 }
 
-#block-views-outreach-block .node-outreach .group_right,
-#block-views-projects-block_1 .node-project .group_right,
-#block-views-projects-block_2 .node-project .group_right {
+#block-views-outreach-block .node-outreach .group-right,
+#block-views-projects-block_1 .node-project .group-right,
+#block-views-projects-block_2 .node-project .group-right {
   overflow: hidden;
 }
 
@@ -1138,14 +1138,14 @@ body.not-front {
   margin: 0;
 }
 
-.node-outreach .group_left,
-.node-project .group_left {
+.node-outreach .group-left,
+.node-project .group-left {
   margin-right: 10px;
   float: left;
 }
 
-.node-outreach .group_right,
-.node-project .group_right {
+.node-outreach .group-right,
+.node-project .group-right {
   overflow: hidden;
 }
 
@@ -1559,12 +1559,12 @@ body.not-front {
 
 /*** EVENTS ***/
 
-.node-event .group_left {
+.node-event .group-left {
   margin-right: 10px;
   float: left;
 }
 
-.node-event .group_right {
+.node-event .group-right {
   overflow: hidden;
 }
 
@@ -1573,20 +1573,20 @@ body.not-front {
   margin-top: 3px;
 }
 
-.not-front #block-views-events-block .node-event .group_left,
-.not-front #block-views-events-block_1 .node-event .group_left,
-.not-front #block-views-events-block_2 .node-event .group_left,
-.not-front #block-views-events-block_3 .node-event .group_left,
-.not-front #block-views-events-block_4 .node-event .group_left {
+.not-front #block-views-events-block .node-event .group-left,
+.not-front #block-views-events-block_1 .node-event .group-left,
+.not-front #block-views-events-block_2 .node-event .group-left,
+.not-front #block-views-events-block_3 .node-event .group-left,
+.not-front #block-views-events-block_4 .node-event .group-left {
   float: left;
   width: inherit;
 }
 
-.not-front #block-views-events-block .node-event .group_right,
-.not-front #block-views-events-block_1 .node-event .group_right,
-.not-front #block-views-events-block_2 .node-event .group_right,
-.not-front #block-views-events-block_3 .node-event .group_right,
-.not-front #block-views-events-block_4 .node-event .group_right {
+.not-front #block-views-events-block .node-event .group-right,
+.not-front #block-views-events-block_1 .node-event .group-right,
+.not-front #block-views-events-block_2 .node-event .group-right,
+.not-front #block-views-events-block_3 .node-event .group-right,
+.not-front #block-views-events-block_4 .node-event .group-right {
   overflow: hidden;
 }
 
