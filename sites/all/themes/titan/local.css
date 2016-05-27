@@ -69,6 +69,28 @@ a:active, a:focus, a:hover, a:visited {
   font-size: 28px;
 }
 
+.group-top {
+  background-color: #cdd5de;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.group-left {
+  float: left;
+  width: inherit;
+  margin-right: 10px;
+}
+
+.group-right {
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.group-related {
+  background-color: #cdd5de;
+  padding: 15px;
+}
+
 #block-node_subpages-menu_bar li {
   float: left;
   margin-right: 30px;
@@ -1072,20 +1094,6 @@ body.not-front {
   padding: 0 20px 5px 20px;
 }
 
-
-#block-views-outreach-block .node-outreach .group-left,
-#block-views-projects-block_1 .node-project .group-left,
-#block-views-projects-block_2 .node-project .group-left {
-  float: left;
-  width: inherit;
-}
-
-#block-views-outreach-block .node-outreach .group-right,
-#block-views-projects-block_1 .node-project .group-right,
-#block-views-projects-block_2 .node-project .group-right {
-  overflow: hidden;
-}
-
 #block-views-outreach-block .node-outreach .field-name-body,
 #block-views-projects-block_1 .node-project .field-name-body,
 #block-views-projects-block_2 .node-project .field-name-body {
@@ -1125,28 +1133,10 @@ body.not-front {
   display: inline;
 }
 
-.node-outreach .group_top,
-.node-project .group_top {
-  background-color: #cdd5de;
-  padding: 15px 15px 5px 15px;
-  margin-bottom: 30px;
-}
-
 .node-outreach .field-name-title-field h1,
 .node-project .field-name-title-field h1 {
   font-size: 24px;
   margin: 0;
-}
-
-.node-outreach .group-left,
-.node-project .group-left {
-  margin-right: 10px;
-  float: left;
-}
-
-.node-outreach .group-right,
-.node-project .group-right {
-  overflow: hidden;
 }
 
 .node-project .field-name-field-funded-title .field-label, 
@@ -1260,24 +1250,6 @@ body.not-front {
 #block-system-main .inner .node-outreach .field-name-field-outreach-image .field-item,
 #block-system-main .inner .node-project .field-name-field-project-image .field-item {
   margin-bottom: 20px;
-}
-
-#block-system-main .inner .node-outreach .field-name-field-outreach-keywords,
-#block-system-main .inner .node-project .field-name-field-keywords {
-  background-color: #cdd5de;
-  margin-bottom: 0;
-  padding: 10px 15px 15px 15px;
-}
-
-#block-system-main .inner .node-outreach .field-name-field-outreach-related-people,
-#block-system-main .inner .node-outreach .field-name-field-outreach-related-resources,
-#block-system-main .inner .node-outreach .field-name-field-outreach-related-events, 
-#block-system-main .inner .node-project .field-name-field-project-related-people,
-#block-system-main .inner .node-project .field-name-field-project-related-events, 
-#block-system-main .inner .node-project .field-name-field-project-related-resources {
-  background-color: #cdd5de;
-  margin-bottom: 0;
-  padding: 10px 15px 10px 15px;
 }
 
 #block-system-main .inner .node-project .sharethis-buttons {
@@ -1559,35 +1531,9 @@ body.not-front {
 
 /*** EVENTS ***/
 
-.node-event .group-left {
-  margin-right: 10px;
-  float: left;
-}
-
-.node-event .group-right {
-  overflow: hidden;
-}
-
 .node-event h2 {
   font-size: 18px;
   margin-top: 3px;
-}
-
-.not-front #block-views-events-block .node-event .group-left,
-.not-front #block-views-events-block_1 .node-event .group-left,
-.not-front #block-views-events-block_2 .node-event .group-left,
-.not-front #block-views-events-block_3 .node-event .group-left,
-.not-front #block-views-events-block_4 .node-event .group-left {
-  float: left;
-  width: inherit;
-}
-
-.not-front #block-views-events-block .node-event .group-right,
-.not-front #block-views-events-block_1 .node-event .group-right,
-.not-front #block-views-events-block_2 .node-event .group-right,
-.not-front #block-views-events-block_3 .node-event .group-right,
-.not-front #block-views-events-block_4 .node-event .group-right {
-  overflow: hidden;
 }
 
 .not-front #block-views-events-block .views-row,
@@ -1836,19 +1782,6 @@ body.not-front {
   margin-bottom: 20px;
 }
 
-#block-system-main .inner .node-event .field-name-field-products,
-#block-system-main .inner .node-event .field-name-field-event-pi,
-#block-system-main .inner .node-event .field-name-field-event-co-pi {
-  background-color: #cdd5de;
-  margin-bottom: 0;
-  padding: 10px 15px 10px 15px;
-}
-
-#block-system-main .inner .node-event .field-name-field-participants {
-  background-color: #cdd5de;
-  padding: 10px 15px 10px 15px;
-}
-
 #block-system-main .inner .node-event .sharethis-buttons {
   display: none;
 }
@@ -1909,13 +1842,6 @@ body.not-front {
 
 #node_event_agenda_group_subpage .field-name-field-event-image {
   float: left;
-}
-
-#node_event_agenda_group_subpage .field-name-field-agenda,
-#node_event_agenda_group_subpage .field-name-field-agenda .field-items,
-#node_event_agenda_group_subpage .field-name-field-agenda .field-items table,
-#node_event_agenda_group_subpage .field-name-field-agenda .field-items table tbody,
-#node_event_agenda_group_subpage .field-name-field-agenda .field-items table tbody tr {
 }
 
 .view-event .group_subpage .field-name-field-agenda {
