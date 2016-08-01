@@ -1428,6 +1428,11 @@ body.not-front {
   background-repeat: no-repeat;
   background-position: 0 32px;
 }
+.resource-type-illustration {
+  background-image: url(/sites/default/files/icons/illustration.png);
+  background-repeat: no-repeat;
+  background-position: 0 32px;
+}
 .resource-type-poster {
   background-image: url(/sites/default/files/icons/poster.png);
   background-repeat: no-repeat;
