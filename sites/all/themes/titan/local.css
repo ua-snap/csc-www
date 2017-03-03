@@ -736,7 +736,7 @@ body.front {
   float: right;
 }
 
-.front .views-content-counter {
+.front .views-content-counter a {
   color: rgb(255, 255, 255);
   width: 20px;
   float: left;
@@ -778,8 +778,8 @@ body.front {
 
 .front .views-slideshow-controls-bottom {
   position: relative;
-  width: 120px;
-  bottom: 20px;
+  width: 150px;
+  bottom: 18px;
   z-index: 6;
   left: 750px;
 }
@@ -1369,7 +1369,7 @@ body.not-front {
   float: right;
 }
 
-.page-node-10 .views-content-counter {
+.page-node-10 .views-content-counter a {
   color: rgb(255, 255, 255);
   width: 20px;
   float: left;
