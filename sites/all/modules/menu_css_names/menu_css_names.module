@@ -153,19 +153,24 @@ function menu_css_names_menu_link(array $variables) {
   return '<li ' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+
 /**
- * This is the modified version of the default theme_menu_tree() function
+ * This is the modified version of the default theme_menu_tree() function.
  *
- * Note that this function wasn't overrided in the D6 version of this module.
- *
- **/
+ * Note that this function was not overridden in the D6 version of this module.
+ */
 function menu_css_names_menu_tree($variables) {
-	$menu = $variables['tree'];
-	$menu = preg_replace('/(<li\s+class="[^"]+)("><a\s+[^>]+>)(.+?)(<\/a>)/e', "'\\1 ' . _make_class_name('\\3') . '\\2\\3\\4'", $menu);
-	
+  $menu = $variables['tree'];
+  $menu = preg_replace_callback(
+    '/(<li\s+class="[^"]+)("><a\s+[^>]+>)(.+?)(<\/a>)/',
+    function ($m) {
+      return $m[1] . ' ' . _make_class_name($m[3]) . $m[2] . $m[3] . $m[4];
+    },
+    $menu
+  );
+
   return '<ul class="menu">' . stripslashes($menu) . '</ul>';
 }
-
 
 /**
  * This is the modified version of the default theme_menu_local_task() function
