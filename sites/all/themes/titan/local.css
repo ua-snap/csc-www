@@ -1047,10 +1047,14 @@ body.not-front {
 
 .not-front #block-system-main .inner .node-article .field-name-field-image {
   margin-right: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+.not-front #block-system-main .inner .node-article .field-name-field-image .field-item {
+  margin-bottom: 2em;
 }
 
 #block-views-news-block .field-name-body,
