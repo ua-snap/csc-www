@@ -1892,6 +1892,43 @@ body.not-front {
   height: 300px;
 }
 
+.not-front #content .view-id-people h3 {
+  font-weight: bold;
+  color: #000;
+}
+
+.not-front #content #block-views-people-block_2 h2,
+.not-front #content #block-views-people-block_7 h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.view-id-people.view-display-id-block_2 th,
+.view-id-people.view-display-id-block_7 th {
+  padding: 8px;
+  background-color: #ddd;
+  width: 50%;
+}
+
+.view-id-people.view-display-id-block_2 tr,
+.view-id-people.view-display-id-block_7 tr {
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.view-id-people.view-display-id-block_2 td,
+.view-id-people.view-display-id-block_7 td {
+  text-align: inherit;
+  padding: 8px;
+  width: 50%;
+}
+
+.view-id-people.view-display-id-block_2 tr.even,
+.view-id-people.view-display-id-block_7 tr.even {
+  background-color: rgb(240, 240, 238);
+}
+
 .view-id-people .views-field-picture {
   height: 150px;
 }
