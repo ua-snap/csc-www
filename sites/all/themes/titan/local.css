@@ -1,7 +1,10 @@
 /*** SITE WIDE ***/
 
 html {
-  font-size: 15px;
+    font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+    letter-spacing: .02em;
+    color: rgb(40,59,94);
 }
 
 body {
@@ -10,9 +13,75 @@ body {
   margin: 0 auto;
 }
 
-a:active, a:focus, a:hover, a:visited {
+strong {
+    font-weight: bold;
+}
+
+
+/* Links */
+a, 
+.node .meta a, 
+li.node-readmore.first.last a, 
+.title-and-meta h2.node-title a,
+.title-and-meta h1.node-title a {
+    color: #1b67e2;
+    font-weight: bold;
+}
+
+a:hover,
+a:active,
+a:focus, 
+.node .meta a:hover, 
+li.node-readmore.first.last a:hover  {
+    color: #96c42b;
+    
+}
+
+a:active, a:visited {
   outline: none;
 }
+
+
+/**
+ * Headers
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(40,59,94);
+}
+h1 {
+  margin: 20px 0 10px 0;
+  font-size: 1.7em;
+}
+h2 {
+  margin: 18px 0 11px 0;
+  font-size: 1.5em;
+}
+h3 {
+  margin: 14px 0 6px 0;
+  font-size: 1.3em;
+}
+h4 {
+  margin: 7px 0;
+  font-size: 1.1em;
+}
+h5,
+h6 {
+  margin: 5px 0;
+  font-size: 1em;
+    border-bottom: 1px dotted silver;
+}
+
+.node h1.node-title,
+node h2.node-title {
+    font-size: 1.7em;
+}
+
+
 
 #header-wrapper {
   background-color: rgb(255, 255, 255);
@@ -170,12 +239,7 @@ a:active, a:focus, a:hover, a:visited {
   color: rgb(46, 73, 112);
 }
 
-a:hover,
-a:active,
-a:focus {
-  color: rgb(193, 205, 145) !important;
-  background-color: transparent !important;
-}
+
 
 #branding {
   display: none;
@@ -202,18 +266,7 @@ form#search-block-form #edit-actions {
   color: rgb(144, 173, 61);
 }
 
-.node .meta a, li.node-readmore.first.last a, a {
-  color: #355582;
-}
 
-.title-and-meta h2.node-title a,
-.title-and-meta h1.node-title a {
-  color: #355582;
-}
-
-.node .meta a:hover, li.node-readmore.first.last a:hover, a:hover {
-  color: rgb(144, 173, 61);
-}
 
 .views-widget input#edit-keys.form-text{
   width: 350px;
@@ -1865,6 +1918,9 @@ body.not-front {
   float: right;
 }
 
+
+/* People */
+
 /*** PEOPLE ***/
 
 #block-views-people-block_1,
@@ -2099,4 +2155,3 @@ body.not-front {
   margin-bottom: 20px;
 }
 
-/*** ABOUT ***/

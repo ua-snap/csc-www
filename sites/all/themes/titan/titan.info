@@ -13,9 +13,12 @@ features[] = node_user_picture
 features[] = comment_user_picture
 features[] = favicon
 
+
 stylesheets[all][]   = base.css
 stylesheets[all][]   = style.css
 stylesheets[all][]   = local.css
+
+
 
 regions[header_menu]          = Header menu
 regions[footer_menu]          = Footer menu
@@ -30,7 +33,7 @@ regions[page_top]             = Page top
 regions[page_bottom]          = Page bottom
 
 settings[trim_pager]            = '5'
-settings[copyright_information] = 'Copyright © 2010 Your Name Here.'
+settings[copyright_information] = 'Copyright © Your Name Here.'
 
 
 ; Information added by drupal.org packaging script on 2011-01-10
