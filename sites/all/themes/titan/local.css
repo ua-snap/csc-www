@@ -1915,72 +1915,6 @@ body.not-front {
 
 /* People */
 
-/*** PEOPLE ***/
-/*
-#block-views-people-block_1,
-#block-views-people-block_2,
-#block-views-people-block_3,
-#block-views-people-block_4,
-#block-views-people-block_5 {
-  margin-top: -20px;
-}
-
-(
-.view-id-people .cols-4 td {
-  width: 209px;
-}
-
-.view-id-people td {
-  text-align: center;
-}
-
-.user-picture {
-  margin-bottom: 20px;
-}
-
-.view-id-people tr {
-  border-bottom: 0;
-  height: 300px;
-}
-
-.not-front #content .view-id-people h3 {
-  font-weight: bold;
-  color: #000;
-}
-
-.not-front #content #block-views-people-block_2 h2,
-.not-front #content #block-views-people-block_7 h2 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-}
-
-.view-id-people.view-display-id-block_2 th,
-.view-id-people.view-display-id-block_7 th {
-  padding: 8px;
-  background-color: #ddd;
-  width: 50%;
-}
-
-.view-id-people.view-display-id-block_2 tr,
-.view-id-people.view-display-id-block_7 tr {
-  height: auto;
-  border: 1px solid #ccc;
-}
-
-.view-id-people.view-display-id-block_2 td,
-.view-id-people.view-display-id-block_7 td {
-  text-align: inherit;
-  padding: 8px;
-  width: 50%;
-}
-
-.view-id-people.view-display-id-block_2 tr.even,
-.view-id-people.view-display-id-block_7 tr.even {
-  background-color: rgb(240, 240, 238);
-}
-*/
-
 
 .view.view-people .views-row .views-field.views-field-picture  {
     float: left;
@@ -1999,10 +1933,31 @@ body.not-front {
     display: none;
 }
 
-#block-views-people-block_5 h3, 
-#block-views-people-block_6 h3 {
+#block-views-people-block_2 h2,   /*affil researchers*/
+#block-views-people-block_7 h2 {   /*alum fellows*/
+    margin: 1em 0 .25em 0;
+    border-top: 1px dotted silver;
+}
+
+#block-views-people-block_5 h3,    /*leadership*/
+#block-views-people-block_6 h3 {   /*alum fellows*/
     margin: 3em 0 .25em 0;
     border-top: 1px dotted silver;
+}
+
+.views-table.cols-2 {
+    width: 50%;
+}
+
+.views-table.cols-2 th {
+    background: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0;
+}
+
+.views-table.cols-2 td {
+    padding: .2em;
 }
 
 
