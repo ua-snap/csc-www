@@ -1928,15 +1928,20 @@ body.not-front {
     margin-bottom: 3em;
 }
 
+#block-views-people-block_5 {   /*leadership*/
+    margin-top: -4em;
+}    
+
+
+#block-views-people-block_2 h2,   /*affil rsch table*/
+#block-views-people-block_7 h2 {   /*alum fellows table*/
+    margin: 1em 0 .25em 0;
+    border-top: 1px dotted silver;
+}
+
 #block-views-people-block_3 h3,  /*fellows page*/
 #block-views-people-block_4 h3 { /*staff page*/
     display: none;
-}
-
-#block-views-people-block_2 h2,   /*affil researchers*/
-#block-views-people-block_7 h2 {   /*alum fellows*/
-    margin: 1em 0 .25em 0;
-    border-top: 1px dotted silver;
 }
 
 #block-views-people-block_5 h3,    /*leadership*/
