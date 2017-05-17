@@ -1945,9 +1945,7 @@ body.not-front {
     border-top: 1px dotted silver;
 }
 
-.views-table.cols-2 {
-    width: 50%;
-}
+
 
 .views-table.cols-2 th {
     background: #fff;
