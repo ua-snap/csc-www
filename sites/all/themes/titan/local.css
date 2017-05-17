@@ -1029,12 +1029,6 @@ body.not-front {
   background-color: transparent;
 }
 
-.not-front #content h2,
-.not-front #content h3,
-.not-front #content h4 {
-  color: rgb(46, 73, 112);
-}
-
 .not-front .node-research-highlight {
   padding-top: 0;
 }
@@ -1922,7 +1916,7 @@ body.not-front {
 /* People */
 
 /*** PEOPLE ***/
-
+/*
 #block-views-people-block_1,
 #block-views-people-block_2,
 #block-views-people-block_3,
@@ -1931,6 +1925,7 @@ body.not-front {
   margin-top: -20px;
 }
 
+(
 .view-id-people .cols-4 td {
   width: 209px;
 }
@@ -1984,18 +1979,36 @@ body.not-front {
 .view-id-people.view-display-id-block_7 tr.even {
   background-color: rgb(240, 240, 238);
 }
+*/
 
-.view-id-people .views-field-picture {
-  height: 150px;
+
+.view.view-people .views-row .views-field.views-field-picture  {
+    float: left;
+    height: 100px;
+    border: 1px solid silver;
+    margin: 0 1em 0 0;
+    border-radius: 5px;
+    }
+
+.views-field.views-field-field-affiliation {
+    margin-bottom: 3em;
 }
 
-.profile .user-picture {
-  width: 325px;
+#block-views-people-block_3 h3,  /*fellows page*/
+#block-views-people-block_4 h3 { /*staff page*/
+    display: none;
 }
 
-.profile .user-picture img {
-  height: 150px;
+#block-views-people-block_5 h3, 
+#block-views-people-block_6 h3 {
+    margin: 3em 0 .25em 0;
+    border-top: 1px dotted silver;
 }
+
+
+
+
+
 
 .profile .group-left-side h3 {
   display: none;
