@@ -60,31 +60,26 @@ h6 {
     font-weight: bold;
 }
 h1 {
-  margin: 20px 0 10px 0;
+  margin: 2em 0 0 0;
   font-size: 1.7em;
 }
 h2 {
-  margin: 18px 0 11px 0;
+  margin: 1.5em 0 0 0;
   font-size: 1.5em;
 }
 h3 {
-  margin: 14px 0 6px 0;
+  margin: 1em 0 0 0;
   font-size: 1.3em;
 }
 h4 {
-  margin: 7px 0;
+  margin: 1em 0 0 0;
   font-size: 1.1em;
 }
 h5,
 h6 {
-  margin: 5px 0;
+  margin: 1em 0;
   font-size: 1em;
     border-bottom: 1px dotted silver;
-}
-
-.node h1.node-title,
-.node h2.node-title {
-    font-size: 1.7em;
 }
 
 
@@ -1584,11 +1579,6 @@ body.not-front {
 }
 
 /*** EVENTS ***/
-
-.node-event h2 {
-  font-size: 18px;
-  margin-top: 3px;
-}
 
 .not-front #block-views-events-block .views-row,
 .not-front #block-views-events-block_1 .views-row,
