@@ -34,7 +34,12 @@ a:focus,
 .node .meta a:hover, 
 li.node-readmore.first.last a:hover  {
     color: #96c42b;
-    
+    outline: none;    
+}
+
+.node h1.node-title a:hover, 
+.node h2.node-title a:hover {
+    color: #96c42b;
 }
 
 a:active, a:visited {
@@ -2126,3 +2131,16 @@ body.not-front {
   margin-bottom: 20px;
 }
 
+
+/* Tables */
+
+td {
+    vertical-align: top;
+    padding: .3em;
+    font-size: .9em;
+}
+
+td img {
+    border: 1px solid silver;
+    margin: .3em 0 0 0;
+}
