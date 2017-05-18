@@ -82,6 +82,11 @@ h6 {
     border-bottom: 1px dotted silver;
 }
 
+.group-right h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
 
 
 #header-wrapper {
@@ -975,6 +980,8 @@ body.not-front {
   background-color: rgb(49, 72, 106);
 }
 
+
+
 /*** BANNERS ***/
 
 .not-front .node-banner .field-name-field-banner-image {
@@ -1629,6 +1636,14 @@ body.not-front {
 .not-front #block-views-events-block_3 .node-event .field-name-body,
 .not-front #block-views-events-block_4 .node-event .field-name-body {
   margin-bottom: 0;
+}
+
+
+/* BLOCK SYSTEM MAIN STYLES */
+
+#block-system-main a[href ^="mailto:"] {
+    background: none;
+    padding: 0;
 }
 
 #block-system-main .inner .node-event .node-header {
