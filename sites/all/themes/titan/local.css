@@ -57,6 +57,7 @@ h4,
 h5,
 h6 {
   color: rgb(40,59,94);
+    font-weight: bold;
 }
 h1 {
   margin: 20px 0 10px 0;
@@ -82,7 +83,7 @@ h6 {
 }
 
 .node h1.node-title,
-node h2.node-title {
+.node h2.node-title {
     font-size: 1.7em;
 }
 
@@ -1159,7 +1160,6 @@ body.not-front {
 #block-views-outreach-block .node-outreach h2,
 #block-views-projects-block_1 .node-project h2,
 #block-views-projects-block_2 .node-project h2 {
-  font-size: 18px;
   margin-top: 3px;
 }
 
@@ -1258,13 +1258,6 @@ body.not-front {
 #block-system-main .inner .node-project .field-name-field-project-related-resources .node-resource {
   margin: 0;
   padding: 0;
-}
-
-#block-system-main .inner .node-project .title-and-meta h2,
-#block-system-main .inner .node-project .title-and-meta h2 a {
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 13px;
 }
 
 #block-system-main .inner .node-project .field-name-field-type {
@@ -2133,10 +2126,16 @@ body.not-front {
 
 
 /* Tables */
+table  {
+    background: #fff;
+    vertical-align: top;
+    padding: 3em;
+}
+
 
 td {
     vertical-align: top;
-    padding: .3em;
+    padding: .6em;
     font-size: .9em;
 }
 
