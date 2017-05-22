@@ -5,6 +5,7 @@ html {
   font-size: 16px;
     letter-spacing: .02em;
     color: rgb(40,59,94);
+    line-height: 1.3;
 }
 
 body {
@@ -46,6 +47,10 @@ a:active, a:visited {
   outline: none;
 }
 
+.node ul.links {
+    margin: 0;
+}
+
 
 /**
  * Headers
@@ -85,6 +90,11 @@ h6 {
 .group-right h2 {
     font-size: 1.2em;
     margin: 0;
+}
+
+.node h2.node-title {
+    font-size: 1em;
+    line-height: .5;
 }
 
 
@@ -358,9 +368,7 @@ ul + p, ol + p {
   margin-bottom: 0;
 }
 
-.node-teaser .title-and-meta h2 a {
-  font-size: 18px;
-}
+
 
 .search-result {
   margin: 25px 0;
@@ -443,13 +451,6 @@ div .collapsiblock a {
   right: 10px;
 }
 
-.node h2.node-title a {
-  font-family: inherit;
-}
-
-.node h2.node-title a {
-  font-family: inherit;
-}
 
 #views_slideshow_cycle_teaser_section_banner-block {
   height: 279px;
@@ -591,14 +592,12 @@ body.front {
 
 .front #block-views-events-block .content h2 {
   text-align: left;
-  font-size: 15px;
   padding: 0;
 }
 
 .front #block-views-events-block h2.node-title,
 .front #block-views-research_highlights-block h2.node-title,
 .front #block-views-publications-block_2 h2.node-title {
-  line-height: 18px;
   text-align: left;
   padding: 0;
 }
@@ -610,9 +609,7 @@ body.front {
 .front #block-views-research_highlights-block h2.node-title a,
 .front #block-views-publications-block_2 p,
 .front #block-views-publications-block_2 h2.node-title a {
-  line-height: 18px;
   color: rgb(255, 255, 255);
-  font-size: 15px;
   font-weight: normal;
 }
 
@@ -766,10 +763,6 @@ body.front {
 
 .front #block-views-events-block .links-wrapper {
   display: none;
-}
-
-.front #block-views-events-block .node-header {
-  line-height: 18px;
 }
 
 .front #block-views-banner-block {
@@ -945,7 +938,6 @@ body.not-front {
 }
 
 .not-front #block-menu_block-1 ul.menu li a {
-  line-height: 24px;
   padding-bottom: 2px;
 }
 
@@ -1002,7 +994,7 @@ body.not-front {
   border: none;
   padding: 0;
 }
-
+x
 /*** RESEARCH HIGHLIGHTS ***/
 
 .not-front #node-216 {
@@ -1270,14 +1262,13 @@ body.not-front {
 }
 
 #block-system-main .inner .node-project .field-name-field-project-related-resources .node-resource {
-  margin: 0;
+  margin: .5em 0;
   padding: 0;
 }
 
 #block-system-main .inner .node-project .field-name-field-type {
   font-size: 13px;
   font-weight: normal;
-  line-height: 13px;
 }
 
 #block-system-main .inner .node-project .content {
@@ -1349,7 +1340,7 @@ body.not-front {
 
 #block-system-main .inner .view-taxonomy-term .node-outreach .node-header,
 #block-system-main .inner .view-taxonomy-term .node-project .node-header {
-  margin-bottom: 16px;
+  margin-bottom: .5em;
 }
 
 #node-11 {
@@ -1366,12 +1357,9 @@ body.not-front {
 
 /*** RESOURCES ***/
 
-.node-resource {
-  margin-bottom: 10px;
-}
-
-#block-views-resources-block_1 {
-  margin-top: -20px;
+.node {
+    padding: 0;
+    margin: 1em 0;
 }
 
 #block-system-main .node-resource .node-header .title-and-meta,
@@ -1380,7 +1368,7 @@ body.not-front {
 }
 
 .node-resource .date {
-  display: none;
+  display: inline;
 }
 
 .page-node-10 .views-field.views-field-field-resource-banner-image {
@@ -1468,6 +1456,91 @@ body.not-front {
   margin-left: 100px;
 }
 
+
+
+
+#block-system-main .inner .view-taxonomy-term .node-resource {
+  padding-left: 100px;
+}
+
+#block-block-4 {
+  margin-bottom: 40px;
+    border: 1px solid;
+}
+
+#block-block-4 h2 {
+  font-size: 16px;
+}
+
+#node-10 {
+  margin-bottom: 0;
+}
+
+#node-10 .field-name-body {
+  margin-bottom: 0;
+}
+
+#node-10 .field-name-body p + p {
+  margin-top: 0;
+}
+
+
+
+#block-views-resources-block_1 .field-name-body,
+#block-views-resources-block_1 .field-items,
+#block-views-resources-block_1 .field-item,
+#block-views-resources-block_1 p,
+#block-views-resources-block_1 .links-wrapper {
+  display: inline;
+}
+
+#block-views-resources-block_1 ul.pager {
+  margin-left: 76px;
+}
+
+.node-header {
+    margin: 0;
+}
+
+#block-views-resources-block_1 p,
+#block-views-resources-block_1 a {
+    line-height: 1.2;
+    font-size: .85em;
+}
+
+#block-views-resources-block_1 h2.node-title a {
+    font-family: inherit;
+}
+
+.views-exposed-form {
+    border: 1px solid rgb(191,200,134);
+    margin: 2em 0;
+    border-radius: 5px;
+    background: rgb(243,244,228);
+    padding: 1em;
+}
+
+.views-exposed-form label {
+    font-size: 1em;
+}
+
+.field-group-div .node-resource {
+    line-height: 1;
+}
+
+.field-group-div .node-resource .node-header h2.node-title a {
+  font-size: .9em;
+    font-family: inherit;
+}
+
+.group-related .field-label {
+    margin: 2em 0 0 0;
+}
+
+
+
+/*  graphics for resource types
+
 .resource-type-audio {
   background-image: url(/sites/default/files/icons/audio.png);
   background-repeat: no-repeat;
@@ -1517,34 +1590,6 @@ body.not-front {
   background-position: 0 32px;
 }
 
-#block-views-resources-block_1 .views-row > div > div {
-  margin-left: 75px;
-}
-
-#block-system-main .inner .view-taxonomy-term .node-resource {
-  padding-left: 100px;
-}
-
-#block-block-4 {
-  margin-bottom: 40px;
-}
-
-#block-block-4 h2 {
-  font-size: 16px;
-}
-
-#node-10 {
-  margin-bottom: 0;
-}
-
-#node-10 .field-name-body {
-  margin-bottom: 0;
-}
-
-#node-10 .field-name-body p + p {
-  margin-top: 0;
-}
-
 .resource-key-item {
   width: 190px;
   height: 200px;
@@ -1556,21 +1601,15 @@ body.not-front {
 
 .resource-key-item p {
   margin-top: 6px;
-  line-height: 16px;
   text-align: center;
 }
 
-#block-views-resources-block_1 .field-name-body,
-#block-views-resources-block_1 .field-items,
-#block-views-resources-block_1 .field-item,
-#block-views-resources-block_1 p,
-#block-views-resources-block_1 .links-wrapper {
-  display: inline;
-}
+*/
 
-#block-views-resources-block_1 ul.pager {
-  margin-left: 76px;
-}
+
+
+
+
 
 /*** PUBLICATIONS ***/
 .page-node-210 .node-page {
@@ -1687,19 +1726,12 @@ body.not-front {
   display: inline;
 }
 
-#block-system-main .inner .node-event .title-and-meta h2,
-#block-system-main .inner .node-event .title-and-meta h2 a {
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 13px;
-}
+
 
 #block-system-main .inner .node-event h1.node-title,
 #block-system-main .inner .view-event h1.node-title {
   padding: 20px 20px;
   background-color: rgb(243,244,228);
-  font-size: 24px;
-  line-height: 24px;
   margin: 0;
 }
 
@@ -1753,7 +1785,6 @@ body.not-front {
   background-color: rgb(32, 56, 92);
   padding: 8px;
   margin-right: 0;
-  line-height: 21px;
 }
 
 #event-sub-nav li.active {
