@@ -19,6 +19,16 @@ strong {
 }
 
 
+.node .field-type-image {
+    margin: 5px 15px 9px 0;
+    float: left;
+    background-color: rgb(243,244,228);
+    border: 1px solid rgb(191,200,134);
+    border-radius: 5px;
+    padding: .35em .35em .15em .35em;
+}
+
+
 /* Links */
 a, 
 .node .meta a, 
@@ -49,6 +59,16 @@ a:active, a:visited {
 
 .node ul.links {
     margin: 0;
+}
+
+.node h1.node-title a, 
+.node h2.node-title a {
+    font-size: 1.2em;
+    line-height: 1.2;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+    color: #1b67e2;
 }
 
 
@@ -1131,6 +1151,10 @@ x
 
 #block-views-news-block ul.pager {
   margin-left: 132px;
+}
+
+.view.view-news .content {
+    margin: .25em 0 0 132px;
 }
 
 /*** PROJECTS ***/
