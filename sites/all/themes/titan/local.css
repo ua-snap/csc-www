@@ -1526,14 +1526,18 @@ x
     margin: 0;
 }
 
+
+
 #block-views-resources-block_1 p,
 #block-views-resources-block_1 a {
     line-height: 1.2;
-    font-size: .85em;
+    font-size: .9em;
+
 }
 
 #block-views-resources-block_1 h2.node-title a {
     font-family: inherit;
+    
 }
 
 .views-exposed-form {
@@ -1548,6 +1552,17 @@ x
     font-size: 1em;
 }
 
+.view.view-resources .views-row {
+    border-top: 1px solid silver;
+    margin: 0 0 1.5em 0;
+}
+
+.views-field.views-field-created {
+    color: #8b929e;
+    font-style: italic;
+    font-size: .9em;
+}
+
 .field-group-div .node-resource {
     line-height: 1;
 }
@@ -1555,11 +1570,14 @@ x
 .field-group-div .node-resource .node-header h2.node-title a {
   font-size: .9em;
     font-family: inherit;
+    
 }
 
 .group-related .field-label {
     margin: 2em 0 0 0;
 }
+
+
 
 
 
