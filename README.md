@@ -1,5 +1,11 @@
 # AK CSC Drupal
 
+## Deploying updates to `nyx.snap.uaf.edu`
+
+To pull the latest code from the `master` branch of this repository and recompile the Sass stylesheets, do this on your local machine:
+
+`ssh -t username@nyx.snap.uaf.edu update_drupal.sh`
+
 ## Local development instance with Docker
 
 ### Setup Docker containers
