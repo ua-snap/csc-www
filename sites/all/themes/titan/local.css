@@ -2004,13 +2004,17 @@ x
 /* People */
 
 
+.view.view-people .views-row  {
+    clear: both;
+}
+
 .view.view-people .views-row .views-field.views-field-picture  {
     float: left;
     height: 100px;
     border: 1px solid silver;
-    margin: 0 1em 0 0;
+    margin: 0 1em 1em 0;
     border-radius: 5px;
-    }
+}
 
 .views-field.views-field-field-affiliation {
     margin-bottom: 3em;
