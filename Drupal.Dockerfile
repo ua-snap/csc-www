@@ -63,7 +63,7 @@ RUN curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.ta
 	&& echo "${DRUPAL_MD5} *drupal.tar.gz" | md5sum -c - \
 	&& tar -xz --strip-components=1 -f drupal.tar.gz \
 	&& rm drupal.tar.gz \
-	&& chown -R www-data:www-data sites modules themes
+	&& chown -R www-data:www-data sites modules themes \
   && curl -OL https://github.com/drush-ops/drush/releases/download/8.1.16/drush.phar
 
 # vim:set ft=dockerfile:
