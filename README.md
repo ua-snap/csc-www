@@ -30,7 +30,7 @@ To pull the latest code from the `master` branch of this repository and recompil
 
    # Launch containers and disable IP restrictions.
    docker-compose up &
-   docker exec -i cscwww_drupal_1 php /var/www/html/drush.phar -y dis restrict_by_ip securepages
+   docker exec -i cscwww_drupal_1 php /usr/bin/drush.phar -y dis restrict_by_ip securepages
    ```
 
 ### Stop Docker containers
