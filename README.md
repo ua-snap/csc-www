@@ -19,11 +19,18 @@ To pull the latest code from the `master` branch of this repository and recompil
    ```bash
    git clone https://github.com/ua-snap/csc-www.git
    cd csc-www
+
+   # Put the database into a folder where it will be ingested.
    mv ~/Downloads/csc.sql database/
+
+   # Add site files and proper settings for local dev.
    cd sites/default
    tar -jxvf ~/Downloads/files-csc.bz2
-   docker-compose up
-   docker exec -i cscwww-drupal drush dis restrict_by_ip securepages
+   cp docker.settings.php settings.php
+
+   # Launch containers and disable IP restrictions.
+   docker-compose up &
+   docker exec -i cscwww_drupal_1 php /var/www/html/drush.phar -y dis restrict_by_ip securepages
    ```
 
 ### Stop Docker containers
