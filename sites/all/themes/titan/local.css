@@ -2,7 +2,7 @@
 
 html {
     font-family: 'PT Sans', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
     letter-spacing: .02em;
     color: rgb(40,59,94);
     line-height: 1.3;
@@ -20,8 +20,8 @@ strong {
 
 
 .node .field-type-image {
-    margin: 5px 15px 9px 0;
-    float: left;
+    margin: 0 0 1em 1em;
+    float: right;
     background-color: rgb(243,244,228);
     border: 1px solid rgb(191,200,134);
     border-radius: 5px;
@@ -72,9 +72,7 @@ a:active, a:visited {
 }
 
 
-/**
- * Headers
- */
+/*  Headers */
 h1,
 h2,
 h3,
@@ -84,16 +82,17 @@ h6 {
   color: rgb(40,59,94);
     font-weight: bold;
 }
-h1 {
-  margin: 2em 0 0 0;
-  font-size: 1.7em;
+.node h1.node-title {
+  margin: 0em 0 1em 0;
+  font-size: 2em;
 }
-h2 {
-  margin: 1.5em 0 0 0;
-  font-size: 1.5em;
+h2,
+.node h2.node-title {
+  margin: 1.25em 0 0 0;
+  font-size: 1.6em;
 }
 h3 {
-  margin: 1em 0 0 0;
+  margin: 1.5em 0 0 0;
   font-size: 1.3em;
 }
 h4 {
@@ -116,6 +115,39 @@ h6 {
     font-size: 1em;
     line-height: .5;
 }
+
+
+/* paragraphs and lists */
+p {
+    margin: 0 0 .5em 0;
+}
+
+ul {
+  list-style: disc outside none;
+  margin: 0 0 1em 2em;
+}
+
+ol {
+    list-style: decimal outside none;
+    margin: 0 0 1em 2em;
+}
+
+ul li, ol li {
+  background: none;
+  padding: 0;
+    margin-bottom: .5em;
+}
+
+p + ul, p + ol {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+ul + p, ol + p {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
 
 
 
@@ -308,15 +340,7 @@ form#search-block-form #edit-actions {
   width: 350px;
 }
 
-ul {
-  list-style: disc outside none;
-  margin: 0 0 20px 25px;
-}
 
-ul li {
-  background: none;
-  padding: 0;
-}
 
 input.form-submit {
   font-size: 13px;
@@ -378,15 +402,7 @@ span.summary {
   margin-bottom: 0;
 }
 
-p + ul, p + ol {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
-ul + p, ol + p {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
 
 
 
