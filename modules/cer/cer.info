@@ -1,0 +1,15 @@
+name = Corresponding Entity References
+description = Syncs the Entity reference between two node types which have an entityreference to each other.  
+core = 7.x
+dependencies[] = entityreference
+dependencies[] = ctools
+
+files[] = cer.admin.inc
+files[] = cer.crud.inc
+
+; Information added by drupal.org packaging script on 2012-09-06
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "cer"
+datestamp = "1346890205"
+
