@@ -68,4 +68,6 @@ RUN curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.ta
 RUN curl -OL https://github.com/drush-ops/drush/releases/download/8.1.16/drush.phar \
   && mv drush.phar /usr/bin
 
+COPY docker.settings.php /var/www/html/sites/default/settings.php
+
 # vim:set ft=dockerfile:

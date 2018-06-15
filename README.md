@@ -12,7 +12,7 @@ To pull the latest code from the `master` branch of this repository and recompil
 
 1. Install [Docker](https://www.docker.com/) if you have not already.
 
-1. Grab AK CSC files and database dump from https://csc.alaska.edu/sites/all/gimme.php, save them to your ~/Downloads folder.
+1. Grab AK CSC files and database dump from https://csc.alaska.edu/sites/all/gimme.php, save them to your ~/Downloads folder.  These directions assume these files are named `csc.sql` and `files-csc.bz2` respectively.
 
 1. Clone this repository and extract the Drupal files into their proper location:
 
@@ -24,11 +24,12 @@ To pull the latest code from the `master` branch of this repository and recompil
    mv ~/Downloads/csc.sql database/
 
    # Add site files and proper settings for local dev.
-   cd sites/default
-   tar -jxvf ~/Downloads/files-csc.bz2
-   cp docker.settings.php settings.php
 
-   # Launch containers and disable IP restrictions.
+   tar -jxvf ~/Downloads/files-csc.bz2 --strip-components=1 files/
+
+   # Launch containers and disable IP restrictions
+   # NOTE -- sometimes the name of the Docker image (csc-www_drupal_1) may be different.
+   # Use `docker ps` to find the right name of the image..
    docker-compose up &
    docker exec -i csc-www_drupal_1 php /usr/bin/drush.phar -y dis restrict_by_ip securepages
    ```
