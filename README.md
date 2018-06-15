@@ -25,7 +25,7 @@ To pull the latest code from the `master` branch of this repository and recompil
 
    # Add site files and proper settings for local dev.
 
-   tar -jxvf ~/Downloads/files-csc.bz2 --strip-components=1 files/
+   tar -jxvf ~/Downloads/files-csc.bz2 --strip-components=1 -C files/
 
    # Launch containers and disable IP restrictions
    # NOTE -- sometimes the name of the Docker image (csc-www_drupal_1) may be different.
