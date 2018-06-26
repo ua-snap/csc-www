@@ -945,8 +945,19 @@ body.front {
   width: 266px;
   padding: 15px 20px 15px 20px;
   float: right;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.85em;
+    line-height: 1.2;
+    font-family: 'Georgia', serif;
+}
+
+.front .views-slideshow-cycle-main-frame-row .views-field.views-field-title a {
+    color: rgb(144, 173, 61);
+    font-weight: normal;
+}
+
+.front .views-slideshow-cycle-main-frame-row .views-field.views-field-title a:hover,
+.front .views-slideshow-cycle-main-frame-row .views-field.views-field-title a:focus {
+    color: #fff;
 }
 
 .front .views-slideshow-cycle-main-frame-row .views-field.views-field-body {
@@ -965,12 +976,7 @@ body.front {
 }
 
 .front .more-link {
-  position: relative;
-  width: 120px;
-  left: 880px;
-  bottom: 29px;
-  line-height: 0;
-  z-index: 6;
+  display: none;
 }
 
 .front #block-views-events-block .more-link {
