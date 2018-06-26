@@ -638,10 +638,7 @@ body.front {
   border-top: 3px solid rgb(133, 149, 40);
 }
 
-#block-views-research_highlights-block .inner {
-  height: 400px;
-  background-image: linear-gradient( rgb(32, 60, 93), transparent, rgb(32, 60, 93) );
-}
+
 
 #block-views-research_highlights-block .node-research-highlight {
   position: absolute;
