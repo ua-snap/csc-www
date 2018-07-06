@@ -37,8 +37,7 @@ li.node-readmore.first.last a,
 .title-and-meta h2.node-title a,
 .title-and-meta h1.node-title a {
     color: #1b67e2;
-    font-weight: bold;
-    font-size: .9em;
+    font-weight:bold;
 }
 
 a:hover,
@@ -47,7 +46,8 @@ a:focus,
 .node .meta a:hover, 
 li.node-readmore.first.last a:hover  {
     color: #96c42b;
-    outline: none;    
+    outline: none;  
+    text-decoration: underline;
 }
 
 .node h1.node-title a:hover, 
