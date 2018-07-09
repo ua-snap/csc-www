@@ -1713,6 +1713,8 @@ x
     color: #8b929e;
     font-style: italic;
     font-size: .9em;
+    margin: 2em 0 0 0;
+    border-bottom: 1px dotted silver;
 }
 
 .field-group-div .node-resource {
