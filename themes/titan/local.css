@@ -1307,227 +1307,52 @@ x
     margin: .25em 0 0 132px;
 }
 
+
+
+/** News article titles sidebar **/
+.view.view-news-article-titles img {
+    border: 1px solid silver;
+    float: right;
+    margin: -1em 0 .25em .5em;
+}
+
+
+
+
+
 /*** PROJECTS ***/
-
-.node-project .node-header,
-.node-project .content {
-  margin-left: 0;
+.view.view-projects table, 
+.view.view-projects table td {
+    border: 3px solid #fff;
+    background: #eeefee;
 }
 
-.node-project .date {
-  display: none;
+.view.view-projects table td {
+    width: 50%;
+    padding: 10px;
 }
 
-.not-front #block-views-outreach-block .views-row-odd,
-.not-front #block-views-projects-block_1 .views-row-odd,
-.not-front #block-views-projects-block_2 .views-row-odd {
-  background-color: rgb(243,244,228);
-  padding: 0 20px 5px 20px;
+.views-field.views-field-field-project-image {
+    float: left;
+    clear: right;
+    margin: 0 1em 0 0;
 }
 
-#block-views-outreach-block .views-row-even,
-#block-views-projects-block_1 .views-row-even,
-#block-views-projects-block_2 .views-row-even {
-  padding: 0 20px 5px 20px;
+.views-field.views-field-field-duration {
+    margin: .5em 0;
 }
 
-#block-views-outreach-block .node-outreach .field-name-body,
-#block-views-projects-block_1 .node-project .field-name-body,
-#block-views-projects-block_2 .node-project .field-name-body {
-  margin-bottom: 0;
+.views-field.views-field-body p {
+    line-height: 1.3;
 }
 
-#block-views-outreach-block .node-outreach h2,
-#block-views-projects-block_1 .node-project h2,
-#block-views-projects-block_2 .node-project h2 {
-  margin-top: 3px;
-}
 
-.node-outreach h2,
-.node-project h2,
-.node-project h2 {
-  margin-top: 0;
-}
 
-.node-outreach > .node-header,
-.node-project > .node-header {
-  display: none;
-}
 
-.node-outreach .node-header,
-.node-project .node-header {
-  display: inline;
-}
 
-.node-outreach .node-header .title-and-meta,
-.node-project .node-header .title-and-meta {
-  display: inline;
-}
 
-.node-outreach .node-header .title-and-meta .node-title,
-.node-project .node-header .title-and-meta .node-title {
-  display: inline;
-}
 
-.node-outreach .field-name-title-field h1,
-.node-project .field-name-title-field h1 {
-  font-size: 24px;
-  margin: 0;
-}
 
-.node-project .field-name-field-funded-title .field-label, 
-.node-project .field-name-field-funded-title .field-items,
-.node-project .field-name-field-funded-title .field-items div {
-  display: inline;
-}
-
-.node-project .field-name-field-pi .field-label, 
-.node-project .field-name-field-pi .field-items,
-.node-project .field-name-field-pi .field-items div {
-  display: inline;
-}
-
-.node-project .field-name-field-co-pi .field-label, 
-.node-project .field-name-field-co-pi .field-items,
-.node-project .field-name-field-co-pi .field-items div {
-  display: inline;
-}
-
-.node-project .field-name-field-project-location .field-label, 
-.node-project .field-name-field-project-location .field-items,
-.node-project .field-name-field-project-location .field-items div {
-  display: inline;
-}
-
-.node-project .field-name-field-duration .field-label, 
-.node-project .field-name-field-duration .field-items,
-.node-project .field-name-field-duration .field-items div {
-  display: inline;
-}
-
-.node-outreach .field-name-field-outreach-location .field-label, 
-.node-outreach .field-name-field-outreach-location .field-items,
-.node-outreach .field-name-field-outreach-location .field-items div {
-  display: inline;
-}
-
-.node-outreach .field-name-field-outreach-duration .field-label, 
-.node-outreach .field-name-field-outreach-duration .field-items,
-.node-outreach .field-name-field-outreach-duration .field-items div {
-  display: inline;
-}
-
-#block-views-projects-block_1 .node-project {
-  background-color: transparent;
-}
-
-#block-system-main .inner .node-outreach .node-header,
-#block-system-main .inner .node-project .node-header {
-  margin-bottom: 0;
-}
-
-#block-system-main .inner .node-project .field-name-field-project-related-resources .content {
-  display: inline-block;
-  color: #888;
-}
-
-#block-system-main .inner .node-project .field-name-field-project-related-resources .content .field-name-field-type {
-  margin-bottom: 0;
-}
-
-#block-system-main .inner .node-project .field-name-field-project-related-resources .node-resource {
-  margin: .5em 0;
-  padding: 0;
-}
-
-#block-system-main .inner .node-project .field-name-field-type {
-  font-size: 13px;
-  font-weight: normal;
-}
-
-#block-system-main .inner .node-project .content {
-  background-color: #ffffff;
-  padding-bottom: 10px;
-}
-
-#block-system-main .inner .node-project .field-name-field-project-related-resources .content {
- padding-bottom: 0;
-}
-
-#block-system-main .inner .node-outreach .field-name-body,
-#block-system-main .inner .node-project .field-name-body,
-#block-system-main .inner .node-project .field-name-field-publications {
-  margin-bottom: 15px;
-}
-
-#block-system-main .inner .node-outreach .field-name-body ul,
-#block-system-main .inner .node-project .field-name-body ul,
-#block-system-main .inner .node-project .field-name-field-publications ul {
-  list-style-position: inside;
-}
-
-#block-system-main .inner .node-outreach .field-name-field-outreach-image,
-#block-system-main .inner .node-project .field-name-field-project-image {
-  margin-right: 30px;
-  margin-bottom: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-#block-system-main .inner .node-outreach .field-name-field-outreach-image .field-item,
-#block-system-main .inner .node-project .field-name-field-project-image .field-item {
-  margin-bottom: 20px;
-}
-
-#block-system-main .inner .node-project .sharethis-buttons {
-  display: none;
-}
-
-#node-58 {
-  margin-bottom: 0;
-}
-
-.view-taxonomy-term .views-row .field-name-field-project-location {
-  background-color: transparent;
-}
-
-#block-system-main .inner .view-taxonomy-term .node-outreach .field-name-field-outreach-location,
-#block-system-main .inner .view-taxonomy-term .node-outreach .field-name-field-outreach-duration,
-#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-project-location,
-#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-duration {
-  display: none;
-}
-
-#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-funded-title,
-#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-pi,
-#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-co-pi {
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-#block-system-main .inner .view-taxonomy-term .node-outreach .field-name-body,
-#block-system-main .inner .view-taxonomy-term .node-project .field-name-body,
-#block-system-main .inner .view-taxonomy-term .node-project .field-name-field-publications {
-  margin-left: 0;
-}
-
-#block-system-main .inner .view-taxonomy-term .node-outreach .node-header,
-#block-system-main .inner .view-taxonomy-term .node-project .node-header {
-  margin-bottom: .5em;
-}
-
-#node-11 {
-  margin-bottom: 0;
-}
-
-#block-system-main .inner .node-project .node-resource .content {
-  background-color: transparent;
-}
-
-#block-system-main .inner .node-project .field-name-field-project-related-resources .content {
-  display: inline-block;
-}
 
 /*** RESOURCES ***/
 
@@ -1714,7 +1539,7 @@ x
     font-style: italic;
     font-size: .9em;
     margin: 2em 0 0 0;
-    border-bottom: 1px dotted silver;
+    border-top: 1px dotted silver;
 }
 
 .field-group-div .node-resource {
