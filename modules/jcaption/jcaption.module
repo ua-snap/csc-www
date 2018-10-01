@@ -79,16 +79,3 @@ function jcaption_permission() {
     ),
   );
 }
-
-/**
- * Implements hook_install()
- * Add default permission for access settings to administrator
- */
-function jcaption_install() {
-  // rid=3 => administrator
-  user_role_change_permissions(3, 
-    array(
-      'access jcaption settings' => TRUE,
-     )
-   );
-}

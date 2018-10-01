@@ -749,7 +749,7 @@ function lightbox2_add_files() {
     'iframe_border' => (int)variable_get('lightbox2_frame_border', 1),
     // Video settings.
     'enable_video' => $enable_video,
-    'useragent' => $_SERVER['HTTP_USER_AGENT'],
+    'useragent' => isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '',
   );
   if ($enable_video) {
     $js_settings['flvPlayer'] = url(check_plain(trim(variable_get('lightbox2_flv_player_path', 'flvplayer.swf'), '/')));

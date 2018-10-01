@@ -124,8 +124,20 @@ class lightbox2_handler_field_lightbox2 extends views_handler_field {
       // We don't actually use the link, but we need it there for lightbox to function.
       if (empty($link)) {
         // Get the path name.
-        $path = isset($_GET['q']) ? $_GET['q'] : '<front>';
-        $link = url($path, array('absolute' => TRUE));
+        $url = isset($_GET['q']) ? $_GET : '<front>';
+        $path = '';
+        $params = array();
+
+        //Get the path and any parameters from the URL
+        foreach ($url as $key => $value) {
+          if ($key === 'q') {
+            $path = $value;
+          } else {
+            $params[$key] = $value;
+          }
+        }
+
+        $link = url($path, array('absolute' => TRUE, 'query' => $params));
       }
 
       // Get the token information and generate the value for the popup and the

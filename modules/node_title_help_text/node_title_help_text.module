@@ -43,7 +43,13 @@ function node_title_help_text_node_type_form_submit($form_id, &$form_state) {
   }
   $name = 'node_title_help_text_' . $form_state['values']['type'] . '_title_help';
   $value = $form_state['values']['title_help'];
-  variable_set($name, $value);
+  // In case of empty text, delete the variable
+  if (empty($value)) {
+    variable_del($name);
+  }
+  else {
+    variable_set($name, $value);
+  }
 }
 
 /**

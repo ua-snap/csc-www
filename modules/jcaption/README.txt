@@ -21,6 +21,19 @@ Theming captions
 The container have the class caption. It's also possible for the container to inherit classes, styles or alignments from the image.
 
 
+Avoid jCaption on admin pages
+-----------------------------
+A solution can be to have a selector that avoids admin pages. For example, if you go to:
+
+admin/config/media/jcaption
+
+and set the
+
+What selectors do you want jQuery Caption to run on? to:
+
+body.page-node .content .content img
+
+
 Similar modules
 ---------------
 

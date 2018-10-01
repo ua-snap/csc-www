@@ -285,7 +285,7 @@ Lightbox = {
     $("#lightbox2-overlay").hide().css({
       'width': '100%',
       'zIndex': '10090',
-      'height': '100%',
+      'height': arrayPageSize[1] + 'px',
       'backgroundColor' : '#' + Lightbox.overlayColor
     });
     // Detect OS X FF2 opacity + flash issue.
@@ -692,6 +692,16 @@ Lightbox = {
         $('#lightshowPlay').show();
       }
     }
+
+    // Adjust the page overlay size.
+    var arrayPageSize = Lightbox.getPageSize();
+    var arrayPageScroll = Lightbox.getPageScroll();
+    var pageHeight = arrayPageSize[1];
+    if (Lightbox.isZoomedIn && arrayPageSize[1] > arrayPageSize[3]) {
+      var lightboxTop = (Lightbox.topPosition == '' ? (arrayPageSize[3] / 10) : Lightbox.topPosition) * 1;
+      pageHeight = pageHeight + arrayPageScroll[1] + lightboxTop;
+    }
+    $('#lightbox2-overlay').css({'height': pageHeight + 'px', 'width': arrayPageSize[0] + 'px'});
 
     // Gecko browsers (e.g. Firefox, SeaMonkey, etc) don't handle pdfs as
     // expected.

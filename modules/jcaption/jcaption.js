@@ -12,7 +12,7 @@ Drupal.behaviors.jcaption = {
       
     	$.fn.jcaption = function(settings) {
     		settings = $.extend({
-    			wrapperElement: 'div',
+    			wrapperElement: 'span',
     			wrapperClass: 'caption',
     			captionElement: 'p',
     			imageAttr: Drupal.settings.jcaption.jcaption_alt_title,
@@ -54,9 +54,9 @@ Drupal.behaviors.jcaption = {
     				}
 
     				//Only create captions if there is content for the caption
-    				if(cleanimage.attr(settings.imageAttr).length > 0 || !settings.requireText){
+    				if(cleanimage.attr(settings.imageAttr) != undefined && (cleanimage.attr(settings.imageAttr).length > 0 || !settings.requireText)){
     					
-    					//Wrap the image with the caption div
+    					//Wrap the image with the caption span
     					image.wrap("<" + settings.wrapperElement + " class='" + settings.wrapperClass + "'></" + settings.wrapperElement + ">");
     					
     					//Save Image Float
@@ -74,8 +74,8 @@ Drupal.behaviors.jcaption = {
     					var imageAlign = cleanimage.attr('align');
     					if(settings.removeAlign) cleanimage.removeAttr('align');
     					
-    					//Put Caption in the Wrapper Div
-    					var div = image.parent().append('<' + settings.captionElement + '>' + cleanimage.attr(settings.imageAttr) + '</' + settings.captionElement + '>');
+    					//Put Caption in the Wrapper span
+    					var span = image.parent().append('<' + settings.captionElement + '>' + cleanimage.attr(settings.imageAttr) + '</' + settings.captionElement + '>');
     					
               //Add css if there is style markup for the paragraph in the settings
               //if(settings.styleMarkup) 
@@ -97,20 +97,20 @@ Drupal.behaviors.jcaption = {
     						});
     					}
     					
-    					//Copy Image Style to Div
-    					if(settings.copyStyle) div.attr('style',imageStyle);
+    					//Copy Image Style to span
+    					if(settings.copyStyle) span.attr('style',imageStyle);
     					
     					//If there is an alignment on the image (for example align="left") add "left" as a class on the caption.  This helps deal with older Text Editors like TinyMCE
-    					if(settings.copyAlignmentToClass) div.addClass(imageAlign);
+    					if(settings.copyAlignmentToClass) span.addClass(imageAlign);
     					
     					//Transfers the float style from the image to the caption container
-    					if(settings.copyFloatToClass) div.addClass(imageFloat);
+    					if(settings.copyFloatToClass) span.addClass(imageFloat);
     					
      					//Transfers the class from the image to the caption container
-    					if(settings.copyClassToClass) div.addClass(imageClass);
+    					if(settings.copyClassToClass) span.addClass(imageClass);
     					
-    					//Properly size the caption div based on the loaded image's size
-    					if(settings.autoWidth) div.width(image.width());
+    					//Properly size the caption span based on the loaded image's size
+    					if(settings.autoWidth) span.width(image.width());
     				}
     			});
     			

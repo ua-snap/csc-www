@@ -6,11 +6,9 @@ package = "Fields"
 dependencies[] = field
 dependencies[] = field_formatter_settings
 
-files[] = field_delimiter.module
-
-; Information added by drupal.org packaging script on 2013-02-15
-version = "7.x-1.0"
+; Information added by Drupal.org packaging script on 2017-11-24
+version = "7.x-1.2"
 core = "7.x"
 project = "field_delimiter"
-datestamp = "1360949231"
+datestamp = "1511538487"
 

@@ -91,7 +91,12 @@ function theme_lightbox2_image($variables) {
 
   // Download Link
   if (user_access('download original image')) {
-    $rel .= '<p><a href="' . file_create_url($item['uri']) . '">' . t(variable_get('lightbox2_download_link_text', 'Download Original')) . '</a></p>';
+    $url_download = file_create_url($item['uri']);
+    $download_original_text = t(variable_get('lightbox2_download_link_text', 'Download Original'));
+    $options_download = array();
+    $options_download['attributes']['title'] = $download_original_text;
+    $options_download['attributes']['download'] = '';
+    $rel .= '<p>' . l($download_original_text, $url_download, $options_download) . '</p>';
   }
   
   // Title End

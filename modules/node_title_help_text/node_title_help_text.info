@@ -2,9 +2,9 @@ name = Node title help text
 description = Allows you to add help text to node title
 core = 7.x
 
-; Information added by Drupal.org packaging script on 2015-02-25
-version = "7.x-1.0"
+; Information added by Drupal.org packaging script on 2017-03-09
+version = "7.x-1.1"
 core = "7.x"
 project = "node_title_help_text"
-datestamp = "1424849292"
+datestamp = "1489080491"
 
