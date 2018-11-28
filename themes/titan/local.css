@@ -1111,9 +1111,9 @@ body.not-front {
   padding-bottom: 2px;
 }
 
-#block-menu_block-2 {
+#block-menu_block-2  {
   clear: both;
-  background-color: rgb(49, 72, 106);
+  background: rgb(150,167,58);
 }
 
 #block-menu_block-2 .inner {
@@ -1147,11 +1147,11 @@ body.not-front {
 }
 
 #block-menu_block-2 .content ul li.active-trail a {
-  color: rgb(193, 205, 145)
+  color: #1E385C;
 }
 
 #block-menu_block-2 .content {
-  background-color: rgb(49, 72, 106);
+  background: rgb(150,167,58);
 }
 
 
