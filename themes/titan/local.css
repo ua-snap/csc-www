@@ -298,8 +298,8 @@ a.field-group-format-title {
 
 .group-left {
   float: left;
-  width: inherit;
-  margin-right: 10px;
+  max-width: 33%;
+  margin-right: 20px;
 }
 
 .group-right {
