@@ -736,12 +736,30 @@ body.front {
   font-weight: normal;
 }
 
+/* Twitter block on homepage */
+#block-twitter_block-1 {
+    border: 1px solid rgb(49, 72, 106);
+    border-top: 3px solid rgb(133, 149, 40);
+    background: rgb(49, 72, 106);
+    float: left;
+    clear: right;
+    margin-right: 21px;
+}
+
+#block-twitter_block-1 h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 10px;
+    margin-top: 0;
+    
+}
+
 
 /*Research highlights block on home page */
 
 .front #block-views-research_highlights-block .node-research-highlight {
     background: rgb(49, 72, 106);
-    border: 1px solid #fff;
     width: 100%;
     height: auto;
     text-align: center;
