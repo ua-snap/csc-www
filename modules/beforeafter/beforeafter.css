@@ -1,0 +1,380 @@
+/* Rangslider polyfill */
+.beforeafter .rangeslider,
+.beforeafter .rangeslider__fill {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.beforeafter .rangeslider__handle {
+  display: block;
+  position: absolute;
+  top: -10px;
+}
+
+/**
+ * Before/After base styles
+ */
+.beforeafter {
+}
+.beforeafter-preview {
+  max-width: 600px;
+}
+.beforeafter img {
+  pointer-events: none;
+  display: block;
+  width: 100%;
+}
+.beforeafter--wrap {
+  position: relative;
+  overflow: hidden;
+}
+.beforeafter--links {
+  padding: 5px 0;
+}
+.beforeafter--links:after {
+  display: block;
+  content: '.';
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.beforeafter--link {
+  display: inline-block;
+}
+.beforeafter--link-before {
+  float: left;
+}
+.beforeafter--link-after {
+  float: right;
+}
+.beforeafter--image {
+  width: 100%;
+}
+.beforeafter--image:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 0;
+}
+.beforeafter--image:nth-child(1) img {
+  width: auto;
+  height: 100%;
+}
+
+.beforeafter--slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  outline: none;
+  z-index: 9;
+}
+.beforeafter--slider:focus {
+  outline: none;
+}
+
+.beforeafter--slider::-moz-range-thumb {
+  border: none;
+  background: transparent;
+  height: 22px;
+  width: 22px;
+}
+
+.beforeafter--slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  height: 22px;
+  width: 22px;
+}
+
+.beforeafter--slider::-ms-thumb {
+  position: relative;
+  border: none;
+  background: transparent;
+  height: 22px;
+  width: 22px;
+}
+.beforeafter--slider::-moz-range-track {
+  width: 100%;
+  background: transparent;
+}
+.beforeafter--slider::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.beforeafter--thumb {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 8;
+  width: 1px;
+  background: #fff;
+}
+.beforeafter--thumb i {
+  position: absolute;
+  top: 50%;
+  display: block;
+  height: 22px;
+  width: 22px;
+  margin-left: -11px;
+  background: #fff;
+}
+
+
+
+/**
+ * Default theme
+ */
+.beforeafter-default .beforeafter--thumb {
+  background: #fff;
+  margin-left: 11px;
+
+  -webkit-transform: translateX(-11px);
+  -moz-transform: translateX(-11px);
+  -ms-transform: translateX(-11px);
+  -o-transform: translateX(-11px);
+  transform: translateX(-11px);
+}
+
+.beforeafter-default .beforeafter--thumb i {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 22px;
+  height: 22px;
+  width: 22px;
+  margin-left: -11px;
+}
+
+.beforeafter-default .beforeafter--thumb i:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 0;
+  height: 0;
+
+  border-bottom: 4px solid transparent;
+  border-right: 4px solid #000;
+  border-top: 4px solid transparent;
+  opacity: 0.3;
+}
+
+.beforeafter-default .beforeafter--thumb i:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 2px;
+  width: 0;
+  height: 0;
+
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #000;
+  border-top: 4px solid transparent;
+  opacity: 0.3;
+}
+
+
+/**
+ * CatchMyFame theme
+ */
+.beforeafter-catchmyfame .beforeafter--thumb {
+  background: #888;
+  width: 2px;
+  opacity: 0.25;
+
+  -webkit-transition: opacity 0.33s ease-in-out 0s;
+  -moz-transition: opacity 0.33s ease-in-out 0s;
+  -ms-transition: opacity 0.33s ease-in-out 0s;
+  -o-transition: opacity 0.33s ease-in-out 0s;
+  transition: opacity 0.33s ease-in-out 0s;
+}
+.beforeafter-catchmyfame .beforeafter--wrap:hover .beforeafter--thumb {
+  opacity: 1;
+}
+.beforeafter-catchmyfame .beforeafter--thumb i {
+  background: #00bb25;
+  width: 8px;
+  height: 56px;
+  margin-left: -3px;
+  margin-top: -28px;
+  box-shadow: 2px 2px 2px #00ff30 inset;
+}
+.beforeafter-catchmyfame .beforeafter--thumb i b {
+  position: absolute;
+  top: 26px;
+  left: 1px;
+}
+.beforeafter-catchmyfame .beforeafter--thumb i b:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.8em;
+  height: 0.08em;
+  background: #fff;
+  box-shadow: 0 0.15em 0 0 #fff, 0 0.3em 0 0 #fff;
+  transform: rotate(90deg);
+}
+.beforeafter-catchmyfame .beforeafter--thumb i:before,
+.beforeafter-catchmyfame .beforeafter--thumb i:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+
+  -webkit-transition: -webkit-transform 0.3s ease-in-out 0s, opacity 0.33s ease-in-out 0s;
+  -moz-transition: -moz-transform 0.3s ease-in-out 0s, opacity 0.33s ease-in-out 0s;
+  -ms-transition: -ms-transform 0.3s ease-in-out 0s, opacity 0.33s ease-in-out 0s;
+  -o-transition: -o-transform 0.3s ease-in-out 0s, opacity 0.33s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s, opacity 0.33s ease-in-out 0s;
+}
+
+.beforeafter-catchmyfame .beforeafter--wrap:hover .beforeafter--thumb i:before {
+  -webkit-animation: beforeafter-arrow-before-in 0.2s ease 0s;
+  -webkit-animation-fill-mode: both;
+  animation: beforeafter-arrow-before-in 0.2s ease 0s;
+  animation-fill-mode: both;
+
+}
+.beforeafter-catchmyfame .beforeafter--wrap:hover .beforeafter--thumb i:after {
+  -webkit-animation: beforeafter-arrow-after-in 0.2s ease 0s;
+  -webkit-animation-fill-mode: both;
+  animation: beforeafter-arrow-after-in 0.2s ease 0s;
+  animation-fill-mode: both;
+}
+
+
+.beforeafter-catchmyfame .beforeafter--thumb i:before {
+  top: 20px;
+  left: -15px;
+  border-bottom: 8px solid transparent;
+  border-right: 7px solid #fff;
+  border-top: 8px solid transparent;
+
+  -webkit-animation: beforeafter-arrow-before-out 0.35s ease-out 0s;
+  -webkit-animation-fill-mode: both;
+  animation: beforeafter-arrow-before-out 0.35s ease-out 0s;
+  animation-fill-mode: both;
+}
+
+.beforeafter-catchmyfame .beforeafter--thumb i:after {
+  top: 20px;
+  right: -15px;
+  border-bottom: 8px solid transparent;
+  border-left: 7px solid #fff;
+  border-top: 8px solid transparent;
+
+  -webkit-animation: beforeafter-arrow-after-out 0.35s ease-out 0s;
+  -webkit-animation-fill-mode: both;
+  animation: beforeafter-arrow-after-out 0.35s ease-out 0s;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes beforeafter-arrow-before-in {
+  0% {
+    -webkit-transform: translateX(6px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes beforeafter-arrow-before-out {
+  0% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-8px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes beforeafter-arrow-after-in {
+  0% {
+    -webkit-transform: translateX(-6px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes beforeafter-arrow-after-out {
+  0% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(8px);
+    opacity: 0;
+  }
+}
+
+
+@keyframes beforeafter-arrow-before-in {
+  0% {
+    transform: translateX(6px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes beforeafter-arrow-before-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-8px);
+    opacity: 0;
+  }
+}
+@keyframes beforeafter-arrow-after-in {
+  0% {
+    transform: translateX(-6px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes beforeafter-arrow-after-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(8px);
+    opacity: 0;
+  }
+}

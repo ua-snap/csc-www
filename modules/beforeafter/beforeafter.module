@@ -1,0 +1,554 @@
+<?php
+/**
+ * @file
+ * Before/After module
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function beforeafter_permission() {
+  return array(
+    'administer beforeafter' =>  array(
+      'title' => t('Administer the Before/After module'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Adds the js_settings array.
+ * This includes all ids of the containers that need the beforeafter effect.
+ */
+function beforeafter_preprocess_html(&$variables) {
+  $js_settings =& beforeafter_js_settings();
+  if ($js_settings) {
+    drupal_add_js(array('beforeafter' => $js_settings), 'setting');
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function beforeafter_ctools_plugin_api($owner, $api) {
+  if ($owner == 'beforeafter' && $api == 'beforeafter_default_preset') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function beforeafter_ctools_plugin_directory($module, $type) {
+  if ($type == 'export_ui') {
+    return 'plugins/export_ui';
+  }
+}
+
+/**
+ * Return a new optionset object
+ * Note that this function does not save the optionset to the database.
+ *
+ * @see beforeafter_optionset_save()
+ */
+function beforeafter_optionset_new($values = array()) {
+  ctools_include('export');
+  $optionset = ctools_export_crud_new('beforeafter_optionset');
+
+  // Set the options to an array
+  $optionset->options = array();
+
+  // Assign specified values
+  if (isset($values['name'])) {
+    $optionset->name = $values['name'];
+  }
+  if (isset($values['title'])) {
+    $optionset->title = $values['title'];
+  }
+  if (isset($values['options']) && is_array($values['options'])) {
+    $optionset->options = $values['options'];
+  }
+
+  // Merge default settings with any given settings
+  $optionset_defaults = _beforeafter_optionset_defaults();
+  $optionset->options = $optionset_defaults += $optionset->options;
+
+  return $optionset;
+}
+
+/**
+ * Fetches all option sets from the database and returns them as an associative array.
+ *
+ * @return array
+ */
+function beforeafter_optionset_load_all() {
+  ctools_include('export');
+  $optionsets = ctools_export_crud_load_all('beforeafter_optionset');
+  foreach ($optionsets as $optionset) {
+    // Ensure the optionset is typecast after being loaded from DB
+    _beforeafter_typecast_optionset($optionset->options);
+  }
+  return $optionsets;
+}
+
+/**
+ * Fetches the given option set and returns it as an object or NULL, if no set could be found.
+ */
+function beforeafter_optionset_load($optionset_name) {
+  ctools_include('export');
+  $optionset = ctools_export_crud_load('beforeafter_optionset', $optionset_name);
+  // Ensure the optionset is typecast after being loaded from DB
+  _beforeafter_typecast_optionset($optionset->options);
+  return $optionset;
+}
+
+/**
+ * Checks whether an option set with the given name already exists.
+ */
+function beforeafter_optionset_exists($optionset_name) {
+  ctools_include('export');
+  $optionset = ctools_export_crud_load('beforeafter_optionset', $optionset_name);
+  return isset($optionset->name);
+}
+
+/**
+ * Saves the given option set to the database.
+ * Set the $new flag if this set has not been written before.
+ *
+ * @return object|boolean
+ *  Returns the newly saved object, FALSE otherwise.
+ */
+function beforeafter_optionset_save($optionset, $new = FALSE) {
+  // If the machine name is missing or already in use, return an error.
+  if (empty($optionset->name) || (FALSE != beforeafter_optionset_exists($optionset->name) && $new)) {
+    return FALSE;
+  }
+
+  // Check for an invalid list of options
+  if (isset($optionset->options) && !is_array($optionset->options)) {
+    return FALSE;
+  }
+
+  // If the title is missing, default to the name
+  if (empty($optionset->title)) {
+    $optionset->title = $optionset->name;
+  }
+
+  // Merge default settings with any given settings
+  $optionset_defaults = _beforeafter_optionset_defaults();
+  $optionset->options = $optionset_defaults += $optionset->options;
+
+  // Prepare the database values.
+  $db_values = array(
+    'name' => $optionset->name,
+    'title' => $optionset->title,
+    'options' => _beforeafter_typecast_optionset($optionset->options),
+  );
+
+  if ($new) {
+    $result = drupal_write_record('beforeafter_optionset', $db_values);
+  } else {
+    $result = drupal_write_record('beforeafter_optionset', $db_values, 'name');
+  }
+
+  // Return the object if the values were saved successfully.
+  if (($new && SAVED_NEW == $result) || (!$new && SAVED_UPDATED == $result)) {
+    return $optionset;
+  }
+
+  // Otherwise, an error occured
+  return FALSE;
+}
+
+/**
+ * Deletes the given option set from the database.
+ *
+ * @param object|string $optionset
+ *  Optionset object or machine name
+ *
+ * @return \DatabaseStatementInterface
+ */
+function beforeafter_optionset_delete($optionset) {
+  if (isset($optionset->name)) {
+    $name = $optionset->name;
+  } else {
+    $name = $optionset;
+  }
+  return db_delete('beforeafter_optionset')->condition('name', $name)->execute();
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function beforeafter_field_formatter_info() {
+  return array(
+    'beforeafter_image' => array(
+      'label' => t('Before/After image'),
+      'field types' => array('image'),
+      'settings' => array(
+        'image_style' => '',
+        'optionset' => 'default',
+        'intro_position' => 0.5,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function beforeafter_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $optionsets = array();
+  ctools_include('export');
+  foreach (beforeafter_optionset_load_all() as $name => $optionset) {
+    $optionsets[$name] = check_plain($optionset->title);
+  }
+  $element['optionset'] = array(
+    '#title' => t('Option set'),
+    '#type' => 'select',
+    '#options' => $optionsets,
+    '#default_value' => $settings['optionset'],
+  );
+
+  $image_styles = image_style_options(FALSE, PASS_THROUGH);
+  $element['image_style'] = array(
+    '#title' => t('Image style'),
+    '#type' => 'select',
+    '#default_value' => $settings['image_style'],
+    '#empty_option' => t('None (original image)'),
+    '#options' => $image_styles,
+  );
+
+  $element['intro_position'] = array(
+    '#title' => t('Intro position'),
+    '#description' => t('Where the draggable separator should appear when the plugin loads, as a fraction of the overall width.') . '<br />'
+                    . t('For example, .25 would have the draggable separator appear 1/4th of the way on the left of the image.'),
+    '#type' => 'textfield',
+    '#default_value' => $settings['intro_position'],
+  );
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function beforeafter_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = array();
+
+  // Load option set
+  ctools_include('export');
+  if (!empty($settings['optionset'])) {
+    $o = beforeafter_optionset_load($settings['optionset']);
+    if ($o !== NULL) {
+      $optionset = $o;
+    }
+  }
+  $optionset = isset($optionset) ? $optionset->title : t('Default settings');
+  $summary[] = t('Option set: %optionset', array('%optionset' => $optionset));
+
+  $image_styles = image_style_options(FALSE, PASS_THROUGH);
+  if (!empty($settings['image_style'])) {
+    $summary[] = t('Image style: @style', array('@style' => $image_styles[$settings['image_style']]));
+  } else {
+    $summary[] = t('No image style (original image)');
+  }
+
+  $summary[] = t('Intro position: @intro_position%', array('@intro_position' => floatval($settings['intro_position'])*100));
+
+  return implode('<br />', $summary);
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function beforeafter_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $static =& drupal_static(__FUNCTION__, array());
+
+  // Only add the library once.
+  if (!isset($static['library_added'])) {
+    drupal_add_library('beforeafter', 'beforeafter');
+    $static['library_added'] = TRUE;
+  }
+
+  // Get the option set.
+  $optionset_name = $display['settings']['optionset'];
+  if (!($optionset = beforeafter_optionset_load($optionset_name))) {
+    watchdog('beforeafter', 'Invalid optionset name supplied to field formatter: @name', array('@name' => $optionset_name), WATCHDOG_WARNING);
+    return;
+  }
+
+  $settings = $optionset->options;
+  $settings['intro_position'] = floatval($display['settings']['intro_position']);
+
+  $container = 'beforeafter_' . $field['field_name'];
+  $elements = array();
+  $count = -1;
+
+  // Static storage of javascript settings.
+  $js_settings =& beforeafter_js_settings();
+
+  // Loop through the items.
+  foreach ($items as $key => $item) {
+    // Images should be wrapped in pairs.
+    if ($key % 2 == 0) {
+      $count++;
+
+      $html_id = drupal_html_id($container . '-' . $count);
+
+      $elements[$count] = array(
+        '#type' => 'container',
+        '#attributes' => array('class' => array('beforeafter'), 'id' => $html_id),
+      );
+      // Only add this to my js_settings array if there is still a next image.
+      // If the images are uneven I don't want to add the beforeafter effect.
+      if (isset($items[$key + 1])) {
+        $js_settings[$field['field_name']][] = array_merge(array(
+          'container' => $html_id,
+        ), $settings);
+      }
+    }
+    $elements[$count][] = array(
+      '#theme' => 'image_formatter',
+      '#item' => $item,
+      '#image_style' => $display['settings']['image_style'],
+      '#path' => '',
+    );
+  }
+
+  return $elements;
+}
+
+/**
+ * Implements hook_library().
+ */
+function beforeafter_library() {
+  $module_path = drupal_get_path('module', 'beforeafter');
+
+  $libraries['beforeafter'] = array(
+    'title' => 'Before/After',
+    'website' => 'http://drupal.org/project/beforeafter',
+    'version' => '2.0',
+    'js' => array(
+      $module_path . '/js/rangeslider.js' => array(),
+      $module_path . '/js/beforeafter.js' => array(),
+    ),
+    'css' => array(
+      $module_path . '/beforeafter.css' => array(
+        'type' => 'file',
+        'media' => 'screen',
+      ),
+    ),
+  );
+
+  if (module_exists('jqeasing')) {
+    $libraries['beforeafter']['dependencies'][] = array('jqeasing', 'easing');
+  }
+
+  return $libraries;
+}
+
+if (!function_exists('jqeasing_library')) {
+  /**
+   * Implements hook_library().
+   *
+   * On behalf of jqeasing module.
+   */
+  function jqeasing_library() {
+    if (!module_exists('jqeasing')) return array();
+    if (!($info = libraries_load('easing'))) return array();
+
+    $libraries['easing'] = array(
+      'title' => $info['name'],
+      'website' => $info['vendor url'],
+      'module' => 'jqeasing',
+      'version' => $info['version'],
+    );
+    foreach ($info['files'] as $key => $files) {
+      foreach ($files as $filename => $opts) {
+        $filename = $info['library path'] . '/' . $filename;
+        $libraries['easing'][$key][$filename] = $opts;
+      }
+    }
+
+    return $libraries;
+  }
+}
+
+/**
+ * Static storage of our js_settings array.
+ *
+ * @return array()
+ */
+function &beforeafter_js_settings() {
+  $js_settings =& drupal_static(__FUNCTION__, array());
+
+  return $js_settings;
+}
+
+/**
+ * Default settings for an option set
+ *
+ * @param string $key [optional]
+ *  Get specific default value
+ *
+ * @return array
+ */
+function _beforeafter_optionset_defaults($key = NULL) {
+
+  $defaults = array(
+    'theme' => 'default',
+    'init_position' => 1,
+    'intro_animate' => TRUE,
+    'intro_easing' => 'swing',
+    'intro_delay' => 2000,
+    'intro_duration' => 500,
+    'intro_position' => 0.5,
+    'before_link_text' => t('Show only before'),
+    'after_link_text' => t('Show only after'),
+    'show_links' => FALSE,
+    'link_anim_duration' => 200,
+    'link_anim_delay' => 0,
+    'link_anim_easing' => 'swing',
+    'click_anim_duration' => 600,
+    'click_anim_delay' => 0,
+    'click_anim_easing' => 'swing',
+
+    'flexslider_enable' => TRUE,
+    'flexslider_selector' => '.flexslider',
+    'flexslider_anim_callback' => 'after',
+    'flexslider_anim_delay' => 0,
+    'flexslider_anim_duration' => 500,
+    'flexslider_anim_easing' => 'swing',
+  );
+
+  // Return the specific item
+  if (isset($key) && array_key_exists($key, $defaults)) {
+    return $defaults[$key];
+  }
+
+  // Return all items
+  return $defaults;
+}
+
+/**
+ * Adds the typecasting to the values so that the generated
+ * json array keeps the right values
+ */
+function _beforeafter_typecast_optionset(&$options) {
+  if (!empty($options)) {
+    foreach ($options as $key => $value) {
+      switch ($key) {
+
+        // Strings
+        case 'theme':
+        case 'intro_easing':
+        case 'before_link_text':
+        case 'after_link_text':
+        case 'link_anim_easing':
+        case 'click_anim_easing':
+        case 'flexslider_selector':
+        case 'flexslider_anim_callback':
+        case 'flexslider_anim_easing':
+          $options[$key] = (string) $value;
+          break;
+
+        // Integers
+        case 'flexslider_anim_delay':
+        case 'flexslider_anim_duration':
+        case 'click_anim_duration':
+        case 'click_anim_delay':
+        case 'link_anim_duration':
+        case 'link_anim_delay':
+        case 'intro_delay':
+        case 'intro_duration':
+          $options[$key] = (int) $value;
+          break;
+
+        // Floats
+        case 'init_position':
+        case 'intro_position':
+          $options[$key] = (float) $value;
+          break;
+
+        // Booleans
+        case 'flexslider_enable':
+        case 'show_links':
+        case 'intro_animate':
+          $options[$key] = (boolean) $value;
+          break;
+      }
+    }
+  }
+  return $options;
+}
+
+/**
+ * Return a list of available themes.
+ *
+ * @return array
+ */
+function _beforeafter_theme_options() {
+  $theme_options = array(
+    'default' => t('Default'),
+    'catchmyfame' => t('CatchMyFame'),
+  );
+
+  return $theme_options;
+}
+
+/**
+ * Return a list of all easing methods available.
+ */
+function _beforeafter_easing_options() {
+  $easing_options = array(
+    'swing' => t('Swing'),
+    'linear' => t('Linear'),
+  );
+
+  // Merge in options from jqeasing
+  if (module_exists('jqeasing')) {
+    $easing_options = array_merge($easing_options, array(
+      'jswing' => 'jswing',
+      'def' => 'def',
+      'easeInQuad' => 'easeInQuad',
+      'easeOutQuad' => 'easeOutQuad',
+      'easeInOutQuad' => 'easeInOutQuad',
+      'easeInCubic' => 'easeInCubic',
+      'easeOutCubic' => 'easeOutCubic',
+      'easeInOutCubic' => 'easeInOutCubic',
+      'easeInQuart' => 'easeInQuart',
+      'easeOutQuart' => 'easeOutQuart',
+      'easeInOutQuart' => 'easeInOutQuart',
+      'easeInQuint' => 'easeInQuint',
+      'easeOutQuint' => 'easeOutQuint',
+      'easeInOutQuint' => 'easeInOutQuint',
+      'easeInSine' => 'easeInSine',
+      'easeOutSine' => 'easeOutSine',
+      'easeInOutSine' => 'easeInOutSine',
+      'easeInExpo' => 'easeInExpo',
+      'easeOutExpo' => 'easeOutExpo',
+      'easeInOutExpo' => 'easeInOutExpo',
+      'easeInCirc' => 'easeInCirc',
+      'easeOutCirc' => 'easeOutCirc',
+      'easeInOutCirc' => 'easeInOutCirc',
+      'easeInElastic' => 'easeInElastic',
+      'easeOutElastic' => 'easeOutElastic',
+      'easeInOutElastic' => 'easeInOutElastic',
+      'easeInBack' => 'easeInBack',
+      'easeOutBack' => 'easeOutBack',
+      'easeInOutBack' => 'easeInOutBack',
+      'easeInBounce' => 'easeInBounce',
+      'easeOutBounce' => 'easeOutBounce',
+      'easeInOutBounce' => 'easeInOutBounce',
+    ));
+  }
+
+  return $easing_options;
+}
