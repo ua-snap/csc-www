@@ -1,0 +1,16 @@
+name = Before/After
+description = Provides a Before/After image field formatter
+dependencies[] = image
+dependencies[] = file
+dependencies[] = ctools
+
+configure = admin/config/media/beforeafter
+
+core = 7.x
+package = User interface
+; Information added by Drupal.org packaging script on 2015-06-10
+version = "7.x-2.0-alpha1"
+core = "7.x"
+project = "beforeafter"
+datestamp = "1433976148"
+

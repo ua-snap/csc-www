@@ -1,0 +1,144 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the beforeafter module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function beforeafter_schema() {
+  $schema = array();
+
+  $schema['beforeafter_optionset'] = array(
+    'description' => 'Store option sets for Before/After instances.',
+    'export' => array(
+      'key' => 'name',
+      'identifier' => 'preset',
+      'default hook' => 'beforeafter_default_presets',
+      'api' => array(
+        'owner' => 'beforeafter',
+        'api' => 'beforeafter_default_preset',
+        'minimum_version' => 1,
+        'current_version' => 1,
+      ),
+    ),
+    'fields' => array(
+      'name' => array(
+        'description' => 'The machine-readable option set name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'title' => array(
+        'description' => 'The human-readable title for this option set.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'options' => array(
+        'description' => 'The options array.',
+        'type' => 'blob',
+        'size' => 'big',
+        'serialize' => TRUE,
+      ),
+    ),
+    'primary key' => array('name'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function beforeafter_uninstall() {
+}
+
+/**
+ * Migrate settings from v1 to v2.
+ */
+function beforeafter_update_7200(&$sandbox) {
+  drupal_install_schema('beforeafter');
+
+  $variables = array(
+    'beforeafter_image_path' => NULL,
+    'beforeafter_animate_intro' => 'intro_animate',
+    'beforeafter_intro_delay' => 'intro_delay',
+    'beforeafter_intro_duration' => 'intro_duration',
+    'beforeafter_before_link_text' => 'before_link_text',
+    'beforeafter_after_link_text' => 'after_link_text',
+    'beforeafter_cursor' => 'cursor',
+    'beforeafter_link_display_speed' => 'link_anim_duration',
+    'beforeafter_click_speed' => 'click_anim_duration',
+  );
+  foreach ($variables as $key => $new_key) {
+    unset($variables[$key]);
+
+    if (isset($new_key)) {
+      // Get stored value
+      $variables[$new_key] = variable_get($key);
+    }
+
+    // Delete old variable
+    variable_del($key);
+  }
+
+  $optionsets = beforeafter_optionset_load_all();
+  foreach ($optionsets as $optionset) {
+    if ($optionset->name === 'default') {
+      // Merge in any old settings
+      foreach ($variables as $key => $value) {
+        if (isset($value)) {
+          $optionset->options[$key] = $value;
+        }
+      }
+      beforeafter_optionset_save($optionset);
+    }
+  }
+
+
+  // Migrate field formatter settings
+  $fields = array();
+
+  // Build an array of 'image' type field names
+  $map = field_info_field_map();
+  foreach ($map as $field_name => &$field) {
+    if ($field['type'] === 'image') {
+      $fields[] = $field_name;
+    }
+  }
+
+  // Gather all instances having a display using the beforeafter_image formatter
+  $field_map = array();
+  $info_instances = field_read_instances(array('field_name' => $fields));
+  foreach ($info_instances as &$instance) {
+    foreach ($instance['display'] as $display_name => &$display) {
+      if ($display['type'] === 'beforeafter_image') {
+        $field_map[$instance['entity_type']][$instance['bundle']] = $instance;
+      }
+    }
+  }
+
+  // Loop through and save all instances gathered in the previous step
+  foreach ($field_map as &$instances) {
+    foreach ($instances as &$instance) {
+      foreach ($instance['display'] as &$display) {
+        if ($display['type'] === 'beforeafter_image') {
+          if (isset($display['settings']['optionset'])) continue;
+
+          // Rewrite the formatter settings
+          $display['settings'] = array(
+            'image_style' => $display['settings']['image_style'],
+            'intro_position' => $display['settings']['intro_position'],
+            'optionset' => 'default',
+          );
+        }
+      }
+      field_update_instance($instance);
+    }
+  }
+
+  return t('The settings was migrated. However it is recommended that you review all your Before/After fields manually, as instance specific settings is not kept.');
+}

@@ -19,15 +19,9 @@ strong {
 }
 
 
-.node .field-type-image {
-    margin: 0 0 1em 1em;
-    float: left;
-    background-color: rgb(243,244,228);
-    border: 1px solid rgb(191,200,134);
-    border-radius: 5px;
-    padding: .35em .35em .15em .35em;
-    margin: .5em 1em 1em 0;
-}
+
+
+
 
 
 /* Links */
@@ -2103,3 +2097,6 @@ td img {
     border: 1px solid silver;
     margin: .3em 0 0 0;
 }
+
+
+
