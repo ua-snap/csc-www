@@ -673,13 +673,7 @@ h3.feed-item-title {
 .node .user-picture img {
   width: 70px;
 }
-.node .field-type-image {
-  margin: 5px 15px 9px 0;
-  float: left;
-  background-color: #F0EBE6;
-  border:1px solid #E6E1DC;
-  padding: 8px;
-}
+
 .node .field-name-body {
   margin-bottom: 14px;
 }
