@@ -18,6 +18,56 @@ strong {
     font-weight: bold;
 }
 
+/* Images general */
+.field.field-name-field-image.field-type-image {
+  margin: 5px 0 9px 0;
+  float: left;
+    clear: right;
+  padding: 0;
+max-width: 55%;
+}
+
+.field.field-name-field-image.field-type-image img {
+    margin: 0 15px 0 0;
+    border: 1px solid #F0EBE6;
+    background: none;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.node.node-article .field.field-name-field-image.field-type-image   {
+    max-width: 55%;
+    height: auto;
+    margin: 0 15px 0 0;
+}
+
+
+span.caption-none a.lightbox-processed {
+    display: none;
+}
+
+/* Captions under images */
+span.caption p {   /*turns off title attribute so a real caption can be displayed*/
+    display: none;
+}
+blockquote  {
+    margin: 0;
+    padding: 0 5px;
+    float: left;
+    width: 95%;
+}
+
+blockquote.image-field-caption p {
+    font-size: .85em;
+    line-height: 1.3;
+}
+
+.view.view-news blockquote.image-field-caption {
+    display: none;
+}
+
+
 
 
 
@@ -471,11 +521,6 @@ span.summary {
 
 .not-front .more-link {
   display: none;
-}
-
-.caption p {
-  font-style: italic;
-  font-size: 90%;
 }
 
 #footer .block {
@@ -1286,17 +1331,7 @@ x
   margin-bottom: 0;
 }
 
-.not-front #block-system-main .inner .node-article .field-name-field-image {
-  margin-right: 35px;
-  margin-bottom: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
 
-.not-front #block-system-main .inner .node-article .field-name-field-image .field-item {
-  margin-bottom: 1.5em;
-}
 
 #block-views-news-block .field-name-body,
 #block-views-news-block .field-items,
@@ -1322,11 +1357,19 @@ x
 
 
 /** News article titles sidebar **/
+.view.view-news-article-titles .views-field.views-field-title {
+    min-height: 75px;
+}
+
 .view.view-news-article-titles img {
     border: 1px solid silver;
     float: right;
     margin: -1em 0 .25em .5em;
 }
+
+.view.view-news-article-titles blockquote.image-field-caption {
+    display: none;
+    }
 
 
 
@@ -1593,79 +1636,6 @@ x
 .group-related .field-label {
     margin: 2em 0 0 0;
 }
-
-
-
-
-
-/*  graphics for resource types
-
-.resource-type-audio {
-  background-image: url(/sites/default/files/icons/audio.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-
-.resource-type-document {
-  background-image: url(/sites/default/files/icons/document.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-
-.resource-type-educational-resource {
-  background-image: url(/sites/default/files/icons/educational-resource.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-
-.resource-type-fact-sheet-faq {
-  background-image: url(/sites/default/files/icons/fact-sheet-faq.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-.resource-type-illustration {
-  background-image: url(/sites/default/files/icons/illustration.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-.resource-type-poster {
-  background-image: url(/sites/default/files/icons/poster.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-.resource-type-presentation {
-  background-image: url(/sites/default/files/icons/presentation.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-.resource-type-video {
-  background-image: url(/sites/default/files/icons/video.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-.resource-type-website {
-  background-image: url(/sites/default/files/icons/website.png);
-  background-repeat: no-repeat;
-  background-position: 0 32px;
-}
-
-.resource-key-item {
-  width: 190px;
-  height: 200px;
-  float: left;
-  margin: 0 25px;
-  font-size: 12px;
-  text-align: center;
-}
-
-.resource-key-item p {
-  margin-top: 6px;
-  text-align: center;
-}
-
-*/
-
-
 
 
 
