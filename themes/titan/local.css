@@ -43,11 +43,11 @@ max-width: 55%;
 }
 
 
+/* Captions under images */
 span.caption-none a.lightbox-processed {
     display: none;
 }
 
-/* Captions under images */
 span.caption p {   /*turns off title attribute so a real caption can be displayed*/
     display: none;
 }
@@ -855,6 +855,25 @@ body.front {
 .front .view-research-highlights .views-row {
   height: 353px;
   position: relative;
+}
+
+
+/* Research Highlights view page */
+.view.view-research-highlights img  {
+    float: left;
+    clear: right;
+    margin: 0 15px 0 0;
+}
+
+.view.view-research-highlights .views-row {
+    height: 150px;
+    margin: 10px 0 0 0;
+}
+
+.field.field-name-field-research-highlight-image img {
+    float: right;
+    clear: right;
+    margin: 0 0 20px 20px;
 }
 
 
