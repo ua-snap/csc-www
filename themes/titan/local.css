@@ -70,10 +70,6 @@ blockquote.image-field-caption p {
 
 
 
-
-
-
-
 /* Links */
 a, 
 .node .meta a, 
@@ -552,12 +548,8 @@ span.summary {
   background-color: transparent;
 }
 
-.empty-upcoming-events {
-  padding-top: 5px;
-}
 
-.empty-publications p,
-.empty-upcoming-events p {
+.empty-publications p {
   margin: 20px 0;
 }
 
@@ -683,44 +675,20 @@ body.front {
 
 .views-slideshow-cycle-main-frame-row .views-field-title,
 #block-views-research_highlights-block,
-#block-views-publications-block_2,
-#block-views-events-block {
+#block-views-publications-block_2 {
   border-top: 3px solid rgb(133, 149, 40);
 }
 
 
 
-#block-views-research_highlights-block .node-research-highlight {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 0;
-  width: 265px;
-}
 
-.front #block-views-events-block .inner > h2,
-.front #block-views-events-block_1 .inner > h2 {
-  padding: 10px 0 0 0;
-  background-color: transparent;
-}
 
-.front #block-views-events-block .inner .field-name-field-location,
-.front #block-views-events-block .inner .field-name-field-date,
-.front #block-views-events-block .inner .field-name-field-event-image,
-.front #block-views-events-block_1 .inner .field-name-field-location,
-.front #block-views-events-block_1 .inner .field-name-field-date,
-.front #block-views-events-block_1 .inner .field-name-field-event-image {
-  display: none;
-}
 
-.front #block-views-events-block,
-.front #block-views-events-block_1 {
-  width: 306px;
-  height: 400px;
-  background-color: rgb(46, 73, 112);
-}
 
-.front #block-views-publications-block_2 .view-empty,
-.front #block-views-events-block .view-empty {
+
+
+
+.front #block-views-publications-block_2 .view-empty {
   margin: 0 20px;
   border-top: 1px solid rgb(255, 255, 255);
 }
@@ -738,7 +706,7 @@ body.front {
   border: none;
 }
 
-.front #block-views-events-block h2,
+
 .front #block-views-research_highlights-block h2,
 .front #block-views-publications-block_2 h2 {
   font-size: 18px;
@@ -750,18 +718,10 @@ body.front {
 
 .front #block-views-research_highlights-block h2 {
   background: rgb(46, 73, 112);
+    height: 30px;
 }
 
-.front #block-views-events-block .node-header {
-  display: none;
-}
 
-.front #block-views-events-block .content h2 {
-  text-align: left;
-  padding: 0;
-}
-
-.front #block-views-events-block h2.node-title,
 .front #block-views-research_highlights-block h2.node-title,
 .front #block-views-publications-block_2 h2.node-title {
   text-align: left;
@@ -769,8 +729,6 @@ body.front {
 }
 
 
-.front #block-views-events-block p,
-.front #block-views-events-block h2.node-title a,
 .front #block-views-research_highlights-block p,
 .front #block-views-research_highlights-block h2.node-title a,
 .front #block-views-publications-block_2 p,
@@ -803,14 +761,19 @@ body.front {
 
 .front #block-views-research_highlights-block .node-research-highlight {
     background: rgb(49, 72, 106);
-    width: 100%;
-    height: auto;
-    text-align: center;
+    width: 87%;
+    position: absolute;
+    bottom: 0;
 }
 
+.front #block-views-research_highlights-block .node-research-highlight .links-wrapper {
+    border: 1px solid red;
+    display: none;
+}
 
 .front #block-views-research_highlights-block h2.node-title {
     text-align: center;
+    margin: 10px;
 }
 
 .front #block-views-research_highlights-block h2.node-title a {
@@ -823,39 +786,23 @@ body.front {
     color: #fff;
 }
 
+.front #block-views-research_highlights-block .field field-name-body {
+    border: 1px solid red;
+}
+
 .front #block-views-research_highlights-block .field-type-text-with-summary p {;
     font-size: .85em;
     line-height: 1.2;
-    margin: .25em 0 -1em 0;
+    margin: 0;
+        text-align: center;
+    margin: 0 10px;
 }
 
-.front #block-views-research_highlights-block .node-readmore {
-  display: none;
-}
 
-.front #block-views-research_highlights-block .links-wrapper,
-.front #block-views-research_highlights-block ul.links,
-.front #block-views-research_highlights-block .field-name-body {
-  margin: 0;
-}
 
-.front #block-views-research_highlights-block .views-row-last {
-  border-top: 1px solid rgb(255, 255, 255);
-}
 
-.front #block-views-research_highlights-block .date,
-.front #block-views-publications-block_2 .date {
-  display: none;
-}
 
-.front .view-research-highlights {
-  margin-bottom: 16px;
-}
 
-.front .view-research-highlights .views-row {
-  height: 353px;
-  position: relative;
-}
 
 
 /* Research Highlights view page */
@@ -893,14 +840,11 @@ body.front {
 }
 
 .front .view-publications .view-content,
-.front .view-publications .view-empty,
-.front .view-events .view-content,
-.front .view-events .view-empty {
+.front .view-publications .view-empty {
   position: relative;
 }
 
-.front #block-views-publications-block_2 .views-row-first,
-.front #block-views-events-block .node {
+.front #block-views-publications-block_2 .views-row-first {
   margin-bottom: 0;
   border-top: 1px solid rgb(255, 255, 255);
 }
@@ -916,73 +860,38 @@ body.front {
 }
 
 
-/*Events block on home page */
 
-.front #block-views-events-block .view-footer p {
-    border: 1px solid #fff;
-    padding: 0 .5em;
-    display: inline-block;
-    font-size: .9em;
-}
-
-.front .view-events .views-row {
-  border-top: none;
-}
-
-.front #block-views-events-block a,
 .front #block-views-publications-block_2 a,
 .front #block-views-research_highlights-block a {
   color: rgb(144, 173, 61);
 }
 
-.front #block-views-events-block a:hover,
 .front #block-views-publications-block_2 a:hover,
 .front #block-views-research_highlights-block a:hover {
   color: #fff;
 }
 
-.front #block-views-events-block .date {
-  float: none;
-  text-transform: none;
-  background: none;
-  padding-left: 0;
-  font-size: 1em;
-}
 
-.front #block-views-events-block .view-content,
-.front #block-views-events-block .view-footer,
+
 .front #block-views-research_highlights-block .view-content,
 .front #block-views-publications-block_2 .view-content,
 .front #block-views-publications-block_2 .view-footer {
   padding: 0 20px;
 }
 
-.front #block-views-events-block .date .year,
-.front #block-views-events-block .date .month,
-.front #block-views-events-block .date .day {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-
-.front #block-views-events-block .date .year {
-  top: 0;
-  display: inline;
-}
 
 
-
-.front #block-views-events-block,
 .front #block-views-research_highlights-block,
 .front #block-views-publications-block_2 {
   float: left;
 }
 
-.front #block-views-events-block,
+
 .front #block-views-publications-block_2 {
   margin-left: 22px;
 }
 
-.front #block-views-events-block .node.indent .title-and-meta,
+
 .front #block-views-research_highlights-block .node.indent .title-and-meta,
 .front #block-views-research_highlights-block .node.indent .content,
 .front #block-views-publications-block_2 .node.indent .title-and-meta,
@@ -990,14 +899,7 @@ body.front {
   margin-left: 0;
 }
 
-.front #block-views-events-block .node.indent .title-and-meta a {
-  font-size: 14px;
-  font-weight: normal;
-}
 
-.front .node-event .field-name-body {
-  display: none;
-}
 
 .front #block-views-research_highlights-block .field-name-field-media img,
 .front #block-views-featured_scientists-block .field-name-field-featured-scientist-media img {
@@ -1005,9 +907,6 @@ body.front {
   margin: 5px 15px 5px 5px;
 }
 
-.front #block-views-events-block .links-wrapper {
-  display: none;
-}
 
 .front #block-views-banner-block {
   background-color: rgb(46, 73, 112);
@@ -1067,14 +966,6 @@ body.front {
   display: none;
 }
 
-.front #block-views-events-block .more-link {
-  position: static;
-  margin: 10px 20px;
-}
-
-.front #block-views-events-block .more-link a {
-  font-weight: bold;
-}
 
 .front .more-link a {
   color: rgb(255, 255, 255);
@@ -1098,18 +989,11 @@ body.front {
   left: 750px;
 }
 
-.front .node-event {
-  padding-top: 24px;
-}
 
 .front #header-menu-wrapper {
   margin-left: 0;
 }
 
-.front #block-views-events-block .views-row-odd,
-.front #block-views-events-block_1 .views-row-odd {
-  background-color: transparent;
-}
 
 .front #branding {
   display: block;
@@ -1575,10 +1459,6 @@ x
   margin-left: 76px;
 }
 
-.node-header {
-    margin: 0;
-}
-
 
 
 /* Resources view block */
@@ -1688,327 +1568,7 @@ x
   color: #355582;
 }
 
-/*** EVENTS ***/
 
-.not-front #block-views-events-block .views-row,
-.not-front #block-views-events-block_1 .views-row,
-.not-front #block-views-events-block_2 .views-row,
-.not-front #block-views-events-block_3 .views-row,
-.not-front #block-views-events-block_4 .views-row {
-  padding: 0 20px 5px 20px;
-}
-
-.not-front #block-views-events-block .date,
-.not-front #block-views-events-block_1 .date,
-.not-front #block-views-events-block_2 .date,
-.not-front #block-views-events-block_3 .date,
-.not-front #block-views-events-block_4 .date {
-  display: none;
-}
-
-.not-front #block-views-events-block .node.indent .content,
-.not-front #block-views-events-block_1 .node.indent .content,
-.not-front #block-views-events-block_2 .node.indent .content,
-.not-front #block-views-events-block_3 .node.indent .content,
-.not-front #block-views-events-block_4 .node.indent .content {
-  margin-left: 0;
-}
-
-.not-front #block-views-events-block .inner > h2,
-.not-front #block-views-events-block_1 .inner > h2,
-.not-front #block-views-events-block_2 .inner > h2,
-.not-front #block-views-events-block_3 .inner > h2,
-.not-front #block-views-events-block_4 .inner > h2 {
-  color: rgb(255, 255, 255);
-  padding: 5px 10px;
-  background-color: rgb(144, 173, 61);
-}
-
-.not-front #block-views-events-block .views-row-odd,
-.not-front #block-views-events-block_1 .views-row-odd,
-.not-front #block-views-events-block_2 .views-row-odd,
-.not-front #block-views-events-block_3 .views-row-odd,
-.not-front #block-views-events-block_4 .views-row-odd {
-  background-color: rgb(243,244,228);
-  padding: 0 20px 5px 20px;
-}
-
-.not-front #block-views-events-block .node-event .field-name-body,
-.not-front #block-views-events-block_1 .node-event .field-name-body,
-.not-front #block-views-events-block_2 .node-event .field-name-body,
-.not-front #block-views-events-block_3 .node-event .field-name-body,
-.not-front #block-views-events-block_4 .node-event .field-name-body {
-  margin-bottom: 0;
-}
-
-
-/* BLOCK SYSTEM MAIN STYLES */
-
-#block-system-main a[href ^="mailto:"] {
-    background: none;
-    padding: 0;
-}
-
-#block-system-main .inner .node-event .node-header {
-  margin-bottom: 0;
-}
-
-#block-system-main .inner .node-event .title-and-meta,
-#block-system-main .inner .node-event .content {
-  margin-left: 0;
-}
-
-#block-system-main .inner .node-event .field-name-field-products .content {
-  display: inline-block;
-  color: #888;
-}
-
-#block-system-main .inner .node-event .field-name-field-products .content .field-name-field-type {
-  margin-bottom: 0;
-}
-
-#block-system-main .inner .node-event .field-name-field-products .node-resource {
-  margin: 0;
-  padding: 0;
-}
-
-#block-system-main .inner .node-event .node-header,
-#block-system-main .inner .node-event .title-and-meta,
-#block-system-main .inner .node-event .title-and-meta h2 {
-  display: inline;
-}
-
-
-
-#block-system-main .inner .node-event h1.node-title,
-#block-system-main .inner .view-event h1.node-title {
-  padding: 20px 20px;
-  background-color: rgb(243,244,228);
-  margin: 0;
-}
-
-#block-system-main .inner .node-event .field-name-field-location,
-#block-system-main .inner .view-event .views-field-field-location {
-  margin-bottom: 0;
-  padding: 0 20px 10px 20px;
-  background-color: rgb(243,244,228);
-}
-
-#block-system-main .inner .node-event .field-name-field-date,
-#block-system-main .inner .view-event .views-field-field-date {
-  padding: 0 20px 20px 20px;
-  background-color: rgb(243,244,228);
-}
-
-#block-system-main .inner .node-event .field-name-body,
-#block-system-main .inner .node-event .field-name-field-agenda,
-#block-system-main .inner .view-event .views-field-field-agenda {
-  margin-bottom: 15px;
-}
-
-#block-system-main .inner .node-event .field-name-body ul,
-#block-system-main .inner .node-event .field-name-field-agenda ul,
-#block-system-main .inner .view-event .views-field-field-agenda ul {
-  list-style-position: inside;
-}
-
-#block-system-main .inner .node-event .field-name-field-event-image {
-  margin-right: 30px;
-  margin-bottom: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-#block-system-main .inner .view-event .views-field-field-event-image {
-  float: left;
-  margin: 5px 15px 9px 0;
-}
-
-#event-sub-nav {
-  display: block;
-  border-bottom: 4px solid rgb(132, 151, 47);
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#event-sub-nav li {
-  display: inline;
-  background-color: rgb(32, 56, 92);
-  padding: 8px;
-  margin-right: 0;
-}
-
-#event-sub-nav li.active {
-  background-color: rgb(132, 151, 47);
-  padding: 8px 8px 9px 8px;
-}
-
-#event-sub-nav li a {
-  color: rgb(255, 255, 255);
-  padding: 10px 50px;
-}
-
-#block-views-workshops-block_1 {
-  margin-top: -20px;
-}
-
-.not-front .node-event .date {
-  display: none;
-}
-
-.field-name-field-event-pi div {
-  display: inline;
-}
-
-#node-12 {
-  margin-bottom: 0;
-}
-
-#node-131 {
-  margin-bottom: 0;
-}
-
-#block-views-events-block .inner .node {
-  margin-bottom: 0;
-}
-
-.not-front #block-views-events-block .node-header,
-.not-front #block-views-events-block_1 .node-header {
-  margin-bottom: 0;
-}
-
-.not-front #block-views-events-block .node-header,
-.not-front #block-views-events-block_1 .node-header,
-.not-front #block-views-events-block_2 .node-header,
-.not-front #block-views-events-block_3 .node-header,
-.not-front #block-views-events-block_4 .node-header {
-  margin-bottom: 0;
-}
-
-#block-views-events-block .field-name-field-location,
-#block-views-events-block_1 .field-name-field-location,
-#block-views-events-block_2 .field-name-field-location,
-#block-views-events-block_3 .field-name-field-location,
-#block-views-events-block_4 .field-name-field-location {
-  margin-bottom: 0;
-}
-
-.node-event .field-name-field-location .field-label, 
-.node-event .field-name-field-location .field-items,
-.node-event .field-name-field-location .field-items div {
-  display: inline;
-}
-
-.view-event .views-field-field-location span,
-.view-event .views-field-field-location div {
-  display: inline;
-}
-
-.view-event .views-field-field-location .views-label {
-  font-weight: bold;
-}
-
-.node-event .field-name-field-date .field-label, 
-.node-event .field-name-field-date .field-items,
-.node-event .field-name-field-date .field-items div {
-  display: inline;
-}
-
-.view-event .views-field-field-date .views-label {
-  font-weight: bold;
-}
-
-.view-event .views-label {
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.view-event .views-field-field-date span,
-.view-event .views-field-field-date div {
-  display: inline;
-}
-
-#block-system-main .inner .node-event .field-name-field-event-image .field-item,
-#block-system-main .inner .view-event .views-field-field-event-image .field-content div {
-  margin-bottom: 20px;
-}
-
-#block-system-main .inner .node-event .sharethis-buttons {
-  display: none;
-}
-
-#block-system-main .inner .view-taxonomy-term .node-event .field-name-field-location {
-  display: none;
-}
-
-#block-system-main .inner .view-taxonomy-term .node-event .field-name-body,
-#block-system-main .inner .view-taxonomy-term .node-event .field-name-field-agenda {
-  margin-left: 0;
-}
-
-#block-system-main .inner .view-taxonomy-term .node-event .node-header {
-  margin-bottom: 16px;
-}
-
-#block-menu-menu-events-menu {
-  margin: 20px 0;
-}
-
-#block-menu-menu-events-menu ul {
-  margin-left: 0;
-}
-
-#block-menu-menu-events-menu ul li {
-  display: inline-block;
-  padding-left: 0;
-  background-image: none;
-  margin: 0 4px 0 0;
-}
-
-#block-menu-menu-events-menu ul li a {
-  display: block;
-  padding: 5px 16px;
-  color: #444444;
-  border: 1px solid #d1cbb5;
-  background-color: #f0ebe7;
-}
-
-#block-menu-menu-events-menu ul li a.active {
-  background-color: #fbf9f8;
-}
-
-#block-menu-menu-events-menu ul li.active a {
-  background-color: #fbf9f8;
-}
-
-#block-menu-menu-events-menu ul li a:active,
-#block-menu-menu-events-menu ul li a:focus {
-  background-color: #ffffff;
-  outline: none;
-}
-
-#block-menu-menu-events-menu ul li a:hover {
-  background-color: #ffffff;
-}
-
-#node_event_agenda_group_subpage .field-name-field-event-image {
-  float: left;
-}
-
-.view-event .group_subpage .field-name-field-agenda {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.view-events .group-info {
-  float: right;
-}
 
 
 /* People */
