@@ -748,6 +748,10 @@ body.front {
   margin-top: 0;
 }
 
+.front #block-views-research_highlights-block h2 {
+  background: rgb(46, 73, 112);
+}
+
 .front #block-views-events-block .node-header {
   display: none;
 }
