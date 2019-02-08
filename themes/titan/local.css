@@ -761,9 +761,9 @@ body.front {
 
 .front #block-views-research_highlights-block .node-research-highlight {
     background: rgb(49, 72, 106);
-    width: 87%;
-    position: absolute;
-    bottom: 0;
+    width: 100%;
+    position: relative;
+    margin: 200px 0 0 0;
 }
 
 .front #block-views-research_highlights-block .node-research-highlight .links-wrapper {
