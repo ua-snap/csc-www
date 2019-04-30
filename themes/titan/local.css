@@ -67,6 +67,12 @@ blockquote.image-field-caption p {
     display: none;
 }
 
+/* Captions under images in project view table */
+table.views-view-grid blockquote.image-field-caption p {
+    display: none;
+}
+
+
 
 
 
