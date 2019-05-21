@@ -36,11 +36,7 @@ max-width: 55%;
     height: auto;
 }
 
-.node.node-article .field.field-name-field-image.field-type-image   {
-    max-width: 55%;
-    height: auto;
-    margin: 0 15px 0 0;
-}
+
 
 
 /* Captions under images */
@@ -52,7 +48,7 @@ span.caption p {   /*turns off title attribute so a real caption can be displaye
     display: none;
 }
 blockquote  {
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0 5px;
     float: left;
     width: 95%;
@@ -191,11 +187,17 @@ p {
 ul {
   list-style: disc outside none;
   margin: 0 0 1em 2em;
+    padding-left: 1.25em;
+    width: auto;
+    overflow: hidden;
 }
 
 ol {
     list-style: decimal outside none;
     margin: 0 0 1em 2em;
+        padding-left: 1.25em;
+        width: auto;
+    overflow: hidden;
 }
 
 ul li, ol li {
@@ -1272,6 +1274,18 @@ x
 
 .view.view-news .content {
     margin: .25em 0 0 132px;
+}
+
+/**Individual news articles **/
+
+.node.node-article .content {
+    margin: 0;
+}
+
+.node.node-article .field.field-name-field-image.field-type-image {
+    max-width: 40%;
+    height: auto;
+    margin: 0 15px 15px 0;
 }
 
 
