@@ -12,6 +12,13 @@
   </IfModule>
 </FilesMatch>
 
+<Files "gimme.php">
+  Order Allow,Deny
+  Allow from 137.229.0.0/16
+  Allow from 172.16.0.0/12
+  Allow from 10.0.0.0/8
+</Files>
+
 # Don't show directory listings for URLs which map to a directory.
 Options -Indexes
 
