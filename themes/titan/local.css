@@ -20,16 +20,14 @@ strong {
 
 /* Images general */
 .field.field-name-field-image.field-type-image {
-  margin: 5px 0 9px 0;
+  margin: 5px 15px 9px 0;
   float: left;
     clear: right;
   padding: 0;
-max-width: 55%;
+max-width: 45%;
 }
 
 .field.field-name-field-image.field-type-image img {
-    margin: 0 15px 0 0;
-    border: 1px solid #F0EBE6;
     background: none;
     padding: 0;
     max-width: 100%;
@@ -1282,11 +1280,7 @@ x
     margin: 0;
 }
 
-.node.node-article .field.field-name-field-image.field-type-image {
-    max-width: 40%;
-    height: auto;
-    margin: 0 15px 15px 0;
-}
+
 
 
 
